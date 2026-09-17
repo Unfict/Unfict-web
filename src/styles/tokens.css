@@ -1,0 +1,14 @@
+:root {
+  /* Brand Palette (BRAND-001 v3.0 RATIFIED) */
+  --unfict-color-white: #ffffff;
+  --unfict-color-institutional-gray: #f6f7f9;
+  --unfict-color-deep-ink: #0a0d14;
+  --unfict-color-slate: #596273;
+  --unfict-color-border-gray: #dde1e7;
+  --unfict-color-blue: #1965ec;
+
+  /* Typography */
+  --unfict-font-sans:
+    'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --unfict-font-mono: 'IBM Plex Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}

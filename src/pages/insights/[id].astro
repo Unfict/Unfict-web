@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const insightsEntries = await getCollection('insights');
+  return insightsEntries.map((entry) => ({
+    params: { id: entry.id },
+    props: { entry }
+  }));
+}
+
+const { entry } = Astro.props;
+---
+
+<BaseLayout title={entry ? entry.data.title : 'Unfict — Insight'}>
+  <!-- Route shell: /insights/[id] -->
+</BaseLayout>

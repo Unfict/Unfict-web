@@ -1,0 +1,3 @@
+# Unfict Web Static Asset Redirects (Cloudflare Workers + Static Assets)
+# Legacy Zyppi URL redirect rules will be defined here when authorized.
+# Format: /old-path /new-path 301
