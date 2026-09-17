@@ -17,10 +17,10 @@ jobs:
         with:
           node-version-file: '.nvmrc'
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: '10.30.3'
+      - name: Enable Corepack & Activate pnpm 10.30.3
+        run: |
+          corepack enable
+          corepack prepare pnpm@10.30.3 --activate
 
       - name: Get pnpm store directory
         shell: bash
