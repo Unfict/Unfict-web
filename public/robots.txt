@@ -1,0 +1,4 @@
+# UNFICT PRE-LAUNCH BOOTSTRAP — NOT FOR INDEXING
+# Disallow crawl access until official launch authority.
+User-agent: *
+Disallow: /
