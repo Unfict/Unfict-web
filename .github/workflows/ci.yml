@@ -16,6 +16,7 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version-file: '.nvmrc'
+          package-manager-cache: false
 
       - name: Enable Corepack & Activate pnpm 10.30.3
         run: |
