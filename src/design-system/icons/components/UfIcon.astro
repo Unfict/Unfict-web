@@ -45,10 +45,6 @@ if (!rawSvg) {
 
 // Extract inner content of <svg ...>...</svg>
 const innerContent = rawSvg.replace(/<svg[^>]*>/, '').replace(/<\/svg>\s*$/, '');
-
-const accessibilityAttrs = decorative
-  ? { 'aria-hidden': 'true', focusable: 'false' }
-  : { role: 'img', 'aria-label': label || icon.name };
 ---
 
 <svg
@@ -60,6 +56,9 @@ const accessibilityAttrs = decorative
   data-tone={resolvedTone}
   data-size={size}
   style={`--uf-icon-size: ${size}px;`}
-  {...accessibilityAttrs}
+  aria-hidden={decorative ? true : undefined}
+  focusable={decorative ? 'false' : undefined}
+  role={decorative ? undefined : 'img'}
+  aria-label={decorative ? undefined : label || icon.name}
   set:html={innerContent}
 />
