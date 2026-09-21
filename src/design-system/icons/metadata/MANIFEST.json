@@ -14,21 +14,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "locked",
-      "allowedTones": [
-        "locked"
-      ],
+      "allowedTones": ["locked"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "brand",
       "brandLocked": true,
       "semanticStatus": "governed"
@@ -43,25 +34,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -76,25 +54,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -109,25 +74,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -142,25 +94,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -175,25 +114,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -208,25 +134,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -241,25 +154,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -274,25 +174,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -307,25 +194,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -340,25 +214,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -373,25 +234,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -406,25 +254,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -439,25 +274,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -472,25 +294,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -505,25 +314,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -538,25 +334,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -571,25 +354,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -604,25 +374,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -637,25 +394,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -670,25 +414,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -703,25 +434,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -736,25 +454,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -769,25 +474,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -802,25 +494,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -835,25 +514,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -868,25 +534,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -901,25 +554,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -934,25 +574,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -967,25 +594,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1000,25 +614,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1033,25 +634,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1066,25 +654,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1099,25 +674,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1132,25 +694,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1165,25 +714,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1198,25 +734,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1231,25 +754,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1264,25 +774,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1297,25 +794,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1330,25 +814,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1363,25 +834,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1396,25 +854,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1429,25 +874,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1462,25 +894,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1495,25 +914,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1528,25 +934,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1561,25 +954,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1594,25 +974,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1627,25 +994,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1660,25 +1014,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1693,25 +1034,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1726,25 +1054,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1759,25 +1074,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1792,25 +1094,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1825,25 +1114,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1858,25 +1134,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1891,25 +1154,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1924,25 +1174,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1957,25 +1194,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -1990,25 +1214,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2023,25 +1234,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2056,25 +1254,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2089,25 +1274,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2122,25 +1294,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2155,25 +1314,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2188,25 +1334,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2221,25 +1354,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2254,25 +1374,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2287,25 +1394,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2320,25 +1414,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2353,25 +1434,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2386,25 +1454,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2419,25 +1474,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2452,25 +1494,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2485,25 +1514,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2518,25 +1534,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2551,25 +1554,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2584,25 +1574,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2617,25 +1594,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2650,25 +1614,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2683,25 +1634,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2716,25 +1654,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2749,25 +1674,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2782,25 +1694,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2815,25 +1714,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2848,25 +1734,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2881,25 +1754,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2914,25 +1774,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2947,25 +1794,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -2980,25 +1814,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3013,25 +1834,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3046,25 +1854,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3079,25 +1874,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3112,25 +1894,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3145,25 +1914,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3178,25 +1934,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3211,25 +1954,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3244,25 +1974,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3277,25 +1994,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3310,25 +2014,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3343,25 +2034,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3376,25 +2054,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3409,25 +2074,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3442,25 +2094,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3475,25 +2114,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 2,
       "defaultTone": "brand",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "brand",
-        "muted",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "brand", "muted", "disabled"],
       "blueAccentAllowed": true,
       "semanticColorAllowed": false,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3508,25 +2134,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3541,25 +2154,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3574,25 +2174,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3607,25 +2194,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3640,25 +2214,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3673,25 +2234,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3706,25 +2254,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3739,25 +2274,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3772,25 +2294,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3805,25 +2314,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3838,25 +2334,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3871,25 +2354,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3904,25 +2374,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3937,25 +2394,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -3970,25 +2414,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -4003,25 +2434,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -4036,25 +2454,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -4069,25 +2474,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -4102,25 +2494,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -4135,25 +2514,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"
@@ -4168,25 +2534,12 @@
       "viewBox": "0 0 24 24",
       "colorChannels": 1,
       "defaultTone": "inherit",
-      "allowedTones": [
-        "inherit",
-        "mono",
-        "muted",
-        "semantic",
-        "disabled"
-      ],
+      "allowedTones": ["inherit", "mono", "muted", "semantic", "disabled"],
       "blueAccentAllowed": false,
       "semanticColorAllowed": true,
       "monochromeSafe": true,
       "smallOptimized": false,
-      "sizes": [
-        16,
-        20,
-        24,
-        32,
-        40,
-        48
-      ],
+      "sizes": [16, 20, 24, 32, 40, 48],
       "accessibilityMode": "contextual",
       "brandLocked": false,
       "semanticStatus": "governed"

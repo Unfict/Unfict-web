@@ -26,7 +26,9 @@ describe('Governed Unfict Icon Runtime Infrastructure', () => {
   it('3. should verify every manifest source file exists', () => {
     for (const icon of manifest.icons) {
       const fullPath = path.join(ROOT_DIR, icon.source);
-      expect(fs.existsSync(fullPath), `Missing source file for ${icon.id}: ${icon.source}`).toBe(true);
+      expect(fs.existsSync(fullPath), `Missing source file for ${icon.id}: ${icon.source}`).toBe(
+        true
+      );
     }
   });
 
@@ -61,7 +63,9 @@ describe('Governed Unfict Icon Runtime Infrastructure', () => {
     for (const icon of manifest.icons) {
       const fullPath = path.join(ROOT_DIR, icon.source);
       const content = fs.readFileSync(fullPath, 'utf8');
-      expect(content, `SVG ${icon.id} must contain viewBox="0 0 24 24"`).toContain('viewBox="0 0 24 24"');
+      expect(content, `SVG ${icon.id} must contain viewBox="0 0 24 24"`).toContain(
+        'viewBox="0 0 24 24"'
+      );
     }
   });
 
@@ -103,7 +107,7 @@ describe('Governed Unfict Icon Runtime Infrastructure', () => {
   it('12. should structurally support monochrome collapse via CSS rules', () => {
     expect(fs.existsSync(STYLES_PATH)).toBe(true);
     const cssContent = fs.readFileSync(STYLES_PATH, 'utf8');
-    expect(cssContent).toContain('.uf-icon[data-tone=\'mono\']');
+    expect(cssContent).toContain(".uf-icon[data-tone='mono']");
     expect(cssContent).toContain('--uf-icon-accent: currentColor;');
   });
 

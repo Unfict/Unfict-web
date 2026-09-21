@@ -17,7 +17,9 @@ function checkRelease() {
   console.log(`[RELEASE CHECK] Current tracked placeholders: ${placeholderCount}`);
 
   if (placeholderCount > 0) {
-    console.error(`RELEASE CHECK FAILED: Production release requires 0 placeholders, but ${placeholderCount} remaining placeholders exist.`);
+    console.error(
+      `RELEASE CHECK FAILED: Production release requires 0 placeholders, but ${placeholderCount} remaining placeholders exist.`
+    );
     process.exit(1);
   }
 

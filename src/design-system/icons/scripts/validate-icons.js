@@ -24,7 +24,9 @@ function validate() {
 
   // 1. Exactly 127 entries
   if (!manifest.icons || manifest.icons.length !== 127) {
-    errors.push(`Manifest icon count must be exactly 127, found ${manifest.icons ? manifest.icons.length : 0}`);
+    errors.push(
+      `Manifest icon count must be exactly 127, found ${manifest.icons ? manifest.icons.length : 0}`
+    );
   }
 
   const seenIds = new Set();
@@ -102,11 +104,15 @@ function validate() {
 
     // 5. All placeholder sources tracked
     if (hasPlaceholderComment && !isListedInPlaceholders) {
-      errors.push(`SVG ${icon.id} has UNFICT_PLACEHOLDER comment but is not listed in PLACEHOLDERS.json`);
+      errors.push(
+        `SVG ${icon.id} has UNFICT_PLACEHOLDER comment but is not listed in PLACEHOLDERS.json`
+      );
     }
     // 6. Every tracked placeholder actually marked
     if (isListedInPlaceholders && !hasPlaceholderComment) {
-      errors.push(`ID ${icon.id} is listed in PLACEHOLDERS.json but SVG does not contain UNFICT_PLACEHOLDER comment`);
+      errors.push(
+        `ID ${icon.id} is listed in PLACEHOLDERS.json but SVG does not contain UNFICT_PLACEHOLDER comment`
+      );
     }
   }
 
@@ -125,7 +131,9 @@ function validate() {
     process.exit(1);
   }
 
-  console.log(`Icon Validation Passed successfully! (127 assets verified, ${placeholderList.length} tracked placeholders).`);
+  console.log(
+    `Icon Validation Passed successfully! (127 assets verified, ${placeholderList.length} tracked placeholders).`
+  );
 }
 
 validate();

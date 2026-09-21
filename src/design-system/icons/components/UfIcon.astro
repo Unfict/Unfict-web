@@ -5,19 +5,13 @@ import manifest from '../metadata/MANIFEST.json';
 const svgFiles = import.meta.glob<string>('../svg/**/*.svg', {
   query: '?raw',
   import: 'default',
-  eager: true,
+  eager: true
 });
 
 export type UfIconName = (typeof manifest.icons)[number]['shortName'];
 
 export type UfIconTone =
-  | 'inherit'
-  | 'mono'
-  | 'brand'
-  | 'muted'
-  | 'semantic'
-  | 'disabled'
-  | 'locked';
+  'inherit' | 'mono' | 'brand' | 'muted' | 'semantic' | 'disabled' | 'locked';
 
 export interface Props {
   name: UfIconName;
@@ -28,14 +22,7 @@ export interface Props {
   class?: string;
 }
 
-const {
-  name,
-  size = 24,
-  tone,
-  decorative = true,
-  label,
-  class: className = '',
-} = Astro.props;
+const { name, size = 24, tone, decorative = true, label, class: className = '' } = Astro.props;
 
 // Look up icon in manifest strictly by shortName
 const icon = manifest.icons.find((i) => i.shortName === name);
@@ -45,8 +32,7 @@ if (!icon) {
 }
 
 // Validate tone against allowed tones
-const resolvedTone =
-  tone && icon.allowedTones.includes(tone as any) ? tone : icon.defaultTone;
+const resolvedTone = tone && icon.allowedTones.includes(tone as any) ? tone : icon.defaultTone;
 
 // Resolve SVG file path
 const svgPath = `../${icon.source}`;
@@ -57,9 +43,7 @@ if (!rawSvg) {
 }
 
 // Extract inner content of <svg ...>...</svg>
-const innerContent = rawSvg
-  .replace(/<svg[^>]*>/, '')
-  .replace(/<\/svg>\s*$/, '');
+const innerContent = rawSvg.replace(/<svg[^>]*>/, '').replace(/<\/svg>\s*$/, '');
 
 const accessibilityAttrs = decorative
   ? { 'aria-hidden': 'true', focusable: 'false' }
