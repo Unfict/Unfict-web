@@ -1,0 +1,138 @@
+---
+import UfIcon from '../icons/components/UfIcon.astro';
+
+export interface FooterGroup {
+  title: string;
+  links: { label: string; href: string }[];
+}
+
+export interface Props {
+  groups?: FooterGroup[];
+  copyright?: string;
+  class?: string;
+}
+
+const defaultGroups: FooterGroup[] = [
+  {
+    title: 'Product',
+    links: [
+      { label: 'GS1 Digital Link', href: '/gs1-digital-link' },
+      { label: 'Developers', href: '/developers' }
+    ]
+  },
+  {
+    title: 'Company',
+    links: [
+      { label: 'About', href: '/about' },
+      { label: 'Insights', href: '/insights' }
+    ]
+  },
+  {
+    title: 'Legal',
+    links: [
+      { label: 'Privacy', href: '/privacy' },
+      { label: 'Terms', href: '/terms' }
+    ]
+  }
+];
+
+const {
+  groups = defaultGroups,
+  copyright = '© Unfict Inc. All rights reserved.',
+  class: className = ''
+} = Astro.props;
+---
+
+<footer
+  class={`uf-global-footer ${className}`.trim()}
+  data-uf-interface-owner="GLOBAL-FOOTER-01"
+  data-uf-interface-status="placeholder"
+>
+  <div class="uf-global-footer__inner">
+    <div class="uf-global-footer__brand">
+      <UfIcon name="motifs/uf-motif-mark" size={20} decorative={true} />
+      <span>Unfict</span>
+    </div>
+
+    <div class="uf-global-footer__groups">
+      {
+        groups.map((group) => (
+          <div class="uf-global-footer__group">
+            <h3 class="uf-global-footer__group-title">{group.title}</h3>
+            <ul class="uf-global-footer__link-list">
+              {group.links.map((link) => (
+                <li>
+                  <a href={link.href} class="uf-global-footer__link">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="uf-global-footer__bottom">
+      <p class="uf-global-footer__copyright">{copyright}</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .uf-global-footer {
+    width: 100%;
+    border-top: 1px solid var(--unfict-color-border-gray, #dde1e7);
+    background-color: var(--unfict-color-institutional-gray, #f6f7f9);
+    padding: var(--uf-spacing-lg, 2rem) var(--uf-spacing-sm, 1rem);
+  }
+
+  .uf-global-footer__inner {
+    max-width: var(--uf-width-wide, 1200px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--uf-spacing-md, 1.5rem);
+  }
+
+  .uf-global-footer__brand {
+    display: flex;
+    align-items: center;
+    gap: var(--uf-spacing-2xs, 0.5rem);
+    font-weight: 700;
+  }
+
+  .uf-global-footer__groups {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--uf-spacing-xl, 3rem);
+  }
+
+  .uf-global-footer__group-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0 0 var(--uf-spacing-xs, 0.75rem) 0;
+  }
+
+  .uf-global-footer__link-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--uf-spacing-2xs, 0.5rem);
+  }
+
+  .uf-global-footer__link {
+    font-size: 0.875rem;
+    color: var(--unfict-color-deep-ink, #0a0d14);
+    text-decoration: none;
+  }
+
+  .uf-global-footer__bottom {
+    border-top: 1px solid var(--unfict-color-border-gray, #dde1e7);
+    padding-top: var(--uf-spacing-xs, 0.75rem);
+    font-size: 0.75rem;
+    color: var(--unfict-color-slate, #596273);
+  }
+</style>

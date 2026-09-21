@@ -1,0 +1,55 @@
+---
+export interface Props {
+  language?: string;
+  filename?: string;
+  class?: string;
+}
+
+const { language, filename, class: className = '' } = Astro.props;
+---
+
+<div
+  class={`uf-code-block ${className}`.trim()}
+  data-uf-interface-owner="CODE-BLOCK-01"
+  data-uf-interface-status="placeholder"
+>
+  {
+    (filename || language) && (
+      <div class="uf-code-block__header">
+        {filename && <span class="uf-code-block__filename">{filename}</span>}
+        {language && <span class="uf-code-block__language">{language}</span>}
+      </div>
+    )
+  }
+  <pre class="uf-code-block__pre"><code class="uf-code-block__code"><slot /></code></pre>
+</div>
+
+<style>
+  .uf-code-block {
+    background-color: var(--unfict-color-institutional-gray, #f6f7f9);
+    border: 1px solid var(--unfict-color-border-gray, #dde1e7);
+    border-radius: var(--uf-radius-default, 4px);
+    overflow: hidden;
+    font-family: var(--unfict-font-mono, monospace);
+  }
+
+  .uf-code-block__header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--uf-spacing-3xs, 0.25rem) var(--uf-spacing-xs, 0.75rem);
+    background-color: var(--unfict-color-white, #ffffff);
+    border-bottom: 1px solid var(--unfict-color-border-gray, #dde1e7);
+    font-size: 0.75rem;
+    color: var(--unfict-color-slate, #596273);
+  }
+
+  .uf-code-block__pre {
+    margin: 0;
+    padding: var(--uf-spacing-xs, 0.75rem);
+    overflow-x: auto;
+  }
+
+  .uf-code-block__code {
+    font-size: 0.875rem;
+  }
+</style>

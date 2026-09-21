@@ -1,0 +1,73 @@
+---
+import ActionHero, { type ActionProp } from '../patterns/ActionHero.astro';
+
+export interface Props {
+  heading: string;
+  lead?: string;
+  primaryAction: ActionProp;
+  secondaryAction?: ActionProp;
+  imageAlt?: string;
+  class?: string;
+}
+
+const {
+  heading,
+  lead,
+  primaryAction,
+  secondaryAction,
+  imageAlt = 'Reality-first representation',
+  class: className = ''
+} = Astro.props;
+---
+
+<section
+  class={`uf-section-human-reality-hero ${className}`.trim()}
+  data-uf-interface-owner="SECTION-HERO-HUMAN-01"
+  data-uf-interface-status="placeholder"
+>
+  <div class="uf-section-human-reality-hero__inner">
+    <ActionHero
+      heading={heading}
+      lead={lead}
+      primaryAction={primaryAction}
+      secondaryAction={secondaryAction}
+    />
+    <div class="uf-section-human-reality-hero__media">
+      <div class="uf-section-human-reality-hero__image-placeholder" aria-label={imageAlt}>
+        <span class="uf-section-human-reality-hero__badge">Reality-first Media Placeholder</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .uf-section-human-reality-hero {
+    padding: var(--uf-spacing-lg, 2rem) var(--uf-spacing-sm, 1rem);
+  }
+
+  .uf-section-human-reality-hero__inner {
+    max-width: var(--uf-width-wide, 1200px);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--uf-spacing-lg, 2rem);
+    align-items: center;
+  }
+
+  .uf-section-human-reality-hero__image-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: var(--unfict-color-institutional-gray, #f6f7f9);
+    border: 1px solid var(--unfict-color-border-gray, #dde1e7);
+    border-radius: var(--uf-radius-default, 4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .uf-section-human-reality-hero__badge {
+    font-size: 0.75rem;
+    color: var(--unfict-color-slate, #596273);
+    font-family: var(--unfict-font-mono, monospace);
+  }
+</style>

@@ -1,0 +1,71 @@
+---
+import ArticleMetadata from '../components/ArticleMetadata.astro';
+
+export interface Props {
+  category?: string;
+  title: string;
+  lead?: string;
+  publishDate: string;
+  updateDate?: string;
+  author?: string;
+  readingTime?: string;
+  class?: string;
+}
+
+const {
+  category,
+  title,
+  lead,
+  publishDate,
+  updateDate,
+  author,
+  readingTime,
+  class: className = ''
+} = Astro.props;
+---
+
+<header
+  class={`uf-pattern-article-header ${className}`.trim()}
+  data-uf-interface-owner="PATTERN-ARTICLE-HEADER-01"
+  data-uf-interface-status="placeholder"
+>
+  {category && <span class="uf-pattern-article-header__category">{category}</span>}
+  <h1 class="uf-pattern-article-header__title">{title}</h1>
+  {lead && <p class="uf-pattern-article-header__lead">{lead}</p>}
+  <ArticleMetadata
+    publishDate={publishDate}
+    updateDate={updateDate}
+    author={author}
+    readingTime={readingTime}
+  />
+</header>
+
+<style>
+  .uf-pattern-article-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--uf-spacing-xs, 0.75rem);
+    max-width: var(--uf-width-reading, 680px);
+    margin: 0 auto;
+    padding: var(--uf-spacing-lg, 2rem) 0;
+  }
+
+  .uf-pattern-article-header__category {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--unfict-color-slate, #596273);
+  }
+
+  .uf-pattern-article-header__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .uf-pattern-article-header__lead {
+    font-size: 1.125rem;
+    color: var(--unfict-color-slate, #596273);
+    margin: 0;
+  }
+</style>

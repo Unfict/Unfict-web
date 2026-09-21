@@ -1,0 +1,29 @@
+---
+export interface Props {
+  class?: string;
+  [key: string]: unknown;
+}
+
+const { class: className = '', ...rest } = Astro.props;
+---
+
+<code
+  class={`uf-code-inline ${className}`.trim()}
+  data-uf-interface-owner="CODE-INLINE-01"
+  data-uf-interface-status="placeholder"
+  {...rest}
+>
+  <slot />
+</code>
+
+<style>
+  .uf-code-inline {
+    font-family: var(--unfict-font-mono, monospace);
+    font-size: 0.875em;
+    padding: 0.125em 0.375em;
+    background-color: var(--unfict-color-institutional-gray, #f6f7f9);
+    border: 1px solid var(--unfict-color-border-gray, #dde1e7);
+    border-radius: var(--uf-radius-sm, 2px);
+    color: var(--unfict-color-deep-ink, #0a0d14);
+  }
+</style>

@@ -1,0 +1,31 @@
+---
+import BrandSignature from '../patterns/BrandSignature.astro';
+
+export interface Props {
+  statement?: string;
+  class?: string;
+}
+
+const { statement, class: className = '' } = Astro.props;
+---
+
+<section
+  class={`uf-section-brand-signature ${className}`.trim()}
+  data-uf-interface-owner="SECTION-BRAND-SIGNATURE-01"
+  data-uf-interface-status="placeholder"
+>
+  <div class="uf-section-brand-signature__inner">
+    <BrandSignature statement={statement} />
+  </div>
+</section>
+
+<style>
+  .uf-section-brand-signature {
+    padding: var(--uf-spacing-xl, 3rem) var(--uf-spacing-sm, 1rem);
+  }
+
+  .uf-section-brand-signature__inner {
+    max-width: var(--uf-width-standard, 960px);
+    margin: 0 auto;
+  }
+</style>

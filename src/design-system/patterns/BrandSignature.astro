@@ -1,0 +1,37 @@
+---
+import UfIcon from '../icons/components/UfIcon.astro';
+
+export interface Props {
+  statement?: string;
+  class?: string;
+}
+
+const { statement = 'Reality Sync Engine', class: className = '' } = Astro.props;
+---
+
+<div
+  class={`uf-pattern-brand-signature ${className}`.trim()}
+  data-uf-interface-owner="PATTERN-BRAND-SIGNATURE-01"
+  data-uf-interface-status="placeholder"
+>
+  <UfIcon name="motifs/uf-motif-mark" size={32} decorative={true} />
+  <p class="uf-pattern-brand-signature__statement">{statement}</p>
+</div>
+
+<style>
+  .uf-pattern-brand-signature {
+    display: flex;
+    align-items: center;
+    gap: var(--uf-spacing-sm, 1rem);
+    padding: var(--uf-spacing-md, 1.5rem);
+    border-left: 2px solid var(--unfict-color-deep-ink, #0a0d14);
+    background-color: var(--unfict-color-institutional-gray, #f6f7f9);
+  }
+
+  .uf-pattern-brand-signature__statement {
+    font-family: var(--unfict-font-mono, monospace);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 0;
+  }
+</style>

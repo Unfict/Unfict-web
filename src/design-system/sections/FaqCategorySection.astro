@@ -1,0 +1,52 @@
+---
+import FaqGroup, { type FaqData } from '../patterns/FaqGroup.astro';
+
+export interface Props {
+  categoryTitle: string;
+  categoryDescription?: string;
+  items: FaqData[];
+  class?: string;
+}
+
+const { categoryTitle, categoryDescription, items, class: className = '' } = Astro.props;
+---
+
+<section
+  class={`uf-section-faq-category ${className}`.trim()}
+  data-uf-interface-owner="SECTION-FAQ-CATEGORY-01"
+  data-uf-interface-status="placeholder"
+>
+  <div class="uf-section-faq-category__inner">
+    <div class="uf-section-faq-category__header">
+      <h2 class="uf-section-faq-category__title">{categoryTitle}</h2>
+      {categoryDescription && <p class="uf-section-faq-category__desc">{categoryDescription}</p>}
+    </div>
+    <FaqGroup items={items} />
+  </div>
+</section>
+
+<style>
+  .uf-section-faq-category {
+    padding: var(--uf-spacing-lg, 2rem) var(--uf-spacing-sm, 1rem);
+  }
+
+  .uf-section-faq-category__inner {
+    max-width: var(--uf-width-reading, 680px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--uf-spacing-md, 1.5rem);
+  }
+
+  .uf-section-faq-category__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .uf-section-faq-category__desc {
+    font-size: 1rem;
+    color: var(--unfict-color-slate, #596273);
+    margin: var(--uf-spacing-3xs, 0.25rem) 0 0 0;
+  }
+</style>

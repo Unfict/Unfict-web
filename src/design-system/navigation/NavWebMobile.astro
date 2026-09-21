@@ -1,0 +1,75 @@
+---
+import type { NavItem } from './NavWebPrimary.astro';
+
+export interface Props {
+  items?: NavItem[];
+  activeHref?: string;
+  isOpen?: boolean;
+  class?: string;
+}
+
+const defaultItems: NavItem[] = [
+  { label: 'GS1 Digital Link', href: '/gs1-digital-link' },
+  { label: 'Developers', href: '/developers' },
+  { label: 'Insights', href: '/insights' },
+  { label: 'About', href: '/about' },
+  { label: 'Request developer preview', href: '/early-access', isCta: true }
+];
+
+const { items = defaultItems, activeHref, isOpen = false, class: className = '' } = Astro.props;
+---
+
+<nav
+  class={`uf-nav-mobile ${isOpen ? 'uf-nav-mobile--open' : ''} ${className}`.trim()}
+  aria-label="Mobile Navigation"
+  hidden={!isOpen}
+  data-uf-interface-owner="NAV-WEB-MOBILE-01"
+  data-uf-interface-status="placeholder"
+>
+  <ul class="uf-nav-mobile__list">
+    {
+      items.map((item) => (
+        <li class="uf-nav-mobile__item">
+          <a
+            href={item.href}
+            class={`uf-nav-mobile__link ${item.isCta ? 'uf-nav-mobile__link--cta' : ''} ${
+              activeHref === item.href ? 'uf-nav-mobile__link--active' : ''
+            }`.trim()}
+            aria-current={activeHref === item.href ? 'page' : undefined}
+          >
+            {item.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  .uf-nav-mobile {
+    padding: var(--uf-spacing-sm, 1rem);
+    background-color: var(--unfict-color-white, #ffffff);
+    border-bottom: 1px solid var(--unfict-color-border-gray, #dde1e7);
+  }
+
+  .uf-nav-mobile__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--uf-spacing-sm, 1rem);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .uf-nav-mobile__link {
+    font-family: var(--unfict-font-sans, sans-serif);
+    font-size: 1rem;
+    color: var(--unfict-color-deep-ink, #0a0d14);
+    text-decoration: none;
+    display: block;
+  }
+
+  .uf-nav-mobile__link--cta {
+    font-weight: 600;
+  }
+</style>

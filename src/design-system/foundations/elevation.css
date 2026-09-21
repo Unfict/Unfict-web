@@ -1,0 +1,5 @@
+/* FOUNDATION-ELEVATION-01: Elevation & Shadow Discipline */
+:root {
+  --uf-shadow-none: none;
+  --uf-elevation-default: var(--uf-shadow-none);
+}

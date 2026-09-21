@@ -1,0 +1,35 @@
+---
+import TextLink from '../primitives/TextLink.astro';
+
+export interface Props {
+  href: string;
+  title: string;
+  description?: string;
+  class?: string;
+}
+
+const { href, title, description, class: className = '' } = Astro.props;
+---
+
+<div
+  class={`uf-related-link ${className}`.trim()}
+  data-uf-interface-owner="RELATED-LINK-01"
+  data-uf-interface-status="placeholder"
+>
+  <TextLink href={href} class="uf-related-link__title">{title}</TextLink>
+  {description && <p class="uf-related-link__description">{description}</p>}
+</div>
+
+<style>
+  .uf-related-link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--uf-spacing-3xs, 0.25rem);
+  }
+
+  .uf-related-link__description {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--unfict-color-slate, #596273);
+  }
+</style>

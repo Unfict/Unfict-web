@@ -1,0 +1,57 @@
+---
+export interface Props {
+  variant?: 'primary' | 'secondary';
+  type?: 'button' | 'submit' | 'reset';
+  href?: string;
+  disabled?: boolean;
+  class?: string;
+  [key: string]: unknown;
+}
+
+const {
+  variant = 'primary',
+  type = 'button',
+  href,
+  disabled = false,
+  class: className = '',
+  ...rest
+} = Astro.props;
+
+const ownerId = variant === 'secondary' ? 'BUTTON-SECONDARY-01' : 'BUTTON-PRIMARY-01';
+const Element = href ? 'a' : 'button';
+---
+
+<Element
+  type={href ? undefined : type}
+  href={href}
+  disabled={href ? undefined : disabled}
+  class={`uf-button uf-button--${variant} ${className}`.trim()}
+  data-uf-interface-owner={ownerId}
+  data-uf-interface-status="placeholder"
+  {...rest}
+>
+  <slot />
+</Element>
+
+<style>
+  .uf-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--uf-spacing-2xs, 0.5rem) var(--uf-spacing-sm, 1rem);
+    font-family: var(--unfict-font-sans, sans-serif);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: var(--uf-radius-default, 4px);
+    cursor: pointer;
+    border: 1px solid var(--unfict-color-border-gray, #dde1e7);
+    background-color: var(--unfict-color-institutional-gray, #f6f7f9);
+    color: var(--unfict-color-deep-ink, #0a0d14);
+  }
+
+  .uf-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+</style>

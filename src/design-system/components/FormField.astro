@@ -1,0 +1,81 @@
+---
+export interface Props {
+  id: string;
+  label: string;
+  helpText?: string;
+  errorText?: string;
+  required?: boolean;
+  class?: string;
+}
+
+const { id, label, helpText, errorText, required = false, class: className = '' } = Astro.props;
+const helpId = helpText ? `${id}-help` : undefined;
+const errorId = errorText ? `${id}-error` : undefined;
+---
+
+<div
+  class={`uf-form-field ${errorText ? 'uf-form-field--error' : ''} ${className}`.trim()}
+  data-uf-interface-owner="FORM-FIELD-01"
+  data-uf-interface-status="placeholder"
+>
+  <label for={id} class="uf-form-field__label">
+    {label}
+    {
+      required && (
+        <span class="uf-form-field__required" aria-hidden="true">
+          *
+        </span>
+      )
+    }
+  </label>
+
+  <div class="uf-form-field__control">
+    <slot />
+  </div>
+
+  {
+    helpText && (
+      <p id={helpId} class="uf-form-field__help">
+        {helpText}
+      </p>
+    )
+  }
+  {
+    errorText && (
+      <p id={errorId} class="uf-form-field__error" role="alert">
+        {errorText}
+      </p>
+    )
+  }
+</div>
+
+<style>
+  .uf-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--uf-spacing-3xs, 0.25rem);
+    margin-bottom: var(--uf-spacing-sm, 1rem);
+  }
+
+  .uf-form-field__label {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .uf-form-field__required {
+    color: var(--unfict-color-blue, #1965ec);
+  }
+
+  .uf-form-field__help {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--unfict-color-slate, #596273);
+  }
+
+  .uf-form-field__error {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--unfict-color-blue, #1965ec);
+    font-weight: 500;
+  }
+</style>

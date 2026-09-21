@@ -1,0 +1,7 @@
+/* FOUNDATION-RADIUS-01: Restrained Radius System */
+:root {
+  --uf-radius-none: 0px;
+  --uf-radius-sm: 2px;
+  --uf-radius-md: 4px;
+  --uf-radius-default: var(--uf-radius-md);
+}

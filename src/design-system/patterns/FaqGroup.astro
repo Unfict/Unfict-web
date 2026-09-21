@@ -1,0 +1,52 @@
+---
+import FaqItem from '../components/FaqItem.astro';
+
+export interface FaqData {
+  id: string;
+  question: string;
+  directAnswer: string;
+}
+
+export interface Props {
+  groupTitle?: string;
+  items: FaqData[];
+  class?: string;
+}
+
+const { groupTitle, items, class: className = '' } = Astro.props;
+---
+
+<div
+  class={`uf-pattern-faq-group ${className}`.trim()}
+  data-uf-interface-owner="PATTERN-FAQ-GROUP-01"
+  data-uf-interface-status="placeholder"
+>
+  {groupTitle && <h3 class="uf-pattern-faq-group__title">{groupTitle}</h3>}
+  <div class="uf-pattern-faq-group__items">
+    {
+      items.map((item) => (
+        <FaqItem id={item.id} question={item.question} directAnswer={item.directAnswer} />
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .uf-pattern-faq-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--uf-spacing-sm, 1rem);
+  }
+
+  .uf-pattern-faq-group__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .uf-pattern-faq-group__items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--uf-spacing-xs, 0.75rem);
+  }
+</style>

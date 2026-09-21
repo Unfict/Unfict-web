@@ -1,0 +1,30 @@
+---
+export interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<section
+  class={`uf-section-article-body ${className}`.trim()}
+  data-uf-interface-owner="SECTION-ARTICLE-BODY-01"
+  data-uf-interface-status="placeholder"
+>
+  <div class="uf-section-article-body__inner">
+    <slot />
+  </div>
+</section>
+
+<style>
+  .uf-section-article-body {
+    padding: var(--uf-spacing-xl, 3rem) var(--uf-spacing-sm, 1rem);
+  }
+
+  .uf-section-article-body__inner {
+    max-width: var(--uf-width-reading, 680px);
+    margin: 0 auto;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+  }
+</style>

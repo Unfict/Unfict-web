@@ -1,0 +1,11 @@
+/* FOUNDATION-SPACING-01: Semantic Spacing System (Provisional Engine Defaults) */
+:root {
+  --uf-spacing-3xs: 0.25rem; /* 4px */
+  --uf-spacing-2xs: 0.5rem; /* 8px */
+  --uf-spacing-xs: 0.75rem; /* 12px */
+  --uf-spacing-sm: 1rem; /* 16px */
+  --uf-spacing-md: 1.5rem; /* 24px */
+  --uf-spacing-lg: 2rem; /* 32px */
+  --uf-spacing-xl: 3rem; /* 48px */
+  --uf-spacing-2xl: 4rem; /* 64px */
+}

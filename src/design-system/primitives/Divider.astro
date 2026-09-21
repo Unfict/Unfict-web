@@ -1,0 +1,36 @@
+---
+export interface Props {
+  orientation?: 'horizontal' | 'vertical';
+  class?: string;
+  [key: string]: unknown;
+}
+
+const { orientation = 'horizontal', class: className = '', ...rest } = Astro.props;
+---
+
+<hr
+  class={`uf-divider uf-divider--${orientation} ${className}`.trim()}
+  aria-orientation={orientation}
+  data-uf-interface-owner="DIVIDER-01"
+  data-uf-interface-status="placeholder"
+  {...rest}
+/>
+
+<style>
+  .uf-divider {
+    border: none;
+    background-color: var(--unfict-color-border-gray, #dde1e7);
+    margin: 0;
+  }
+
+  .uf-divider--horizontal {
+    width: 100%;
+    height: 1px;
+  }
+
+  .uf-divider--vertical {
+    width: 1px;
+    height: 100%;
+    display: inline-block;
+  }
+</style>
