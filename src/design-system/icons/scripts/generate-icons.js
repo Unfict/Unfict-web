@@ -20,7 +20,7 @@ const inventory = [
     blueAccentAllowed: false,
     semanticColorAllowed: false,
     accessibilityMode: 'brand',
-    placeholder: false,
+    placeholder: false
   },
   {
     code: 'A02',
@@ -36,7 +36,7 @@ const inventory = [
     blueAccentAllowed: true,
     semanticColorAllowed: false,
     accessibilityMode: 'contextual',
-    placeholder: true,
+    placeholder: true
   },
   {
     code: 'A03',
@@ -52,7 +52,7 @@ const inventory = [
     blueAccentAllowed: true,
     semanticColorAllowed: false,
     accessibilityMode: 'contextual',
-    placeholder: true,
+    placeholder: true
   },
   {
     code: 'A04',
@@ -68,7 +68,7 @@ const inventory = [
     blueAccentAllowed: true,
     semanticColorAllowed: false,
     accessibilityMode: 'contextual',
-    placeholder: true,
+    placeholder: true
   },
   {
     code: 'A05',
@@ -84,7 +84,7 @@ const inventory = [
     blueAccentAllowed: true,
     semanticColorAllowed: false,
     accessibilityMode: 'contextual',
-    placeholder: true,
+    placeholder: true
   },
   {
     code: 'A06',
@@ -100,7 +100,7 @@ const inventory = [
     blueAccentAllowed: true,
     semanticColorAllowed: false,
     accessibilityMode: 'contextual',
-    placeholder: true,
+    placeholder: true
   },
 
   // Collection B — Functional UI
@@ -111,7 +111,7 @@ const inventory = [
     id: 'uf-icon-menu',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B02',
@@ -120,7 +120,7 @@ const inventory = [
     id: 'uf-icon-close',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B03',
@@ -129,7 +129,7 @@ const inventory = [
     id: 'uf-icon-search',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B04',
@@ -138,7 +138,7 @@ const inventory = [
     id: 'uf-icon-chevron-right',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B05',
@@ -147,7 +147,7 @@ const inventory = [
     id: 'uf-icon-chevron-down',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B06',
@@ -156,7 +156,7 @@ const inventory = [
     id: 'uf-icon-arrow-right',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B07',
@@ -165,7 +165,7 @@ const inventory = [
     id: 'uf-icon-arrow-left',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B08',
@@ -174,7 +174,7 @@ const inventory = [
     id: 'uf-icon-arrow-up',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B09',
@@ -183,7 +183,7 @@ const inventory = [
     id: 'uf-icon-arrow-down',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B10',
@@ -192,7 +192,7 @@ const inventory = [
     id: 'uf-icon-plus',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B11',
@@ -201,7 +201,7 @@ const inventory = [
     id: 'uf-icon-minus',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B12',
@@ -210,7 +210,7 @@ const inventory = [
     id: 'uf-icon-edit',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B13',
@@ -219,7 +219,7 @@ const inventory = [
     id: 'uf-icon-delete',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B14',
@@ -228,7 +228,7 @@ const inventory = [
     id: 'uf-icon-copy',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B15',
@@ -237,7 +237,7 @@ const inventory = [
     id: 'uf-icon-external-link',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B16',
@@ -246,7 +246,7 @@ const inventory = [
     id: 'uf-icon-settings',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B17',
@@ -255,7 +255,7 @@ const inventory = [
     id: 'uf-icon-user',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B18',
@@ -264,7 +264,7 @@ const inventory = [
     id: 'uf-icon-notifications',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B19',
@@ -273,7 +273,7 @@ const inventory = [
     id: 'uf-icon-download',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B20',
@@ -282,7 +282,7 @@ const inventory = [
     id: 'uf-icon-upload',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B21',
@@ -291,7 +291,7 @@ const inventory = [
     id: 'uf-icon-refresh',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B22',
@@ -300,15 +300,16 @@ const inventory = [
     id: 'uf-icon-filter',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B23',
     name: 'Info',
     shortName: 'info',
     id: 'uf-icon-info',
-    family: 'functional', collection: 'B',
-    channels: 1,
+    family: 'functional',
+    collection: 'B',
+    channels: 1
   },
   {
     code: 'B24',
@@ -317,7 +318,7 @@ const inventory = [
     id: 'uf-icon-warning',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B25',
@@ -326,7 +327,7 @@ const inventory = [
     id: 'uf-icon-success',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B26',
@@ -335,7 +336,7 @@ const inventory = [
     id: 'uf-icon-error',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'B27',
@@ -344,7 +345,7 @@ const inventory = [
     id: 'uf-icon-more',
     family: 'functional',
     collection: 'B',
-    channels: 1,
+    channels: 1
   },
 
   // Collection C — Domain & Concept
@@ -355,7 +356,7 @@ const inventory = [
     id: 'uf-icon-product',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C02',
@@ -364,7 +365,7 @@ const inventory = [
     id: 'uf-icon-identifier',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C03',
@@ -373,7 +374,7 @@ const inventory = [
     id: 'uf-icon-digital-link',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C04',
@@ -382,7 +383,7 @@ const inventory = [
     id: 'uf-icon-resolver',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C05',
@@ -391,7 +392,7 @@ const inventory = [
     id: 'uf-icon-resource',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C06',
@@ -400,7 +401,7 @@ const inventory = [
     id: 'uf-icon-route',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C07',
@@ -409,7 +410,7 @@ const inventory = [
     id: 'uf-icon-persistent',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C08',
@@ -418,7 +419,7 @@ const inventory = [
     id: 'uf-icon-validation',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C09',
@@ -427,7 +428,7 @@ const inventory = [
     id: 'uf-icon-qualifier',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C10',
@@ -436,7 +437,7 @@ const inventory = [
     id: 'uf-icon-context',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C11',
@@ -445,7 +446,7 @@ const inventory = [
     id: 'uf-icon-standard',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C12',
@@ -454,7 +455,7 @@ const inventory = [
     id: 'uf-icon-interface',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C13',
@@ -463,7 +464,7 @@ const inventory = [
     id: 'uf-icon-host',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C14',
@@ -472,7 +473,7 @@ const inventory = [
     id: 'uf-icon-subject',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C15',
@@ -481,7 +482,7 @@ const inventory = [
     id: 'uf-icon-organization',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C16',
@@ -490,7 +491,7 @@ const inventory = [
     id: 'uf-icon-relationship',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C17',
@@ -499,7 +500,7 @@ const inventory = [
     id: 'uf-icon-authority',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C18',
@@ -508,7 +509,7 @@ const inventory = [
     id: 'uf-icon-delegation',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C19',
@@ -517,7 +518,7 @@ const inventory = [
     id: 'uf-icon-capability',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C20',
@@ -526,7 +527,7 @@ const inventory = [
     id: 'uf-icon-evidence',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C21',
@@ -535,7 +536,7 @@ const inventory = [
     id: 'uf-icon-standing',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C22',
@@ -544,7 +545,7 @@ const inventory = [
     id: 'uf-icon-policy',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C23',
@@ -553,7 +554,7 @@ const inventory = [
     id: 'uf-icon-outcome',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'C24',
@@ -562,7 +563,7 @@ const inventory = [
     id: 'uf-icon-receipt',
     family: 'domain',
     collection: 'C',
-    channels: 2,
+    channels: 2
   },
 
   // Collection D — Navigation & Workspace
@@ -573,7 +574,7 @@ const inventory = [
     id: 'uf-icon-home',
     family: 'navigation',
     collection: 'D',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'D02',
@@ -582,7 +583,7 @@ const inventory = [
     id: 'uf-icon-dashboard',
     family: 'navigation',
     collection: 'D',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'D03',
@@ -591,7 +592,7 @@ const inventory = [
     id: 'uf-icon-sidebar',
     family: 'navigation',
     collection: 'D',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'D04',
@@ -600,7 +601,7 @@ const inventory = [
     id: 'uf-icon-panel',
     family: 'navigation',
     collection: 'D',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'D05',
@@ -609,7 +610,7 @@ const inventory = [
     id: 'uf-icon-grid-view',
     family: 'navigation',
     collection: 'D',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'D06',
@@ -618,7 +619,7 @@ const inventory = [
     id: 'uf-icon-list-view',
     family: 'navigation',
     collection: 'D',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'D07',
@@ -627,7 +628,7 @@ const inventory = [
     id: 'uf-icon-table-view',
     family: 'navigation',
     collection: 'D',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'D08',
@@ -636,7 +637,7 @@ const inventory = [
     id: 'uf-icon-sort',
     family: 'navigation',
     collection: 'D',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'D09',
@@ -645,7 +646,7 @@ const inventory = [
     id: 'uf-icon-expand',
     family: 'navigation',
     collection: 'D',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'D10',
@@ -654,7 +655,7 @@ const inventory = [
     id: 'uf-icon-collapse',
     family: 'navigation',
     collection: 'D',
-    channels: 1,
+    channels: 1
   },
 
   // Collection E — Content, Files & Communication
@@ -665,7 +666,7 @@ const inventory = [
     id: 'uf-icon-file',
     family: 'content',
     collection: 'E',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'E02',
@@ -674,7 +675,7 @@ const inventory = [
     id: 'uf-icon-folder',
     family: 'content',
     collection: 'E',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'E03',
@@ -683,7 +684,7 @@ const inventory = [
     id: 'uf-icon-documentation',
     family: 'content',
     collection: 'E',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'E04',
@@ -692,7 +693,7 @@ const inventory = [
     id: 'uf-icon-attachment',
     family: 'content',
     collection: 'E',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'E05',
@@ -701,7 +702,7 @@ const inventory = [
     id: 'uf-icon-media',
     family: 'content',
     collection: 'E',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'E06',
@@ -710,7 +711,7 @@ const inventory = [
     id: 'uf-icon-bookmark',
     family: 'content',
     collection: 'E',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'E07',
@@ -719,7 +720,7 @@ const inventory = [
     id: 'uf-icon-share',
     family: 'content',
     collection: 'E',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'E08',
@@ -728,7 +729,7 @@ const inventory = [
     id: 'uf-icon-print',
     family: 'content',
     collection: 'E',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'E09',
@@ -737,7 +738,7 @@ const inventory = [
     id: 'uf-icon-notification',
     family: 'content',
     collection: 'E',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'E10',
@@ -746,7 +747,7 @@ const inventory = [
     id: 'uf-icon-message',
     family: 'content',
     collection: 'E',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'E11',
@@ -755,7 +756,7 @@ const inventory = [
     id: 'uf-icon-help',
     family: 'content',
     collection: 'E',
-    channels: 1,
+    channels: 1
   },
 
   // Collection F — Developer, API & Data
@@ -766,7 +767,7 @@ const inventory = [
     id: 'uf-icon-code',
     family: 'developer',
     collection: 'F',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'F02',
@@ -775,7 +776,7 @@ const inventory = [
     id: 'uf-icon-terminal',
     family: 'developer',
     collection: 'F',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'F03',
@@ -784,7 +785,7 @@ const inventory = [
     id: 'uf-icon-api',
     family: 'developer',
     collection: 'F',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'F04',
@@ -793,7 +794,7 @@ const inventory = [
     id: 'uf-icon-webhook',
     family: 'developer',
     collection: 'F',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'F05',
@@ -802,7 +803,7 @@ const inventory = [
     id: 'uf-icon-database',
     family: 'developer',
     collection: 'F',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'F06',
@@ -811,7 +812,7 @@ const inventory = [
     id: 'uf-icon-schema',
     family: 'developer',
     collection: 'F',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'F07',
@@ -820,7 +821,7 @@ const inventory = [
     id: 'uf-icon-json',
     family: 'developer',
     collection: 'F',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'F08',
@@ -829,7 +830,7 @@ const inventory = [
     id: 'uf-icon-log',
     family: 'developer',
     collection: 'F',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'F09',
@@ -838,7 +839,7 @@ const inventory = [
     id: 'uf-icon-history',
     family: 'developer',
     collection: 'F',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'F10',
@@ -847,7 +848,7 @@ const inventory = [
     id: 'uf-icon-debug',
     family: 'developer',
     collection: 'F',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'F11',
@@ -856,7 +857,7 @@ const inventory = [
     id: 'uf-icon-run',
     family: 'developer',
     collection: 'F',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'F12',
@@ -865,7 +866,7 @@ const inventory = [
     id: 'uf-icon-stop',
     family: 'developer',
     collection: 'F',
-    channels: 1,
+    channels: 1
   },
 
   // Collection G — GS1, Product Identity & Connected Product
@@ -876,7 +877,7 @@ const inventory = [
     id: 'uf-icon-trade-item',
     family: 'gs1',
     collection: 'G',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'G02',
@@ -885,7 +886,7 @@ const inventory = [
     id: 'uf-icon-gtin',
     family: 'gs1',
     collection: 'G',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'G03',
@@ -894,7 +895,7 @@ const inventory = [
     id: 'uf-icon-barcode',
     family: 'gs1',
     collection: 'G',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'G04',
@@ -903,7 +904,7 @@ const inventory = [
     id: 'uf-icon-qr-code',
     family: 'gs1',
     collection: 'G',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'G05',
@@ -912,7 +913,7 @@ const inventory = [
     id: 'uf-icon-serial',
     family: 'gs1',
     collection: 'G',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'G06',
@@ -921,7 +922,7 @@ const inventory = [
     id: 'uf-icon-batch-lot',
     family: 'gs1',
     collection: 'G',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'G07',
@@ -930,7 +931,7 @@ const inventory = [
     id: 'uf-icon-location',
     family: 'gs1',
     collection: 'G',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'G08',
@@ -939,7 +940,7 @@ const inventory = [
     id: 'uf-icon-party',
     family: 'gs1',
     collection: 'G',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'G09',
@@ -948,7 +949,7 @@ const inventory = [
     id: 'uf-icon-dpp',
     family: 'gs1',
     collection: 'G',
-    channels: 2,
+    channels: 2
   },
 
   // Collection H — Identity, Access & Governance Extensions
@@ -959,7 +960,7 @@ const inventory = [
     id: 'uf-icon-authentication',
     family: 'governance',
     collection: 'H',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'H02',
@@ -968,7 +969,7 @@ const inventory = [
     id: 'uf-icon-credential',
     family: 'governance',
     collection: 'H',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'H03',
@@ -977,7 +978,7 @@ const inventory = [
     id: 'uf-icon-role',
     family: 'governance',
     collection: 'H',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'H04',
@@ -986,7 +987,7 @@ const inventory = [
     id: 'uf-icon-permission',
     family: 'governance',
     collection: 'H',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'H05',
@@ -995,7 +996,7 @@ const inventory = [
     id: 'uf-icon-scope',
     family: 'governance',
     collection: 'H',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'H06',
@@ -1004,7 +1005,7 @@ const inventory = [
     id: 'uf-icon-claim',
     family: 'governance',
     collection: 'H',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'H07',
@@ -1013,7 +1014,7 @@ const inventory = [
     id: 'uf-icon-provenance',
     family: 'governance',
     collection: 'H',
-    channels: 2,
+    channels: 2
   },
   {
     code: 'H08',
@@ -1022,7 +1023,7 @@ const inventory = [
     id: 'uf-icon-issuer',
     family: 'governance',
     collection: 'H',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'H09',
@@ -1031,7 +1032,7 @@ const inventory = [
     id: 'uf-icon-revocation',
     family: 'governance',
     collection: 'H',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'H10',
@@ -1040,7 +1041,7 @@ const inventory = [
     id: 'uf-icon-expiry',
     family: 'governance',
     collection: 'H',
-    channels: 1,
+    channels: 1
   },
 
   // Collection I — System, State & Temporal
@@ -1051,7 +1052,7 @@ const inventory = [
     id: 'uf-icon-pending',
     family: 'state',
     collection: 'I',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'I02',
@@ -1060,7 +1061,7 @@ const inventory = [
     id: 'uf-icon-processing',
     family: 'state',
     collection: 'I',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'I03',
@@ -1069,7 +1070,7 @@ const inventory = [
     id: 'uf-icon-unavailable',
     family: 'state',
     collection: 'I',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'I04',
@@ -1078,7 +1079,7 @@ const inventory = [
     id: 'uf-icon-connected',
     family: 'state',
     collection: 'I',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'I05',
@@ -1087,7 +1088,7 @@ const inventory = [
     id: 'uf-icon-disconnected',
     family: 'state',
     collection: 'I',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'I06',
@@ -1096,7 +1097,7 @@ const inventory = [
     id: 'uf-icon-calendar',
     family: 'state',
     collection: 'I',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'I07',
@@ -1105,7 +1106,7 @@ const inventory = [
     id: 'uf-icon-time',
     family: 'state',
     collection: 'I',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'I08',
@@ -1114,7 +1115,7 @@ const inventory = [
     id: 'uf-icon-recent',
     family: 'state',
     collection: 'I',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'I09',
@@ -1123,7 +1124,7 @@ const inventory = [
     id: 'uf-icon-locked',
     family: 'state',
     collection: 'I',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'I10',
@@ -1132,7 +1133,7 @@ const inventory = [
     id: 'uf-icon-unlocked',
     family: 'state',
     collection: 'I',
-    channels: 1,
+    channels: 1
   },
 
   // Collection J — Inspection, Visibility & Interaction
@@ -1143,7 +1144,7 @@ const inventory = [
     id: 'uf-icon-view',
     family: 'interaction',
     collection: 'J',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'J02',
@@ -1152,7 +1153,7 @@ const inventory = [
     id: 'uf-icon-hide',
     family: 'interaction',
     collection: 'J',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'J03',
@@ -1161,7 +1162,7 @@ const inventory = [
     id: 'uf-icon-inspect',
     family: 'interaction',
     collection: 'J',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'J04',
@@ -1170,7 +1171,7 @@ const inventory = [
     id: 'uf-icon-focus',
     family: 'interaction',
     collection: 'J',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'J05',
@@ -1179,7 +1180,7 @@ const inventory = [
     id: 'uf-icon-pin',
     family: 'interaction',
     collection: 'J',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'J06',
@@ -1188,7 +1189,7 @@ const inventory = [
     id: 'uf-icon-unpin',
     family: 'interaction',
     collection: 'J',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'J07',
@@ -1197,7 +1198,7 @@ const inventory = [
     id: 'uf-icon-drag',
     family: 'interaction',
     collection: 'J',
-    channels: 1,
+    channels: 1
   },
   {
     code: 'J08',
@@ -1206,8 +1207,8 @@ const inventory = [
     id: 'uf-icon-resize',
     family: 'interaction',
     collection: 'J',
-    channels: 1,
-  },
+    channels: 1
+  }
 ];
 
 function generate() {
@@ -1255,10 +1256,7 @@ function generate() {
     let shouldWrite = true;
     if (fs.existsSync(fullSvgPath)) {
       const existing = fs.readFileSync(fullSvgPath, 'utf8');
-      if (
-        !existing.includes('UNFICT_PLACEHOLDER') &&
-        item.id !== 'uf-motif-mark'
-      ) {
+      if (!existing.includes('UNFICT_PLACEHOLDER') && item.id !== 'uf-motif-mark') {
         shouldWrite = false;
       }
     }
@@ -1279,13 +1277,9 @@ function generate() {
         ? ['inherit', 'mono', 'brand', 'muted', 'disabled']
         : ['inherit', 'mono', 'muted', 'semantic', 'disabled']);
     const blueAccentAllowed =
-      item.blueAccentAllowed !== undefined
-        ? item.blueAccentAllowed
-        : is2Channel;
+      item.blueAccentAllowed !== undefined ? item.blueAccentAllowed : is2Channel;
     const semanticColorAllowed =
-      item.semanticColorAllowed !== undefined
-        ? item.semanticColorAllowed
-        : !is2Channel;
+      item.semanticColorAllowed !== undefined ? item.semanticColorAllowed : !is2Channel;
 
     manifestIcons.push({
       id: item.id,
@@ -1305,7 +1299,7 @@ function generate() {
       sizes: [16, 20, 24, 32, 40, 48],
       accessibilityMode: item.accessibilityMode || 'contextual',
       brandLocked: item.brandLocked || false,
-      semanticStatus: 'governed',
+      semanticStatus: 'governed'
     });
   }
 
@@ -1315,38 +1309,25 @@ function generate() {
     library: 'unfict-icons',
     iconographyVersion: '1.0',
     generatedAt: new Date().toISOString().split('T')[0],
-    icons: manifestIcons,
+    icons: manifestIcons
   };
 
   const manifestPath = path.join(ROOT_DIR, 'metadata/MANIFEST.json');
-  fs.writeFileSync(
-    manifestPath,
-    JSON.stringify(manifest, null, 2) + '\n',
-    'utf8'
-  );
+  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + '\n', 'utf8');
 
   // PLACEHOLDERS.json
   const placeholders = {
     schemaVersion: '1.0',
-    placeholders: placeholderIds,
+    placeholders: placeholderIds
   };
 
   const placeholdersPath = path.join(ROOT_DIR, 'metadata/PLACEHOLDERS.json');
-  fs.writeFileSync(
-    placeholdersPath,
-    JSON.stringify(placeholders, null, 2) + '\n',
-    'utf8'
-  );
+  fs.writeFileSync(placeholdersPath, JSON.stringify(placeholders, null, 2) + '\n', 'utf8');
 
-  // Automatically format emitted JSON with Prettier
-  try {
-    execSync(
-      `pnpm exec prettier --write "${manifestPath}" "${placeholdersPath}"`,
-      { stdio: 'inherit' }
-    );
-  } catch {
-    // Ignore if prettier not found in execution context
-  }
+  // Automatically format emitted JSON with Prettier (fail loudly if formatter fails)
+  execSync(`pnpm exec prettier --write "${manifestPath}" "${placeholdersPath}"`, {
+    stdio: 'inherit'
+  });
 
   console.log(
     `Generated ${inventory.length} canonical SVGs (${placeholderIds.length} placeholders, ${inventory.length - placeholderIds.length} approved).`
