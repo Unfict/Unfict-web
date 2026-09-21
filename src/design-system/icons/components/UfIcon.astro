@@ -8,10 +8,19 @@ const svgFiles = import.meta.glob<string>('../svg/**/*.svg', {
   eager: true,
 });
 
-export type UfIconTone = 'inherit' | 'mono' | 'brand' | 'muted' | 'semantic' | 'disabled' | 'locked';
+export type UfIconName = (typeof manifest.icons)[number]['shortName'];
+
+export type UfIconTone =
+  | 'inherit'
+  | 'mono'
+  | 'brand'
+  | 'muted'
+  | 'semantic'
+  | 'disabled'
+  | 'locked';
 
 export interface Props {
-  name: string;
+  name: UfIconName;
   size?: number;
   tone?: UfIconTone;
   decorative?: boolean;
@@ -28,19 +37,16 @@ const {
   class: className = '',
 } = Astro.props;
 
-// Look up icon in manifest by shortName or canonical ID fallback
-const icon = manifest.icons.find(
-  (i) => i.shortName === name || i.id === name || i.id === `uf-icon-${name}` || i.id === `uf-motif-${name}`
-);
+// Look up icon in manifest strictly by shortName
+const icon = manifest.icons.find((i) => i.shortName === name);
 
 if (!icon) {
   throw new Error(`[UfIcon] Icon "${name}" not found in MANIFEST.json`);
 }
 
 // Validate tone against allowed tones
-const resolvedTone = tone && icon.allowedTones.includes(tone as any)
-  ? tone
-  : icon.defaultTone;
+const resolvedTone =
+  tone && icon.allowedTones.includes(tone as any) ? tone : icon.defaultTone;
 
 // Resolve SVG file path
 const svgPath = `../${icon.source}`;
@@ -62,7 +68,7 @@ const accessibilityAttrs = decorative
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  viewBox={icon.viewBox || "0 0 24 24"}
+  viewBox={icon.viewBox || '0 0 24 24'}
   width={size}
   height={size}
   class={`uf-icon uf-icon--${icon.shortName} ${className}`.trim()}
