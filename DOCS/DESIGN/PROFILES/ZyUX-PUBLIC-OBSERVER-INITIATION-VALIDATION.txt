@@ -1,0 +1,11 @@
+program current developer v0.3: PASS
+developer end marker v0.3: PASS
+app v0.2: PASS
+public observer v0.1: PASS
+program maturity ladder: PASS
+program complexity budget: PASS
+app signature opportunities: PASS
+app public observer composition: PASS
+observer 24 invariants: PASS
+observer 60 vectors: PASS
+designer brief: PASS
