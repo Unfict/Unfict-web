@@ -1,0 +1,46 @@
+/* Unfict Icon Runtime System Styles */
+
+.uf-icon {
+  display: inline-block;
+  flex: 0 0 auto;
+
+  width: var(--uf-icon-size, 1em);
+  height: var(--uf-icon-size, 1em);
+
+  color: inherit;
+  vertical-align: middle;
+
+  --uf-icon-accent: var(--unfict-color-blue, #1965ec);
+}
+
+.uf-icon[data-tone='inherit'] {
+  color: inherit;
+}
+
+.uf-icon[data-tone='mono'] {
+  color: inherit;
+  --uf-icon-accent: currentColor;
+}
+
+.uf-icon[data-tone='brand'] {
+  color: inherit;
+  --uf-icon-accent: var(--unfict-color-blue, #1965ec);
+}
+
+.uf-icon[data-tone='muted'] {
+  color: var(--unfict-color-slate, #596273);
+}
+
+.uf-icon[data-tone='semantic'] {
+  color: inherit;
+}
+
+.uf-icon[data-tone='disabled'] {
+  color: var(--unfict-color-slate, #596273);
+  opacity: 0.6;
+  --uf-icon-accent: currentColor;
+}
+
+.uf-icon[data-tone='locked'] {
+  color: inherit;
+}

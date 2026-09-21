@@ -1,0 +1,64 @@
+---
+import manifest from '../metadata/MANIFEST.json';
+
+// Import all SVG files eagerly as raw text strings
+const svgFiles = import.meta.glob<string>('../svg/**/*.svg', {
+  query: '?raw',
+  import: 'default',
+  eager: true
+});
+
+export type UfIconName = (typeof manifest.icons)[number]['shortName'];
+
+export type UfIconTone =
+  'inherit' | 'mono' | 'brand' | 'muted' | 'semantic' | 'disabled' | 'locked';
+
+export interface Props {
+  name: UfIconName;
+  size?: number;
+  tone?: UfIconTone;
+  decorative?: boolean;
+  label?: string;
+  class?: string;
+}
+
+const { name, size = 24, tone, decorative = true, label, class: className = '' } = Astro.props;
+
+// Look up icon in manifest strictly by shortName
+const icon = manifest.icons.find((i) => i.shortName === name);
+
+if (!icon) {
+  throw new Error(`[UfIcon] Icon "${name}" not found in MANIFEST.json`);
+}
+
+// Validate tone against allowed tones
+const resolvedTone =
+  tone && icon.allowedTones.some((allowedTone) => allowedTone === tone) ? tone : icon.defaultTone;
+
+// Resolve SVG file path
+const svgPath = `../${icon.source}`;
+const rawSvg = svgFiles[svgPath];
+
+if (!rawSvg) {
+  throw new Error(`[UfIcon] SVG file not found for path: ${svgPath}`);
+}
+
+// Extract inner content of <svg ...>...</svg>
+const innerContent = rawSvg.replace(/<svg[^>]*>/, '').replace(/<\/svg>\s*$/, '');
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox={icon.viewBox || '0 0 24 24'}
+  width={size}
+  height={size}
+  class={`uf-icon uf-icon--${icon.shortName} ${className}`.trim()}
+  data-tone={resolvedTone}
+  data-size={size}
+  style={`--uf-icon-size: ${size}px;`}
+  aria-hidden={decorative ? true : undefined}
+  focusable={decorative ? 'false' : undefined}
+  role={decorative ? undefined : 'img'}
+  aria-label={decorative ? undefined : label || icon.name}
+  set:html={innerContent}
+/>
