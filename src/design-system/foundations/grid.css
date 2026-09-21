@@ -1,0 +1,23 @@
+/* FOUNDATION-GRID-01: Responsive Web Grid (Provisional Engine Defaults) */
+:root {
+  --uf-grid-columns: 12;
+  --uf-grid-gutter-mobile: 1rem;
+  --uf-grid-gutter-desktop: 1.5rem;
+  --uf-grid-max-width: var(--uf-width-wide, 1200px);
+}
+
+.uf-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--uf-grid-columns), minmax(0, 1fr));
+  gap: var(--uf-grid-gutter-mobile);
+  width: 100%;
+  max-width: var(--uf-grid-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .uf-grid {
+    gap: var(--uf-grid-gutter-desktop);
+  }
+}

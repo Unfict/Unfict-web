@@ -1,0 +1,52 @@
+---
+import UfIcon, { type UfIconName } from '../icons/components/UfIcon.astro';
+
+export interface Props {
+  icon: UfIconName;
+  label: string;
+  type?: 'button' | 'submit' | 'reset';
+  disabled?: boolean;
+  class?: string;
+  [key: string]: unknown;
+}
+
+const {
+  icon,
+  label,
+  type = 'button',
+  disabled = false,
+  class: className = '',
+  ...rest
+} = Astro.props;
+---
+
+<button
+  type={type}
+  disabled={disabled}
+  aria-label={label}
+  class={`uf-icon-button ${className}`.trim()}
+  data-uf-interface-owner="ICON-BUTTON-01"
+  data-uf-interface-status="placeholder"
+  {...rest}
+>
+  <UfIcon name={icon} size={20} decorative={true} />
+</button>
+
+<style>
+  .uf-icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--uf-spacing-2xs, 0.5rem);
+    background: transparent;
+    border: 1px solid var(--unfict-color-border-gray, #dde1e7);
+    border-radius: var(--uf-radius-default, 4px);
+    cursor: pointer;
+    color: var(--unfict-color-deep-ink, #0a0d14);
+  }
+
+  .uf-icon-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+</style>

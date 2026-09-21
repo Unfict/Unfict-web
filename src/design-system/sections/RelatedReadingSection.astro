@@ -1,0 +1,34 @@
+---
+import RelatedReading from '../patterns/RelatedReading.astro';
+import type { ArticleLink } from '../patterns/RelatedReading.astro';
+
+export interface Props {
+  title?: string;
+  articles: ArticleLink[];
+  class?: string;
+}
+
+const { title, articles, class: className = '' } = Astro.props;
+---
+
+<section
+  class={`uf-section-related-reading ${className}`.trim()}
+  data-uf-interface-owner="SECTION-RELATED-READING-01"
+  data-uf-interface-status="placeholder"
+>
+  <div class="uf-section-related-reading__inner">
+    <RelatedReading title={title} articles={articles} />
+  </div>
+</section>
+
+<style>
+  .uf-section-related-reading {
+    padding: var(--uf-spacing-xl, 3rem) var(--uf-spacing-sm, 1rem);
+    background-color: var(--unfict-color-institutional-gray, #f6f7f9);
+  }
+
+  .uf-section-related-reading__inner {
+    max-width: var(--uf-width-reading, 680px);
+    margin: 0 auto;
+  }
+</style>

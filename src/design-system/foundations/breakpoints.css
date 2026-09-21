@@ -1,0 +1,7 @@
+/* FOUNDATION-BREAKPOINTS-01: Responsive Breakpoint Proof System */
+/* Design Proof Widths: 320px, 360px, 390px, 768px, 1280px, 1440px */
+:root {
+  --uf-breakpoint-mobile: 360px;
+  --uf-breakpoint-tablet: 768px;
+  --uf-breakpoint-desktop: 1280px;
+}

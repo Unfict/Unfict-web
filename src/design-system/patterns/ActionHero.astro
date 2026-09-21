@@ -1,0 +1,68 @@
+---
+import Button from '../primitives/Button.astro';
+
+export interface ActionProp {
+  label: string;
+  href: string;
+}
+
+export interface Props {
+  heading: string;
+  lead?: string;
+  primaryAction: ActionProp;
+  secondaryAction?: ActionProp;
+  class?: string;
+}
+
+const { heading, lead, primaryAction, secondaryAction, class: className = '' } = Astro.props;
+---
+
+<section
+  class={`uf-pattern-action-hero ${className}`.trim()}
+  aria-labelledby="action-hero-heading"
+  data-uf-interface-owner="PATTERN-HERO-ACTION-01"
+  data-uf-interface-status="placeholder"
+>
+  <h1 id="action-hero-heading" class="uf-pattern-action-hero__heading">{heading}</h1>
+  {lead && <p class="uf-pattern-action-hero__lead">{lead}</p>}
+  <div class="uf-pattern-action-hero__actions">
+    <Button variant="primary" href={primaryAction.href}>
+      {primaryAction.label}
+    </Button>
+    {
+      secondaryAction && (
+        <Button variant="secondary" href={secondaryAction.href}>
+          {secondaryAction.label}
+        </Button>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  .uf-pattern-action-hero {
+    display: flex;
+    flex-direction: column;
+    gap: var(--uf-spacing-sm, 1rem);
+    padding: var(--uf-spacing-xl, 3rem) var(--uf-spacing-sm, 1rem);
+    max-width: var(--uf-width-standard, 960px);
+    margin: 0 auto;
+  }
+
+  .uf-pattern-action-hero__heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .uf-pattern-action-hero__lead {
+    font-size: 1.125rem;
+    color: var(--unfict-color-slate, #596273);
+    margin: 0;
+  }
+
+  .uf-pattern-action-hero__actions {
+    display: flex;
+    gap: var(--uf-spacing-xs, 0.75rem);
+  }
+</style>

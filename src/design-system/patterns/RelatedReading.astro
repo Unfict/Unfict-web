@@ -1,0 +1,55 @@
+---
+import RelatedLink from '../components/RelatedLink.astro';
+
+export interface ArticleLink {
+  href: string;
+  title: string;
+  description?: string;
+}
+
+export interface Props {
+  title?: string;
+  articles: ArticleLink[];
+  class?: string;
+}
+
+const { title = 'Related Reading', articles, class: className = '' } = Astro.props;
+---
+
+<aside
+  class={`uf-pattern-related-reading ${className}`.trim()}
+  aria-label={title}
+  data-uf-interface-owner="PATTERN-RELATED-READING-01"
+  data-uf-interface-status="placeholder"
+>
+  <h3 class="uf-pattern-related-reading__title">{title}</h3>
+  <div class="uf-pattern-related-reading__links">
+    {
+      articles.map((article) => (
+        <RelatedLink href={article.href} title={article.title} description={article.description} />
+      ))
+    }
+  </div>
+</aside>
+
+<style>
+  .uf-pattern-related-reading {
+    display: flex;
+    flex-direction: column;
+    gap: var(--uf-spacing-sm, 1rem);
+    padding: var(--uf-spacing-md, 1.5rem) 0;
+    border-top: 1px solid var(--unfict-color-border-gray, #dde1e7);
+  }
+
+  .uf-pattern-related-reading__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .uf-pattern-related-reading__links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--uf-spacing-sm, 1rem);
+  }
+</style>

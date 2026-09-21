@@ -1,0 +1,58 @@
+---
+import TextLink from '../primitives/TextLink.astro';
+
+export interface PathItem {
+  title: string;
+  description: string;
+  href: string;
+}
+
+export interface Props {
+  paths: PathItem[];
+  class?: string;
+}
+
+const { paths, class: className = '' } = Astro.props;
+---
+
+<div
+  class={`uf-pattern-depth-paths ${className}`.trim()}
+  data-uf-interface-owner="PATTERN-DEPTH-PATHS-01"
+  data-uf-interface-status="placeholder"
+>
+  {
+    paths.map((path) => (
+      <div class="uf-pattern-depth-paths__item">
+        <h4 class="uf-pattern-depth-paths__title">
+          <TextLink href={path.href}>{path.title}</TextLink>
+        </h4>
+        <p class="uf-pattern-depth-paths__desc">{path.description}</p>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .uf-pattern-depth-paths {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--uf-spacing-md, 1.5rem);
+  }
+
+  .uf-pattern-depth-paths__item {
+    border: 1px solid var(--unfict-color-border-gray, #dde1e7);
+    padding: var(--uf-spacing-sm, 1rem);
+    border-radius: var(--uf-radius-default, 4px);
+  }
+
+  .uf-pattern-depth-paths__title {
+    margin: 0 0 var(--uf-spacing-3xs, 0.25rem) 0;
+    font-size: 1rem;
+  }
+
+  .uf-pattern-depth-paths__desc {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--unfict-color-slate, #596273);
+  }
+</style>

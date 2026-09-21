@@ -1,0 +1,48 @@
+---
+import UfIcon from '../icons/components/UfIcon.astro';
+
+export interface Props {
+  controls: string;
+  expanded?: boolean;
+  class?: string;
+  [key: string]: unknown;
+}
+
+const { controls, expanded = false, class: className = '', ...rest } = Astro.props;
+---
+
+<button
+  type="button"
+  aria-expanded={expanded}
+  aria-controls={controls}
+  class={`uf-disclosure-trigger ${className}`.trim()}
+  data-uf-interface-owner="DISCLOSURE-TRIGGER-01"
+  data-uf-interface-status="placeholder"
+  {...rest}
+>
+  <span class="uf-disclosure-trigger__label"><slot /></span>
+  <UfIcon
+    name={expanded ? 'chevron-down' : 'chevron-right'}
+    size={16}
+    decorative={true}
+    class="uf-disclosure-trigger__icon"
+  />
+</button>
+
+<style>
+  .uf-disclosure-trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: var(--uf-spacing-2xs, 0.5rem) var(--uf-spacing-xs, 0.75rem);
+    background: transparent;
+    border: none;
+    font-family: var(--unfict-font-sans, sans-serif);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--unfict-color-deep-ink, #0a0d14);
+    text-align: left;
+    cursor: pointer;
+  }
+</style>

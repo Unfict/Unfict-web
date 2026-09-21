@@ -1,0 +1,8 @@
+/* FOUNDATION-IMAGE-TREATMENT-01: Reality-First Image Treatment */
+.uf-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: var(--uf-radius-default, 4px);
+}

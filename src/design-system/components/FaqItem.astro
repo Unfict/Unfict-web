@@ -1,0 +1,50 @@
+---
+import DisclosureTrigger from '../primitives/DisclosureTrigger.astro';
+
+export interface Props {
+  id: string;
+  question: string;
+  directAnswer: string;
+  isOpen?: boolean;
+  class?: string;
+}
+
+const { id, question, directAnswer, isOpen = false, class: className = '' } = Astro.props;
+const contentId = `${id}-content`;
+---
+
+<div
+  class={`uf-faq-item ${className}`.trim()}
+  data-uf-interface-owner="FAQ-ITEM-01"
+  data-uf-interface-status="placeholder"
+>
+  <DisclosureTrigger controls={contentId} expanded={isOpen}>
+    {question}
+  </DisclosureTrigger>
+  <div
+    id={contentId}
+    class="uf-faq-item__content"
+    hidden={!isOpen}
+    role="region"
+    aria-label={question}
+  >
+    <p class="uf-faq-item__answer">{directAnswer}</p>
+    <slot />
+  </div>
+</div>
+
+<style>
+  .uf-faq-item {
+    border-bottom: 1px solid var(--unfict-color-border-gray, #dde1e7);
+    padding-bottom: var(--uf-spacing-2xs, 0.5rem);
+  }
+
+  .uf-faq-item__content {
+    padding: var(--uf-spacing-2xs, 0.5rem) var(--uf-spacing-xs, 0.75rem);
+  }
+
+  .uf-faq-item__answer {
+    margin: 0;
+    font-size: 0.9375rem;
+  }
+</style>

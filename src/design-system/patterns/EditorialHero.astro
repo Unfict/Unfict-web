@@ -1,0 +1,53 @@
+---
+export interface Props {
+  heading: string;
+  subheading?: string;
+  lead?: string;
+  class?: string;
+}
+
+const { heading, subheading, lead, class: className = '' } = Astro.props;
+---
+
+<section
+  class={`uf-pattern-editorial-hero ${className}`.trim()}
+  aria-labelledby="editorial-hero-heading"
+  data-uf-interface-owner="PATTERN-HERO-EDITORIAL-01"
+  data-uf-interface-status="placeholder"
+>
+  {subheading && <p class="uf-pattern-editorial-hero__subheading">{subheading}</p>}
+  <h1 id="editorial-hero-heading" class="uf-pattern-editorial-hero__heading">{heading}</h1>
+  {lead && <p class="uf-pattern-editorial-hero__lead">{lead}</p>}
+</section>
+
+<style>
+  .uf-pattern-editorial-hero {
+    display: flex;
+    flex-direction: column;
+    gap: var(--uf-spacing-xs, 0.75rem);
+    padding: var(--uf-spacing-xl, 3rem) var(--uf-spacing-sm, 1rem);
+    max-width: var(--uf-width-reading, 680px);
+    margin: 0 auto;
+  }
+
+  .uf-pattern-editorial-hero__subheading {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--unfict-color-slate, #596273);
+    margin: 0;
+  }
+
+  .uf-pattern-editorial-hero__heading {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .uf-pattern-editorial-hero__lead {
+    font-size: 1.125rem;
+    color: var(--unfict-color-slate, #596273);
+    margin: 0;
+  }
+</style>

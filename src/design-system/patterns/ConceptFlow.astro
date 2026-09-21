@@ -1,0 +1,97 @@
+---
+import UfIcon from '../icons/components/UfIcon.astro';
+
+export interface ConceptStep {
+  title: string;
+  description: string;
+}
+
+export interface Props {
+  title?: string;
+  steps: ConceptStep[];
+  class?: string;
+}
+
+const { title, steps, class: className = '' } = Astro.props;
+---
+
+<div
+  class={`uf-pattern-concept-flow ${className}`.trim()}
+  data-uf-interface-owner="PATTERN-CONCEPT-FLOW-01"
+  data-uf-interface-status="placeholder"
+>
+  {title && <h3 class="uf-pattern-concept-flow__title">{title}</h3>}
+  <ol class="uf-pattern-concept-flow__steps">
+    {
+      steps.map((step, index) => (
+        <li class="uf-pattern-concept-flow__step">
+          <div class="uf-pattern-concept-flow__step-number">{index + 1}</div>
+          <div class="uf-pattern-concept-flow__step-content">
+            <h4 class="uf-pattern-concept-flow__step-title">{step.title}</h4>
+            <p class="uf-pattern-concept-flow__step-desc">{step.description}</p>
+          </div>
+          {index < steps.length - 1 && (
+            <div class="uf-pattern-concept-flow__arrow" aria-hidden="true">
+              <UfIcon name="arrow-right" size={16} decorative={true} />
+            </div>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</div>
+
+<style>
+  .uf-pattern-concept-flow {
+    display: flex;
+    flex-direction: column;
+    gap: var(--uf-spacing-sm, 1rem);
+  }
+
+  .uf-pattern-concept-flow__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  .uf-pattern-concept-flow__steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--uf-spacing-md, 1.5rem);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .uf-pattern-concept-flow__step {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--uf-spacing-xs, 0.75rem);
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .uf-pattern-concept-flow__step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--unfict-color-border-gray, #dde1e7);
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .uf-pattern-concept-flow__step-title {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    margin: 0 0 var(--uf-spacing-3xs, 0.25rem) 0;
+  }
+
+  .uf-pattern-concept-flow__step-desc {
+    font-size: 0.8125rem;
+    color: var(--unfict-color-slate, #596273);
+    margin: 0;
+  }
+</style>

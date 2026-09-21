@@ -1,0 +1,56 @@
+---
+import NavWebPrimary, { type NavItem } from '../navigation/NavWebPrimary.astro';
+import UfIcon from '../icons/components/UfIcon.astro';
+
+export interface Props {
+  navItems?: NavItem[];
+  activeHref?: string;
+  brandName?: string;
+  class?: string;
+}
+
+const { navItems, activeHref, brandName = 'Unfict', class: className = '' } = Astro.props;
+---
+
+<header
+  class={`uf-global-header ${className}`.trim()}
+  data-uf-interface-owner="GLOBAL-HEADER-01"
+  data-uf-interface-status="placeholder"
+>
+  <div class="uf-global-header__inner">
+    <a href="/" class="uf-global-header__brand" aria-label={brandName}>
+      <UfIcon name="motifs/uf-motif-mark" size={24} decorative={true} />
+      <span class="uf-global-header__brand-text">{brandName}</span>
+    </a>
+
+    <div class="uf-global-header__nav">
+      <NavWebPrimary items={navItems} activeHref={activeHref} />
+    </div>
+  </div>
+</header>
+
+<style>
+  .uf-global-header {
+    width: 100%;
+    border-bottom: 1px solid var(--unfict-color-border-gray, #dde1e7);
+    background-color: var(--unfict-color-white, #ffffff);
+  }
+
+  .uf-global-header__inner {
+    max-width: var(--uf-width-wide, 1200px);
+    margin: 0 auto;
+    padding: var(--uf-spacing-2xs, 0.5rem) var(--uf-spacing-sm, 1rem);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .uf-global-header__brand {
+    display: flex;
+    align-items: center;
+    gap: var(--uf-spacing-2xs, 0.5rem);
+    text-decoration: none;
+    color: var(--unfict-color-deep-ink, #0a0d14);
+    font-weight: 700;
+  }
+</style>

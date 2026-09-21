@@ -1,0 +1,42 @@
+---
+import GlobalHeader from '../components/GlobalHeader.astro';
+import GlobalFooter from '../components/GlobalFooter.astro';
+import type { NavItem } from '../navigation/NavWebPrimary.astro';
+
+export interface Props {
+  navItems?: NavItem[];
+  activeHref?: string;
+  brandName?: string;
+  copyright?: string;
+  class?: string;
+}
+
+const { navItems, activeHref, brandName, copyright, class: className = '' } = Astro.props;
+---
+
+<div
+  class={`uf-shell-public-web ${className}`.trim()}
+  data-uf-interface-owner="SHELL-WEB-PUBLIC-01"
+  data-uf-interface-status="placeholder"
+>
+  <GlobalHeader navItems={navItems} activeHref={activeHref} brandName={brandName} />
+
+  <main id="main-content" class="uf-shell-public-web__main">
+    <slot />
+  </main>
+
+  <GlobalFooter copyright={copyright} />
+</div>
+
+<style>
+  .uf-shell-public-web {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .uf-shell-public-web__main {
+    flex: 1;
+    width: 100%;
+  }
+</style>

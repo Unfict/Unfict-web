@@ -1,0 +1,59 @@
+---
+export interface Props {
+  publishDate: string;
+  updateDate?: string;
+  author?: string;
+  readingTime?: string;
+  class?: string;
+}
+
+const { publishDate, updateDate, author, readingTime, class: className = '' } = Astro.props;
+---
+
+<div
+  class={`uf-article-metadata ${className}`.trim()}
+  data-uf-interface-owner="ARTICLE-METADATA-01"
+  data-uf-interface-status="placeholder"
+>
+  {
+    author && (
+      <span class="uf-article-metadata__item">
+        <span class="uf-article-metadata__label">Author:</span> {author}
+      </span>
+    )
+  }
+  <span class="uf-article-metadata__item">
+    <span class="uf-article-metadata__label">Published:</span>
+    <time datetime={publishDate}>{publishDate}</time>
+  </span>
+  {
+    updateDate && (
+      <span class="uf-article-metadata__item">
+        <span class="uf-article-metadata__label">Updated:</span>
+        <time datetime={updateDate}>{updateDate}</time>
+      </span>
+    )
+  }
+  {
+    readingTime && (
+      <span class="uf-article-metadata__item">
+        <span class="uf-article-metadata__label">Reading time:</span> {readingTime}
+      </span>
+    )
+  }
+</div>
+
+<style>
+  .uf-article-metadata {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--uf-spacing-xs, 0.75rem);
+    font-size: 0.8125rem;
+    color: var(--unfict-color-slate, #596273);
+    font-family: var(--unfict-font-sans, sans-serif);
+  }
+
+  .uf-article-metadata__label {
+    font-weight: 500;
+  }
+</style>

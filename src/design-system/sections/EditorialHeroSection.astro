@@ -1,0 +1,26 @@
+---
+import EditorialHero from '../patterns/EditorialHero.astro';
+
+export interface Props {
+  heading: string;
+  subheading?: string;
+  lead?: string;
+  class?: string;
+}
+
+const { heading, subheading, lead, class: className = '' } = Astro.props;
+---
+
+<section
+  class={`uf-section-editorial-hero ${className}`.trim()}
+  data-uf-interface-owner="SECTION-HERO-EDITORIAL-01"
+  data-uf-interface-status="placeholder"
+>
+  <EditorialHero heading={heading} subheading={subheading} lead={lead} />
+</section>
+
+<style>
+  .uf-section-editorial-hero {
+    padding: var(--uf-spacing-lg, 2rem) var(--uf-spacing-sm, 1rem);
+  }
+</style>

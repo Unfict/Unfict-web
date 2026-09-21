@@ -1,0 +1,57 @@
+---
+import Button from '../primitives/Button.astro';
+
+export interface ActionProp {
+  label: string;
+  href: string;
+}
+
+export interface Props {
+  heading: string;
+  subheading?: string;
+  primaryAction: ActionProp;
+  class?: string;
+}
+
+const { heading, subheading, primaryAction, class: className = '' } = Astro.props;
+---
+
+<div
+  class={`uf-pattern-final-cta ${className}`.trim()}
+  data-uf-interface-owner="PATTERN-FINAL-CTA-01"
+  data-uf-interface-status="placeholder"
+>
+  <h2 class="uf-pattern-final-cta__heading">{heading}</h2>
+  {subheading && <p class="uf-pattern-final-cta__subheading">{subheading}</p>}
+  <div class="uf-pattern-final-cta__action">
+    <Button variant="primary" href={primaryAction.href}>
+      {primaryAction.label}
+    </Button>
+  </div>
+</div>
+
+<style>
+  .uf-pattern-final-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--uf-spacing-sm, 1rem);
+    padding: var(--uf-spacing-xl, 3rem) var(--uf-spacing-sm, 1rem);
+    border: 1px solid var(--unfict-color-border-gray, #dde1e7);
+    border-radius: var(--uf-radius-default, 4px);
+    background-color: var(--unfict-color-institutional-gray, #f6f7f9);
+  }
+
+  .uf-pattern-final-cta__heading {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .uf-pattern-final-cta__subheading {
+    font-size: 1rem;
+    color: var(--unfict-color-slate, #596273);
+    margin: 0;
+  }
+</style>

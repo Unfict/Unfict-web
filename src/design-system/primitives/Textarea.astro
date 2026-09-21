@@ -1,0 +1,60 @@
+---
+export interface Props {
+  id: string;
+  name?: string;
+  rows?: number;
+  value?: string;
+  placeholder?: string;
+  required?: boolean;
+  disabled?: boolean;
+  ariaDescribedBy?: string;
+  class?: string;
+  [key: string]: unknown;
+}
+
+const {
+  id,
+  name,
+  rows = 4,
+  value,
+  placeholder,
+  required = false,
+  disabled = false,
+  ariaDescribedBy,
+  class: className = '',
+  ...rest
+} = Astro.props;
+---
+
+<textarea
+  id={id}
+  name={name || id}
+  rows={rows}
+  placeholder={placeholder}
+  required={required}
+  disabled={disabled}
+  aria-describedby={ariaDescribedBy}
+  class={`uf-textarea ${className}`.trim()}
+  data-uf-interface-owner="TEXTAREA-01"
+  data-uf-interface-status="placeholder"
+  {...rest}>{value}</textarea
+>
+
+<style>
+  .uf-textarea {
+    width: 100%;
+    padding: var(--uf-spacing-2xs, 0.5rem) var(--uf-spacing-xs, 0.75rem);
+    font-family: var(--unfict-font-sans, sans-serif);
+    font-size: 0.875rem;
+    border: 1px solid var(--unfict-color-border-gray, #dde1e7);
+    border-radius: var(--uf-radius-default, 4px);
+    background-color: var(--unfict-color-white, #ffffff);
+    color: var(--unfict-color-deep-ink, #0a0d14);
+    resize: vertical;
+  }
+
+  .uf-textarea:disabled {
+    background-color: var(--unfict-color-institutional-gray, #f6f7f9);
+    cursor: not-allowed;
+  }
+</style>

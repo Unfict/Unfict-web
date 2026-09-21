@@ -1,0 +1,51 @@
+---
+import UfIcon, { type UfIconName } from '../icons/components/UfIcon.astro';
+
+export interface Props {
+  type?: 'note' | 'warning' | 'info';
+  title?: string;
+  icon?: UfIconName;
+  class?: string;
+}
+
+const { type = 'note', title, icon = 'content/uf-icon-help', class: className = '' } = Astro.props;
+---
+
+<aside
+  class={`uf-callout uf-callout--${type} ${className}`.trim()}
+  aria-label={title || type}
+  data-uf-interface-owner="CALLOUT-01"
+  data-uf-interface-status="placeholder"
+>
+  <div class="uf-callout__icon">
+    <UfIcon name={icon} size={20} decorative={true} />
+  </div>
+  <div class="uf-callout__content">
+    {title && <h4 class="uf-callout__title">{title}</h4>}
+    <div class="uf-callout__body">
+      <slot />
+    </div>
+  </div>
+</aside>
+
+<style>
+  .uf-callout {
+    display: flex;
+    gap: var(--uf-spacing-xs, 0.75rem);
+    padding: var(--uf-spacing-xs, 0.75rem);
+    background-color: var(--unfict-color-institutional-gray, #f6f7f9);
+    border: 1px solid var(--unfict-color-border-gray, #dde1e7);
+    border-radius: var(--uf-radius-default, 4px);
+    margin: var(--uf-spacing-sm, 1rem) 0;
+  }
+
+  .uf-callout__title {
+    margin: 0 0 var(--uf-spacing-3xs, 0.25rem) 0;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .uf-callout__body {
+    font-size: 0.875rem;
+  }
+</style>

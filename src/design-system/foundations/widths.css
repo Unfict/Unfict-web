@@ -1,0 +1,8 @@
+/* FOUNDATION-CONTENT-WIDTHS-01: Semantic Content Width System (Provisional Engine Defaults) */
+:root {
+  --uf-width-narrow: 480px;
+  --uf-width-reading: 680px;
+  --uf-width-standard: 960px;
+  --uf-width-wide: 1200px;
+  --uf-width-full: 100%;
+}

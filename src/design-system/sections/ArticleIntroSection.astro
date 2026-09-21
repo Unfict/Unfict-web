@@ -1,0 +1,48 @@
+---
+import ArticleHeader from '../patterns/ArticleHeader.astro';
+
+export interface Props {
+  category?: string;
+  title: string;
+  lead?: string;
+  publishDate: string;
+  updateDate?: string;
+  author?: string;
+  readingTime?: string;
+  class?: string;
+}
+
+const {
+  category,
+  title,
+  lead,
+  publishDate,
+  updateDate,
+  author,
+  readingTime,
+  class: className = ''
+} = Astro.props;
+---
+
+<section
+  class={`uf-section-article-intro ${className}`.trim()}
+  data-uf-interface-owner="SECTION-ARTICLE-INTRO-01"
+  data-uf-interface-status="placeholder"
+>
+  <ArticleHeader
+    category={category}
+    title={title}
+    lead={lead}
+    publishDate={publishDate}
+    updateDate={updateDate}
+    author={author}
+    readingTime={readingTime}
+  />
+</section>
+
+<style>
+  .uf-section-article-intro {
+    padding: var(--uf-spacing-md, 1.5rem) var(--uf-spacing-sm, 1rem);
+    border-bottom: 1px solid var(--unfict-color-border-gray, #dde1e7);
+  }
+</style>

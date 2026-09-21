@@ -1,0 +1,31 @@
+---
+export interface Props {
+  href: string;
+  external?: boolean;
+  class?: string;
+  [key: string]: unknown;
+}
+
+const { href, external = false, class: className = '', ...rest } = Astro.props;
+---
+
+<a
+  href={href}
+  target={external ? '_blank' : undefined}
+  rel={external ? 'noopener noreferrer' : undefined}
+  class={`uf-text-link ${className}`.trim()}
+  data-uf-interface-owner="TEXT-LINK-01"
+  data-uf-interface-status="placeholder"
+  {...rest}
+>
+  <slot />
+</a>
+
+<style>
+  .uf-text-link {
+    color: var(--unfict-color-deep-ink, #0a0d14);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    font-family: var(--unfict-font-sans, sans-serif);
+  }
+</style>

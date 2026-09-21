@@ -1,0 +1,8 @@
+/* FOUNDATION-BORDER-01: Structural Border System */
+:root {
+  --uf-border-width-thin: 1px;
+  --uf-border-color-default: var(--unfict-color-border-gray, #dde1e7);
+  --uf-border-style-solid: solid;
+  --uf-border-default: var(--uf-border-width-thin) var(--uf-border-style-solid)
+    var(--uf-border-color-default);
+}

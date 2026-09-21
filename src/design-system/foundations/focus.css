@@ -1,0 +1,12 @@
+/* FOUNDATION-FOCUS-01: Keyboard Focus System */
+:root {
+  --uf-focus-outline-width: 2px;
+  --uf-focus-outline-style: solid;
+  --uf-focus-outline-color: var(--unfict-color-blue, #1965ec);
+  --uf-focus-outline-offset: 2px;
+}
+
+:focus-visible {
+  outline: var(--uf-focus-outline-width) var(--uf-focus-outline-style) var(--uf-focus-outline-color) !important;
+  outline-offset: var(--uf-focus-outline-offset) !important;
+}

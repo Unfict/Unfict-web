@@ -1,0 +1,33 @@
+---
+import NavWebMobile from '../navigation/NavWebMobile.astro';
+import type { NavItem } from '../navigation/NavWebPrimary.astro';
+import IconButton from '../primitives/IconButton.astro';
+
+export interface Props {
+  navItems?: NavItem[];
+  activeHref?: string;
+  isOpen?: boolean;
+  class?: string;
+}
+
+const { navItems, activeHref, isOpen = false, class: className = '' } = Astro.props;
+---
+
+<div
+  class={`uf-global-mobile-nav ${className}`.trim()}
+  data-uf-interface-owner="GLOBAL-MOBILE-NAV-01"
+  data-uf-interface-status="placeholder"
+>
+  <IconButton
+    icon={isOpen ? 'close' : 'menu'}
+    label={isOpen ? 'Close menu' : 'Open menu'}
+    aria-expanded={isOpen}
+  />
+  <NavWebMobile items={navItems} activeHref={activeHref} isOpen={isOpen} />
+</div>
+
+<style>
+  .uf-global-mobile-nav {
+    display: block;
+  }
+</style>

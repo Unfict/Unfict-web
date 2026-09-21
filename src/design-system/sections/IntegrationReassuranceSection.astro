@@ -1,0 +1,34 @@
+---
+import IntegrationReassurance, {
+  type IntegrationPoint
+} from '../patterns/IntegrationReassurance.astro';
+
+export interface Props {
+  title?: string;
+  points: IntegrationPoint[];
+  class?: string;
+}
+
+const { title, points, class: className = '' } = Astro.props;
+---
+
+<section
+  class={`uf-section-integration-reassurance ${className}`.trim()}
+  data-uf-interface-owner="SECTION-INTEGRATION-REASSURANCE-01"
+  data-uf-interface-status="placeholder"
+>
+  <div class="uf-section-integration-reassurance__inner">
+    <IntegrationReassurance title={title} points={points} />
+  </div>
+</section>
+
+<style>
+  .uf-section-integration-reassurance {
+    padding: var(--uf-spacing-xl, 3rem) var(--uf-spacing-sm, 1rem);
+  }
+
+  .uf-section-integration-reassurance__inner {
+    max-width: var(--uf-width-standard, 960px);
+    margin: 0 auto;
+  }
+</style>

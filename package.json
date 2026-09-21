@@ -15,7 +15,9 @@
     "test": "vitest run",
     "icons:validate": "node src/design-system/icons/scripts/validate-icons.js",
     "icons:check-release": "node src/design-system/icons/scripts/check-release-placeholders.js",
-    "ci": "pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run icons:validate && pnpm run test && pnpm run build"
+    "interface:validate": "node src/design-system/scripts/validate-interface.js",
+    "interface:check-release": "node src/design-system/scripts/check-release-placeholders.js",
+    "ci": "pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run icons:validate && pnpm run interface:validate && pnpm run test && pnpm run build"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",

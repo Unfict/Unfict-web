@@ -1,0 +1,94 @@
+---
+import FormField from '../components/FormField.astro';
+import Input from '../primitives/Input.astro';
+import Textarea from '../primitives/Textarea.astro';
+import Button from '../primitives/Button.astro';
+
+export interface Props {
+  heading?: string;
+  description?: string;
+  actionUrl?: string;
+  class?: string;
+}
+
+const {
+  heading = 'Request Developer Early Access',
+  description = 'Provide your organization details to join the preview stream.',
+  actionUrl,
+  class: className = ''
+} = Astro.props;
+---
+
+<section
+  class={`uf-section-early-access-form ${className}`.trim()}
+  data-uf-interface-owner="SECTION-EARLY-ACCESS-FORM-01"
+  data-uf-interface-status="placeholder"
+>
+  <div class="uf-section-early-access-form__inner">
+    <div class="uf-section-early-access-form__header">
+      <h2 class="uf-section-early-access-form__heading">{heading}</h2>
+      <p class="uf-section-early-access-form__desc">{description}</p>
+    </div>
+
+    <form action={actionUrl} method="POST" class="uf-section-early-access-form__form">
+      <FormField id="early-access-email" label="Work Email" required={true}>
+        <Input
+          id="early-access-email"
+          type="email"
+          required={true}
+          placeholder="name@company.com"
+        />
+      </FormField>
+
+      <FormField id="early-access-org" label="Organization / Entity" required={true}>
+        <Input id="early-access-org" type="text" required={true} placeholder="Organization Name" />
+      </FormField>
+
+      <FormField
+        id="early-access-usecase"
+        label="Primary Use Case Context"
+        helpText="Briefly describe your integration requirements."
+      >
+        <Textarea
+          id="early-access-usecase"
+          rows={3}
+          placeholder="GS1 Digital Link, DPP, Provenance, etc."
+        />
+      </FormField>
+
+      <Button variant="primary" type="submit">Submit Early Access Request</Button>
+    </form>
+  </div>
+</section>
+
+<style>
+  .uf-section-early-access-form {
+    padding: var(--uf-spacing-xl, 3rem) var(--uf-spacing-sm, 1rem);
+  }
+
+  .uf-section-early-access-form__inner {
+    max-width: var(--uf-width-narrow, 480px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--uf-spacing-md, 1.5rem);
+  }
+
+  .uf-section-early-access-form__heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 var(--uf-spacing-3xs, 0.25rem) 0;
+  }
+
+  .uf-section-early-access-form__desc {
+    font-size: 0.9375rem;
+    color: var(--unfict-color-slate, #596273);
+    margin: 0;
+  }
+
+  .uf-section-early-access-form__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--uf-spacing-sm, 1rem);
+  }
+</style>
