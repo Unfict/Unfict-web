@@ -7,18 +7,69 @@ const MANIFEST_PATH = path.join(ROOT_DIR, 'metadata/MANIFEST.json');
 const PLACEHOLDERS_PATH = path.join(ROOT_DIR, 'metadata/PLACEHOLDERS.json');
 const STYLES_PATH = path.join(ROOT_DIR, 'styles/icons.css');
 
-describe('Governed Unfict Icon Runtime Infrastructure', () => {
-  const manifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf8'));
-  const placeholdersData = JSON.parse(fs.readFileSync(PLACEHOLDERS_PATH, 'utf8'));
-  const placeholders = placeholdersData.placeholders || [];
+interface IconManifestEntry {
+  id: string;
+  name: string;
+  shortName: string;
+  source: string;
+  viewBox: string;
+  colorChannels: number;
+  defaultTone: string;
+  allowedTones: string[];
+  blueAccentAllowed: boolean;
+  semanticColorAllowed: boolean;
+  monochromeSafe: boolean;
+  smallOptimized: boolean;
+  sizes: number[];
+  accessibilityMode: string;
+  brandLocked: boolean;
+  semanticStatus: string;
+}
 
+interface IconManifest {
+  icons: IconManifestEntry[];
+}
+
+interface PlaceholderManifest {
+  placeholders?: string[];
+}
+
+const manifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf8')) as IconManifest;
+
+const placeholdersData = JSON.parse(
+  fs.readFileSync(PLACEHOLDERS_PATH, 'utf8')
+) as PlaceholderManifest;
+
+const placeholders = placeholdersData.placeholders ?? [];
+
+function getIconById(id: string): IconManifestEntry {
+  const icon = manifest.icons.find((entry) => entry.id === id);
+
+  if (!icon) {
+    throw new Error(`Icon "${id}" must exist in MANIFEST.json`);
+  }
+
+  return icon;
+}
+
+function getIconByShortName(shortName: string): IconManifestEntry {
+  const icon = manifest.icons.find((entry) => entry.shortName === shortName);
+
+  if (!icon) {
+    throw new Error(`Icon shortName "${shortName}" must exist in MANIFEST.json`);
+  }
+
+  return icon;
+}
+
+describe('Governed Unfict Icon Runtime Infrastructure', () => {
   it('1. should contain exactly 127 governed manifest entries', () => {
     expect(manifest.icons).toBeDefined();
     expect(manifest.icons.length).toBe(127);
   });
 
   it('2. should enforce unique canonical IDs', () => {
-    const ids = manifest.icons.map((i: any) => i.id);
+    const ids = manifest.icons.map((icon) => icon.id);
     const uniqueIds = new Set(ids);
     expect(uniqueIds.size).toBe(127);
   });
@@ -51,8 +102,7 @@ describe('Governed Unfict Icon Runtime Infrastructure', () => {
 
   it('6. should verify every tracked placeholder actually contains UNFICT_PLACEHOLDER comment', () => {
     for (const pId of placeholders) {
-      const icon = manifest.icons.find((i: any) => i.id === pId);
-      expect(icon, `Placeholder ID ${pId} must exist in MANIFEST.json`).toBeDefined();
+      const icon = getIconById(pId);
       const fullPath = path.join(ROOT_DIR, icon.source);
       const content = fs.readFileSync(fullPath, 'utf8');
       expect(content).toContain('UNFICT_PLACEHOLDER');
@@ -86,8 +136,7 @@ describe('Governed Unfict Icon Runtime Infrastructure', () => {
   });
 
   it('10. should support one-channel rendering using currentColor', () => {
-    const searchIcon = manifest.icons.find((i: any) => i.shortName === 'search');
-    expect(searchIcon).toBeDefined();
+    const searchIcon = getIconByShortName('search');
     expect(searchIcon.colorChannels).toBe(1);
     const fullPath = path.join(ROOT_DIR, searchIcon.source);
     const content = fs.readFileSync(fullPath, 'utf8');
@@ -95,8 +144,7 @@ describe('Governed Unfict Icon Runtime Infrastructure', () => {
   });
 
   it('11. should expose --uf-icon-accent in authorized two-channel assets', () => {
-    const resolverIcon = manifest.icons.find((i: any) => i.shortName === 'resolver');
-    expect(resolverIcon).toBeDefined();
+    const resolverIcon = getIconByShortName('resolver');
     expect(resolverIcon.colorChannels).toBe(2);
     expect(resolverIcon.blueAccentAllowed).toBe(true);
     const fullPath = path.join(ROOT_DIR, resolverIcon.source);
@@ -112,28 +160,28 @@ describe('Governed Unfict Icon Runtime Infrastructure', () => {
   });
 
   it('13. should resolve valid short semantic names in MANIFEST.json', () => {
-    const search = manifest.icons.find((i: any) => i.shortName === 'search');
-    const resolver = manifest.icons.find((i: any) => i.shortName === 'resolver');
-    const mark = manifest.icons.find((i: any) => i.shortName === 'mark');
+    const search = getIconByShortName('search');
+    const resolver = getIconByShortName('resolver');
+    const mark = getIconByShortName('mark');
     expect(search).toBeDefined();
     expect(resolver).toBeDefined();
     expect(mark).toBeDefined();
   });
 
   it('14. should handle tone constraints according to runtime contract', () => {
-    const search = manifest.icons.find((i: any) => i.shortName === 'search');
+    const search = getIconByShortName('search');
     expect(search.allowedTones).not.toContain('brand');
-    const resolver = manifest.icons.find((i: any) => i.shortName === 'resolver');
+    const resolver = getIconByShortName('resolver');
     expect(resolver.allowedTones).toContain('brand');
   });
 
   it('15. should support representative decorative accessibility attributes', () => {
-    const search = manifest.icons.find((i: any) => i.shortName === 'search');
+    const search = getIconByShortName('search');
     expect(search.accessibilityMode).toBe('contextual');
   });
 
   it('16. should support representative meaningful accessibility attributes', () => {
-    const mark = manifest.icons.find((i: any) => i.shortName === 'mark');
+    const mark = getIconByShortName('mark');
     expect(mark.accessibilityMode).toBe('brand');
   });
 });

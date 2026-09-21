@@ -32,7 +32,8 @@ if (!icon) {
 }
 
 // Validate tone against allowed tones
-const resolvedTone = tone && icon.allowedTones.includes(tone as any) ? tone : icon.defaultTone;
+const resolvedTone =
+  tone && icon.allowedTones.some((allowedTone) => allowedTone === tone) ? tone : icon.defaultTone;
 
 // Resolve SVG file path
 const svgPath = `../${icon.source}`;
