@@ -13,7 +13,9 @@
     "lint": "eslint .",
     "typecheck": "astro check && tsc --noEmit",
     "test": "vitest run",
-    "ci": "pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run test && pnpm run build"
+    "icons:validate": "node src/design-system/icons/scripts/validate-icons.js",
+    "icons:check-release": "node src/design-system/icons/scripts/check-release-placeholders.js",
+    "ci": "pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run icons:validate && pnpm run test && pnpm run build"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.1",
