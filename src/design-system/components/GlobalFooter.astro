@@ -1,5 +1,6 @@
 ---
 import UfIcon from '../icons/components/UfIcon.astro';
+import UfWordmark from '../icons/components/UfWordmark.astro';
 
 export interface FooterGroup {
   title: string;
@@ -9,6 +10,7 @@ export interface FooterGroup {
 export interface Props {
   groups?: FooterGroup[];
   copyright?: string;
+  description?: string;
   class?: string;
 }
 
@@ -38,7 +40,8 @@ const defaultGroups: FooterGroup[] = [
 
 const {
   groups = defaultGroups,
-  copyright = '© Unfict Inc. All rights reserved.',
+  copyright = '© Unfict. All rights reserved.',
+  description,
   class: className = ''
 } = Astro.props;
 ---
@@ -46,31 +49,41 @@ const {
 <footer
   class={`uf-global-footer ${className}`.trim()}
   data-uf-interface-owner="GLOBAL-FOOTER-01"
-  data-uf-interface-status="placeholder"
+  data-uf-interface-status="implemented"
 >
   <div class="uf-global-footer__inner">
-    <div class="uf-global-footer__brand">
-      <UfIcon name="motifs/uf-motif-mark" size={20} decorative={true} />
-      <span>Unfict</span>
+    <div class="uf-global-footer__top">
+      <div class="uf-global-footer__brand">
+        <div class="uf-global-footer__lockup">
+          <UfIcon name="motifs/uf-motif-mark" size={24} decorative={true} />
+          <span class="uf-global-footer__divider" aria-hidden="true"></span>
+          <UfWordmark height={20} />
+          <span class="sr-only">Unfict</span>
+          <span class="uf-global-footer__tag">REALITY SYNC</span>
+        </div>
+        {description && <p class="uf-global-footer__description">{description}</p>}
+      </div>
     </div>
 
-    <div class="uf-global-footer__groups">
-      {
-        groups.map((group) => (
-          <div class="uf-global-footer__group">
-            <h3 class="uf-global-footer__group-title">{group.title}</h3>
-            <ul class="uf-global-footer__link-list">
-              {group.links.map((link) => (
-                <li>
-                  <a href={link.href} class="uf-global-footer__link">
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))
-      }
+    <div class="uf-global-footer__middle">
+      <div class="uf-global-footer__groups">
+        {
+          groups.map((group) => (
+            <div class="uf-global-footer__group">
+              <h3 class="uf-global-footer__group-title">{group.title}</h3>
+              <ul class="uf-global-footer__link-list">
+                {group.links.map((link) => (
+                  <li>
+                    <a href={link.href} class="uf-global-footer__link">
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
     </div>
 
     <div class="uf-global-footer__bottom">
@@ -84,7 +97,8 @@ const {
     width: 100%;
     border-top: 1px solid var(--unfict-color-border-gray, #dde1e7);
     background-color: var(--unfict-color-institutional-gray, #f6f7f9);
-    padding: var(--uf-spacing-lg, 2rem) var(--uf-spacing-sm, 1rem);
+    color: var(--unfict-color-deep-ink, #0a0d14);
+    padding: var(--uf-spacing-xl, 3rem) var(--uf-spacing-sm, 1rem) var(--uf-spacing-lg, 2rem);
   }
 
   .uf-global-footer__inner {
@@ -92,26 +106,77 @@ const {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    gap: var(--uf-spacing-lg, 2rem);
+  }
+
+  .uf-global-footer__top {
+    display: flex;
+    flex-direction: column;
     gap: var(--uf-spacing-md, 1.5rem);
+    padding-bottom: var(--uf-spacing-md, 1.5rem);
+    border-bottom: 1px solid var(--unfict-color-border-gray, #dde1e7);
+  }
+
+  @media (min-width: 768px) {
+    .uf-global-footer__top {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
   }
 
   .uf-global-footer__brand {
     display: flex;
+    flex-direction: column;
+    gap: var(--uf-spacing-2xs, 0.5rem);
+    max-width: 32rem;
+  }
+
+  .uf-global-footer__lockup {
+    display: flex;
     align-items: center;
     gap: var(--uf-spacing-2xs, 0.5rem);
-    font-weight: 700;
+    color: var(--unfict-color-deep-ink, #0a0d14);
+  }
+
+  .uf-global-footer__divider {
+    display: inline-block;
+    width: 1px;
+    height: 1rem;
+    background-color: var(--unfict-color-border-gray, #dde1e7);
+  }
+
+  .uf-global-footer__tag {
+    font-family: var(--unfict-font-sans, sans-serif);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--unfict-color-slate, #596273);
+    padding-left: var(--uf-spacing-2xs, 0.5rem);
+    border-left: 1px solid var(--unfict-color-border-gray, #dde1e7);
+  }
+
+  .uf-global-footer__description {
+    font-family: var(--unfict-font-sans, sans-serif);
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    color: var(--unfict-color-slate, #596273);
+    margin: 0;
   }
 
   .uf-global-footer__groups {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--uf-spacing-xl, 3rem);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: var(--uf-spacing-lg, 2rem);
   }
 
   .uf-global-footer__group-title {
+    font-family: var(--unfict-font-sans, sans-serif);
     font-size: 0.875rem;
     font-weight: 600;
     margin: 0 0 var(--uf-spacing-xs, 0.75rem) 0;
+    color: var(--unfict-color-deep-ink, #0a0d14);
   }
 
   .uf-global-footer__link-list {
@@ -124,15 +189,38 @@ const {
   }
 
   .uf-global-footer__link {
+    font-family: var(--unfict-font-sans, sans-serif);
     font-size: 0.875rem;
-    color: var(--unfict-color-deep-ink, #0a0d14);
+    color: var(--unfict-color-slate, #596273);
     text-decoration: none;
+    transition: color 0.15s ease-in-out;
+  }
+
+  .uf-global-footer__link:hover {
+    color: var(--unfict-color-deep-ink, #0a0d14);
   }
 
   .uf-global-footer__bottom {
     border-top: 1px solid var(--unfict-color-border-gray, #dde1e7);
-    padding-top: var(--uf-spacing-xs, 0.75rem);
+    padding-top: var(--uf-spacing-sm, 1rem);
+    font-family: var(--unfict-font-sans, sans-serif);
     font-size: 0.75rem;
     color: var(--unfict-color-slate, #596273);
+  }
+
+  .uf-global-footer__copyright {
+    margin: 0;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
   }
 </style>

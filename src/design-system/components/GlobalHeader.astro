@@ -1,6 +1,7 @@
 ---
 import NavWebPrimary, { type NavItem } from '../navigation/NavWebPrimary.astro';
 import UfIcon from '../icons/components/UfIcon.astro';
+import UfWordmark from '../icons/components/UfWordmark.astro';
 
 export interface Props {
   navItems?: NavItem[];
@@ -15,12 +16,19 @@ const { navItems, activeHref, brandName = 'Unfict', class: className = '' } = As
 <header
   class={`uf-global-header ${className}`.trim()}
   data-uf-interface-owner="GLOBAL-HEADER-01"
-  data-uf-interface-status="placeholder"
+  data-uf-interface-status="implemented"
 >
   <div class="uf-global-header__inner">
-    <a href="/" class="uf-global-header__brand" aria-label={brandName}>
-      <UfIcon name="motifs/uf-motif-mark" size={24} decorative={true} />
-      <span class="uf-global-header__brand-text">{brandName}</span>
+    <a href="/" class="uf-global-header__brand" aria-label={`${brandName} Home`}>
+      <span class="uf-global-header__brand-mark">
+        <UfIcon name="motifs/uf-motif-mark" size={24} decorative={true} />
+      </span>
+      <span class="uf-global-header__divider" aria-hidden="true"></span>
+      <span class="uf-global-header__wordmark">
+        <UfWordmark height={20} />
+      </span>
+      <span class="sr-only">{brandName}</span>
+      <span class="uf-global-header__tag">REALITY SYNC</span>
     </a>
 
     <div class="uf-global-header__nav">
@@ -34,6 +42,9 @@ const { navItems, activeHref, brandName = 'Unfict', class: className = '' } = As
     width: 100%;
     border-bottom: 1px solid var(--unfict-color-border-gray, #dde1e7);
     background-color: var(--unfict-color-white, #ffffff);
+    position: sticky;
+    top: 0;
+    z-index: 50;
   }
 
   .uf-global-header__inner {
@@ -43,14 +54,64 @@ const { navItems, activeHref, brandName = 'Unfict', class: className = '' } = As
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-height: 4rem;
   }
 
   .uf-global-header__brand {
     display: flex;
     align-items: center;
-    gap: var(--uf-spacing-2xs, 0.5rem);
     text-decoration: none;
     color: var(--unfict-color-deep-ink, #0a0d14);
-    font-weight: 700;
+  }
+
+  .uf-global-header__brand-mark {
+    display: flex;
+    align-items: center;
+    color: var(--unfict-color-blue, #1965ec);
+    margin-right: var(--uf-spacing-2xs, 0.5rem);
+  }
+
+  .uf-global-header__divider {
+    display: inline-block;
+    width: 1px;
+    height: 1rem;
+    background-color: var(--unfict-color-border-gray, #dde1e7);
+    margin-right: var(--uf-spacing-2xs, 0.5rem);
+  }
+
+  .uf-global-header__wordmark {
+    display: flex;
+    align-items: center;
+    color: var(--unfict-color-deep-ink, #0a0d14);
+  }
+
+  .uf-global-header__tag {
+    font-family: var(--unfict-font-sans, sans-serif);
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--unfict-color-slate, #596273);
+    padding-left: var(--uf-spacing-2xs, 0.5rem);
+    margin-left: var(--uf-spacing-2xs, 0.5rem);
+    border-left: 1px solid var(--unfict-color-border-gray, #dde1e7);
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  @media (max-width: 768px) {
+    .uf-global-header__tag {
+      display: none;
+    }
   }
 </style>
