@@ -2774,7 +2774,7 @@ placeholderAllowed: false
 engineBaseline: CREATIVE
 
 notes: >-
-  Legacy Zyppi-era material is seed/reference evidence only; active Unfict composition must be designed and accepted as a whole.
+  Stitch export accepted as active design evidence for governed extraction; page route remains non-replaced pending full content/responsive ratification.
 ```
 
 ## COMPOSITION-GS1-PILLAR-01 — GS1 Digital Link Master Composition
@@ -2807,7 +2807,7 @@ placeholderAllowed: false
 engineBaseline: CREATIVE
 
 notes: >-
-  Legacy Zyppi-era material is seed/reference evidence only; active Unfict composition must be designed and accepted as a whole.
+  Stitch export accepted as active design evidence for governed extraction; page route remains non-replaced pending full content/responsive ratification.
 ```
 
 ## COMPOSITION-ABOUT-01 — About Master Composition
@@ -2840,7 +2840,7 @@ placeholderAllowed: false
 engineBaseline: CREATIVE
 
 notes: >-
-  Legacy Zyppi-era material is seed/reference evidence only; active Unfict composition must be designed and accepted as a whole.
+  Stitch export accepted as active design evidence for governed extraction; page route remains non-replaced pending full content/responsive ratification.
 ```
 
 ## COMPOSITION-FAQ-01 — FAQ Master Composition
@@ -2873,7 +2873,7 @@ placeholderAllowed: false
 engineBaseline: CREATIVE
 
 notes: >-
-  Legacy Zyppi-era material is seed/reference evidence only; active Unfict composition must be designed and accepted as a whole.
+  Stitch export accepted as active design evidence for governed extraction; page route remains non-replaced pending full content/responsive ratification.
 ```
 
 ## COMPOSITION-ARTICLE-01 — Insight Article Master Composition
@@ -2903,7 +2903,7 @@ placeholderAllowed: false
 engineBaseline: CREATIVE
 
 notes: >-
-  Legacy Zyppi-era material is seed/reference evidence only; active Unfict composition must be designed and accepted as a whole.
+  Stitch export accepted as active design evidence for governed extraction; page route remains non-replaced pending full content/responsive ratification.
 ```
 
 # PART X — CROSS-REGISTRY CONTRACTS

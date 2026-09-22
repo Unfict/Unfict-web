@@ -5,8 +5,10 @@
 - Evidence version: Homepage Stitch working evidence — 22 September 2026
 - Mandate ID: `JULES-UNFICT-HOME-EVIDENCE-EXTRACTION-01`
 - Date: 22 September 2026
-- Starting HEAD: `8cb2de1` (supersedes preparation SHA `c5f2b973fa517fd992b8407c5bb86dd032283dbe`)
-- Final Pushed HEAD: `PR #4 commit update` (pushed to branch `design/homepage-evidence-extraction-01`)
+- Starting HEAD: `8cb2de16164fb46a2b4ad5bc324b9a3ee2565929` (supersedes preparation SHA `c5f2b973fa517fd992b8407c5bb86dd032283dbe`)
+- PR: `#4`
+- Actual branch: `design/homepage-evidence-extraction-01-692429508757172008`
+- Final Pushed HEAD: `EXTERNAL — reported in the Jules completion response after the final push; intentionally not self-embedded because modifying this committed receipt changes the commit SHA.`
 - Reviewer: Chair + Jules.google.com
 - Status: FIRST CONSERVATIVE EXTRACTION COMPLETE & CORRECTIONS APPLIED — NOT VISUALLY FROZEN
 
@@ -73,7 +75,7 @@
    - Status: Extracted & Implemented. Removed from `INTERFACE-PLACEHOLDERS.json`.
    - Contract: Public Web framing with accessible skip-to-content link, sticky `GlobalHeader`, main content region (`#main-content`), and `GlobalFooter`.
 
-## Owners Intentionally Held at Existing Governed State (14)
+## Owners Intentionally Held at Existing Governed State (14 Unchanged)
 
 - `GLOBAL-MOBILE-NAV-01` (Tracked Placeholder)
 - `PATTERN-HERO-ACTION-01` (Tracked Placeholder)
@@ -106,7 +108,7 @@ All 14 held owners remain at their existing governed state. Deferred owners were
 - Extracted placeholders removed: 6
 - Remaining tracked placeholders count: 45
 
-## Reconstruction
+## Integrated Reconstruction
 - Environment: Integrated Non-route Interface Harness (`src/design-system/dev/InterfaceHarness.astro`) and Vitest harness tests.
 - Result: Extracted owners demonstrate integrated shell framing, header orientation, primary navigation, main content relationships, and footer closure without hard-coding promotional claims or modifying `src/pages/index.astro`.
 
@@ -115,7 +117,7 @@ All 14 held owners remain at their existing governed state. Deferred owners were
 - Mobile navigation drawer remains held at `GLOBAL-MOBILE-NAV-01` pending canonical mobile evidence.
 - Public page content and route replacement (`src/pages/index.astro`) remain blocked pending content truth and responsive evidence ratification.
 
-## Validation Gates & Release Check
+## Validation Gates & Release Checks Evidence
 - `pnpm run format:check`: PASS
 - `pnpm run lint`: PASS
 - `pnpm run typecheck`: PASS
@@ -124,9 +126,9 @@ All 14 held owners remain at their existing governed state. Deferred owners were
 - `pnpm run test`: PASS
 - `pnpm run build`: PASS
 - `pnpm run ci`: PASS
-- `pnpm run interface:check-release`: Expected failure reporting exactly 45 remaining interface placeholders.
-- `pnpm run icons:check-release`: Expected failure reporting remaining icon placeholders.
+- `pnpm run interface:check-release`: EXPECTED FAIL — 45 remaining interface placeholders.
+- `pnpm run icons:check-release`: EXPECTED FAIL — 126 remaining icon placeholders.
 
 ## Final Recommendation
-- **EXTRACTION CORRECTIONS COMPLETE**
-- PR #4 updated and ready for Chair review.
+- **EXTRACTION CORRECTIONS COMPLETE & REGISTRY PARITY VERIFIED**
+- PR #4 updated and ready for final Chair review.
