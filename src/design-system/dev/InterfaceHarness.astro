@@ -1,5 +1,6 @@
 ---
 import { HARNESS_FIXTURES } from './harness-fixtures';
+import PublicWebShell from '../shells/PublicWebShell.astro';
 import Button from '../primitives/Button.astro';
 import TextLink from '../primitives/TextLink.astro';
 import IconButton from '../primitives/IconButton.astro';
@@ -10,79 +11,87 @@ import ConceptFlow from '../patterns/ConceptFlow.astro';
 import FinalCta from '../patterns/FinalCta.astro';
 ---
 
-<div class="uf-harness-inspector">
-  <div class="uf-harness-notice">
-    <strong>{HARNESS_FIXTURES.notice}</strong>
+<PublicWebShell navItems={[...HARNESS_FIXTURES.headerNav]}>
+  <div class="uf-harness-inspector">
+    <div class="uf-harness-notice">
+      <strong>{HARNESS_FIXTURES.notice}</strong>
+      <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem;">
+        Integrated Shell Reconstruction: PublicWebShell + GlobalHeader + NavWebPrimary + Main
+        Content + GlobalFooter
+      </p>
+    </div>
+
+    <section class="uf-harness-section">
+      <h2>1. Primitives & Action Hierarchy Inspection</h2>
+      <div class="uf-harness-grid">
+        <div>
+          <h3>BUTTON-PRIMARY-01</h3>
+          <Button variant="primary">Primary Action</Button>
+        </div>
+        <div>
+          <h3>BUTTON-SECONDARY-01</h3>
+          <Button variant="secondary">Secondary Action</Button>
+        </div>
+        <div>
+          <h3>TEXT-LINK-01</h3>
+          <TextLink href="#">Sample Text Link</TextLink>
+        </div>
+        <div>
+          <h3>ICON-BUTTON-01</h3>
+          <IconButton icon="search" label="Search" />
+        </div>
+        <div>
+          <h3>CODE-INLINE-01</h3>
+          <CodeInline>npm run build</CodeInline>
+        </div>
+      </div>
+    </section>
+
+    <section class="uf-harness-section">
+      <h2>2. Integrated Main Content & Pattern Relationships</h2>
+      <div style="margin-bottom: 2rem;">
+        <h3>PATTERN-HERO-ACTION-01</h3>
+        <ActionHero
+          heading={HARNESS_FIXTURES.heroData.heading}
+          lead={HARNESS_FIXTURES.heroData.lead}
+          primaryAction={HARNESS_FIXTURES.heroData.primaryAction}
+          secondaryAction={HARNESS_FIXTURES.heroData.secondaryAction}
+        />
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <h3>PATTERN-CONCEPT-FLOW-01</h3>
+        <ConceptFlow steps={[...HARNESS_FIXTURES.conceptSteps]} />
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <h3>FAQ-ITEM-01</h3>
+        <FaqItem
+          id={HARNESS_FIXTURES.faqItems[0].id}
+          question={HARNESS_FIXTURES.faqItems[0].question}
+          directAnswer={HARNESS_FIXTURES.faqItems[0].directAnswer}
+        />
+      </div>
+
+      <div>
+        <h3>PATTERN-FINAL-CTA-01</h3>
+        <FinalCta
+          heading={HARNESS_FIXTURES.finalCtaData.heading}
+          subheading={HARNESS_FIXTURES.finalCtaData.subheading}
+          primaryAction={HARNESS_FIXTURES.finalCtaData.primaryAction}
+        />
+      </div>
+    </section>
   </div>
-
-  <section class="uf-harness-section">
-    <h2>1. Primitives Inspection</h2>
-    <div class="uf-harness-grid">
-      <div>
-        <h3>BUTTON-PRIMARY-01</h3>
-        <Button variant="primary">Primary Action</Button>
-      </div>
-      <div>
-        <h3>BUTTON-SECONDARY-01</h3>
-        <Button variant="secondary">Secondary Action</Button>
-      </div>
-      <div>
-        <h3>TEXT-LINK-01</h3>
-        <TextLink href="#">Sample Text Link</TextLink>
-      </div>
-      <div>
-        <h3>ICON-BUTTON-01</h3>
-        <IconButton icon="search" label="Search" />
-      </div>
-      <div>
-        <h3>CODE-INLINE-01</h3>
-        <CodeInline>npm run build</CodeInline>
-      </div>
-    </div>
-  </section>
-
-  <section class="uf-harness-section">
-    <h2>2. Components & Patterns Inspection</h2>
-    <div>
-      <h3>FAQ-ITEM-01</h3>
-      <FaqItem
-        id={HARNESS_FIXTURES.faqItems[0].id}
-        question={HARNESS_FIXTURES.faqItems[0].question}
-        directAnswer={HARNESS_FIXTURES.faqItems[0].directAnswer}
-      />
-    </div>
-
-    <div>
-      <h3>PATTERN-HERO-ACTION-01</h3>
-      <ActionHero
-        heading={HARNESS_FIXTURES.heroData.heading}
-        lead={HARNESS_FIXTURES.heroData.lead}
-        primaryAction={HARNESS_FIXTURES.heroData.primaryAction}
-        secondaryAction={HARNESS_FIXTURES.heroData.secondaryAction}
-      />
-    </div>
-
-    <div>
-      <h3>PATTERN-CONCEPT-FLOW-01</h3>
-      <ConceptFlow steps={[...HARNESS_FIXTURES.conceptSteps]} />
-    </div>
-
-    <div>
-      <h3>PATTERN-FINAL-CTA-01</h3>
-      <FinalCta
-        heading={HARNESS_FIXTURES.finalCtaData.heading}
-        subheading={HARNESS_FIXTURES.finalCtaData.subheading}
-        primaryAction={HARNESS_FIXTURES.finalCtaData.primaryAction}
-      />
-    </div>
-  </section>
-</div>
+</PublicWebShell>
 
 <style>
   .uf-harness-inspector {
     padding: 2rem;
     font-family: var(--unfict-font-sans, sans-serif);
     background-color: var(--unfict-color-white, #ffffff);
+    max-width: var(--uf-width-wide, 1200px);
+    margin: 0 auto;
   }
 
   .uf-harness-notice {

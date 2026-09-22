@@ -15,7 +15,7 @@ const { href, external = false, class: className = '', ...rest } = Astro.props;
   rel={external ? 'noopener noreferrer' : undefined}
   class={`uf-text-link ${className}`.trim()}
   data-uf-interface-owner="TEXT-LINK-01"
-  data-uf-interface-status="placeholder"
+  data-uf-interface-status="implemented"
   {...rest}
 >
   <slot />
@@ -25,7 +25,13 @@ const { href, external = false, class: className = '', ...rest } = Astro.props;
   .uf-text-link {
     color: var(--unfict-color-deep-ink, #0a0d14);
     text-decoration: underline;
-    text-underline-offset: 2px;
+    text-underline-offset: 3px;
     font-family: var(--unfict-font-sans, sans-serif);
+    font-size: inherit;
+    transition: color 0.15s ease-in-out;
+  }
+
+  .uf-text-link:hover {
+    color: var(--unfict-color-blue, #1965ec);
   }
 </style>

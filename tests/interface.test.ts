@@ -99,10 +99,10 @@ describe('Interface Engine Governance & Registry', () => {
     expect(colorRecord?.implementationStatus).toBe('IMPLEMENTED');
     expect(getEffectiveImplementationStatus('FOUNDATION-COLOR-PALETTE-01')).toBe('IMPLEMENTED');
 
-    // BUTTON-PRIMARY-01 is source NOT_IMPLEMENTED in Registry, but in placeholder overlay
-    const buttonRecord = getRegistryRecordById('BUTTON-PRIMARY-01');
+    // BUTTON-SECONDARY-01 is source NOT_IMPLEMENTED in Registry, but in placeholder overlay
+    const buttonRecord = getRegistryRecordById('BUTTON-SECONDARY-01');
     expect(buttonRecord?.implementationStatus).toBe('NOT_IMPLEMENTED');
-    expect(getEffectiveImplementationStatus('BUTTON-PRIMARY-01')).toBe('PLACEHOLDER');
+    expect(getEffectiveImplementationStatus('BUTTON-SECONDARY-01')).toBe('PLACEHOLDER');
   });
 
   it('should verify all REQUIRED runtime owners exist on disk', () => {
