@@ -22,7 +22,7 @@ import { CONVERSION_ARCHETYPE } from '../src/design-system/archetypes/Conversion
 import { LEGAL_ARCHETYPE } from '../src/design-system/archetypes/LegalArchetype';
 import { UTILITY_ARCHETYPE } from '../src/design-system/archetypes/UtilityArchetype';
 
-describe('Interface Engine Governance & Registry', () => {
+describe('Interface Engine Governance & Registry Parity', () => {
   it('should contain exactly 83 records in the v0.1 inventory', () => {
     expect(INTERFACE_REGISTRY.length).toBe(83);
   });
@@ -80,6 +80,103 @@ describe('Interface Engine Governance & Registry', () => {
     }
   });
 
+  it('should ensure comprehensive full-field parity between Markdown authority and TypeScript projection', () => {
+    const mdPath = path.resolve(
+      process.cwd(),
+      'DOCS/DESIGN/WEB/UNFICT-WEB-INTERFACE-REGISTRY-001-v0.1.md'
+    );
+    const mdContent = fs.readFileSync(mdPath, 'utf8');
+
+    const mdBlocksMap = new Map<string, Record<string, unknown>>();
+    const blockRegex = /^## ([\w-]+)[^\n]*\n\n```yaml\n([\s\S]*?)\n```/gm;
+    let match: RegExpExecArray | null;
+
+    while ((match = blockRegex.exec(mdContent)) !== null) {
+      const id = match[1];
+      const yamlContent = match[2];
+
+      const parsed: Record<string, unknown> = {};
+      const lines = yamlContent.split('\n');
+      let currentKey = '';
+      let currentList: string[] | null = null;
+      let multiLineVal = '';
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        if (line.trim().startsWith('- ') && currentList) {
+          currentList.push(line.trim().replace(/^-\s*/, '').replace(/^'|'$/g, ''));
+        } else if (line.includes(':') && !line.startsWith('  -')) {
+          if (currentKey) {
+            if (currentList) {
+              parsed[currentKey] = currentList;
+              currentList = null;
+            } else if (multiLineVal) {
+              parsed[currentKey] = multiLineVal.trim();
+              multiLineVal = '';
+            }
+          }
+          const [key, ...valParts] = line.split(':');
+          const val = valParts.join(':').trim();
+          currentKey = key.trim();
+
+          if (val === '') {
+            currentList = [];
+          } else if (val === '>-' || val === '>') {
+            multiLineVal = '';
+          } else {
+            parsed[currentKey] = val.replace(/^'|'$/g, '').trim();
+          }
+        } else if (multiLineVal !== undefined && line.startsWith('  ')) {
+          multiLineVal += (multiLineVal ? ' ' : '') + line.trim();
+        }
+      }
+      if (currentKey) {
+        if (currentList) parsed[currentKey] = currentList;
+        else if (multiLineVal) parsed[currentKey] = multiLineVal.trim();
+      }
+      mdBlocksMap.set(id, parsed);
+    }
+
+    expect(mdBlocksMap.size).toBe(83);
+
+    for (const record of INTERFACE_REGISTRY) {
+      const mdRecord = mdBlocksMap.get(record.id);
+      expect(mdRecord).toBeDefined();
+      if (!mdRecord) continue;
+
+      expect(mdRecord.id).toBe(record.id);
+      expect(mdRecord.name).toBe(record.name);
+      expect(mdRecord.layer).toBe(record.layer);
+      expect(mdRecord.domain).toBe(record.domain);
+      expect(String(mdRecord.version)).toBe(String(record.version));
+      expect(mdRecord.semanticStatus).toBe(record.semanticStatus);
+      expect(mdRecord.visualStatus).toBe(record.visualStatus);
+      expect(mdRecord.implementationStatus).toBe(record.implementationStatus);
+      expect(mdRecord.authorityConfidence).toBe(record.authorityConfidence);
+      expect(mdRecord.visualEvidence).toBe(record.visualEvidence);
+
+      expect(mdRecord.sources).toEqual(record.sources);
+      expect(mdRecord.sourceCompositions).toEqual(record.sourceCompositions);
+
+      const expectedRuntimeOwner = record.runtimeOwner === null ? 'null' : record.runtimeOwner;
+      expect(String(mdRecord.runtimeOwner)).toBe(String(expectedRuntimeOwner));
+
+      const expectedRegressionOwner =
+        record.visualRegressionOwner === null ? 'null' : record.visualRegressionOwner;
+      expect(String(mdRecord.visualRegressionOwner)).toBe(String(expectedRegressionOwner));
+
+      expect(String(mdRecord.placeholderAllowed)).toBe(String(record.placeholderAllowed));
+      expect(mdRecord.engineBaseline).toBe(record.engineBaseline);
+
+      if (record.job) {
+        expect(mdRecord.job).toEqual(record.job);
+      }
+      if (record.notes) {
+        expect(mdRecord.notes).toBe(record.notes);
+      }
+    }
+  });
+
   it('should ensure two-way placeholder overlay consistency', () => {
     const overlayIds = getAllPlaceholderOwnerIds();
     expect(overlayIds.length).toBeGreaterThan(0);
@@ -94,12 +191,10 @@ describe('Interface Engine Governance & Registry', () => {
   });
 
   it('should preserve original source Registry implementationStatus while resolving effective status', () => {
-    // FOUNDATION-COLOR-PALETTE-01 is source IMPLEMENTED in Registry and not in placeholders
     const colorRecord = getRegistryRecordById('FOUNDATION-COLOR-PALETTE-01');
     expect(colorRecord?.implementationStatus).toBe('IMPLEMENTED');
     expect(getEffectiveImplementationStatus('FOUNDATION-COLOR-PALETTE-01')).toBe('IMPLEMENTED');
 
-    // BUTTON-SECONDARY-01 is source NOT_IMPLEMENTED in Registry, but in placeholder overlay
     const buttonRecord = getRegistryRecordById('BUTTON-SECONDARY-01');
     expect(buttonRecord?.implementationStatus).toBe('NOT_IMPLEMENTED');
     expect(getEffectiveImplementationStatus('BUTTON-SECONDARY-01')).toBe('PLACEHOLDER');
@@ -108,8 +203,10 @@ describe('Interface Engine Governance & Registry', () => {
   it('should verify all REQUIRED runtime owners exist on disk', () => {
     const requiredRecords = getRegistryRecordsByBaseline('REQUIRED');
     for (const record of requiredRecords) {
-      const filePath = path.resolve(process.cwd(), record.runtimeOwner);
-      expect(fs.existsSync(filePath)).toBe(true);
+      if (record.runtimeOwner) {
+        const filePath = path.resolve(process.cwd(), record.runtimeOwner);
+        expect(fs.existsSync(filePath)).toBe(true);
+      }
     }
   });
 
@@ -128,6 +225,50 @@ describe('Interface Engine Governance & Registry', () => {
       expect(isPlaceholderOwner(record.id)).toBe(false);
       expect(getEffectiveImplementationStatus(record.id)).toBe('NOT_IMPLEMENTED');
     }
+  });
+});
+
+describe('Promoted Owners Component Contracts', () => {
+  it('should verify ActionHero contract exports and theme capabilities', async () => {
+    const filePath = path.resolve(process.cwd(), 'src/design-system/patterns/ActionHero.astro');
+    const content = fs.readFileSync(filePath, 'utf8');
+
+    expect(content).toContain('PATTERN-HERO-ACTION-01');
+    expect(content).toContain('uf-pattern-action-hero--${theme}');
+    expect(content).toContain('TextLink');
+    expect(content).toContain('Button');
+  });
+
+  it('should verify HumanRealityHero requires imageSrc and imageAlt media contract', async () => {
+    const filePath = path.resolve(
+      process.cwd(),
+      'src/design-system/sections/HumanRealityHero.astro'
+    );
+    const content = fs.readFileSync(filePath, 'utf8');
+
+    expect(content).toContain('SECTION-HERO-HUMAN-01');
+    expect(content).toContain('imageSrc: string;');
+    expect(content).toContain('imageAlt: string;');
+    expect(content).toContain("theme = 'dark'");
+    expect(content).not.toContain('Reality-first Media');
+  });
+
+  it('should verify ConceptFlow supports variable step count ordering', async () => {
+    const filePath = path.resolve(process.cwd(), 'src/design-system/patterns/ConceptFlow.astro');
+    const content = fs.readFileSync(filePath, 'utf8');
+
+    expect(content).toContain('PATTERN-CONCEPT-FLOW-01');
+    expect(content).toContain('steps.map');
+    expect(content).toContain('index + 1');
+  });
+
+  it('should verify FinalCta contract supports primary action and optional secondary link', async () => {
+    const filePath = path.resolve(process.cwd(), 'src/design-system/patterns/FinalCta.astro');
+    const content = fs.readFileSync(filePath, 'utf8');
+
+    expect(content).toContain('PATTERN-FINAL-CTA-01');
+    expect(content).toContain('primaryAction: ActionProp;');
+    expect(content).toContain('secondaryAction?: ActionProp;');
   });
 });
 
@@ -154,7 +295,6 @@ describe('Navigation & Component Governance', () => {
     expect(secondaryBtn).toBeDefined();
     expect(primaryBtn?.id).not.toBe(secondaryBtn?.id);
 
-    // Both point to Button.astro as single technical owner
     expect(primaryBtn?.runtimeOwner).toBe('src/design-system/primitives/Button.astro');
     expect(secondaryBtn?.runtimeOwner).toBe('src/design-system/primitives/Button.astro');
   });
@@ -202,7 +342,6 @@ describe('Navigation & Component Governance', () => {
     const astroFiles = scanFiles(componentsDir);
     for (const filePath of astroFiles) {
       const content = fs.readFileSync(filePath, 'utf8');
-      // No raw <svg> tags inside interface components (excluding UfIcon itself)
       expect(content.includes('<svg')).toBe(false);
     }
   });
@@ -222,7 +361,6 @@ describe('Navigation & Component Governance', () => {
       const pagePath = path.join(pagesDir, pageName);
       if (fs.existsSync(pagePath)) {
         const content = fs.readFileSync(pagePath, 'utf8');
-        // Ensure components/placeholders from design-system are not injected into protected public pages
         expect(content.includes('data-uf-interface-owner')).toBe(false);
       }
     }

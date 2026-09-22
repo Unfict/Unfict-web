@@ -5,10 +5,11 @@ import Button from '../primitives/Button.astro';
 import TextLink from '../primitives/TextLink.astro';
 import IconButton from '../primitives/IconButton.astro';
 import CodeInline from '../primitives/CodeInline.astro';
+import HumanRealityHero from '../sections/HumanRealityHero.astro';
+import ConceptualModelSection from '../sections/ConceptualModelSection.astro';
+import ProgressiveDepthPaths from '../patterns/ProgressiveDepthPaths.astro';
+import FinalCtaSection from '../sections/FinalCtaSection.astro';
 import FaqItem from '../components/FaqItem.astro';
-import ActionHero from '../patterns/ActionHero.astro';
-import ConceptFlow from '../patterns/ConceptFlow.astro';
-import FinalCta from '../patterns/FinalCta.astro';
 ---
 
 <PublicWebShell navItems={[...HARNESS_FIXTURES.headerNav]}>
@@ -16,8 +17,7 @@ import FinalCta from '../patterns/FinalCta.astro';
     <div class="uf-harness-notice">
       <strong>{HARNESS_FIXTURES.notice}</strong>
       <p style="margin: 0.5rem 0 0 0; font-size: 0.875rem;">
-        Integrated Shell Reconstruction: PublicWebShell + GlobalHeader + NavWebPrimary + Main
-        Content + GlobalFooter
+        Integrated Cross-Composition Reconstruction: Home + GS1 Pillar Candidates
       </p>
     </div>
 
@@ -48,37 +48,91 @@ import FinalCta from '../patterns/FinalCta.astro';
     </section>
 
     <section class="uf-harness-section">
-      <h2>2. Integrated Main Content & Pattern Relationships</h2>
-      <div style="margin-bottom: 2rem;">
-        <h3>PATTERN-HERO-ACTION-01</h3>
-        <ActionHero
-          heading={HARNESS_FIXTURES.heroData.heading}
-          lead={HARNESS_FIXTURES.heroData.lead}
-          primaryAction={HARNESS_FIXTURES.heroData.primaryAction}
-          secondaryAction={HARNESS_FIXTURES.heroData.secondaryAction}
+      <h2>2. Composition-1 (Homepage) Extracted Owner Verification</h2>
+
+      <div class="uf-harness-example-block">
+        <h3>SECTION-HERO-HUMAN-01 / PATTERN-HERO-ACTION-01 (Homepage Contract)</h3>
+        <HumanRealityHero
+          eyebrow={HARNESS_FIXTURES.homeHeroData.eyebrow}
+          heading={HARNESS_FIXTURES.homeHeroData.heading}
+          lead={HARNESS_FIXTURES.homeHeroData.lead}
+          primaryAction={HARNESS_FIXTURES.homeHeroData.primaryAction}
+          secondaryAction={HARNESS_FIXTURES.homeHeroData.secondaryAction}
+          imageSrc="/favicon.svg"
+          imageAlt="Homepage human reality representation"
+          theme="dark"
         />
       </div>
 
-      <div style="margin-bottom: 2rem;">
-        <h3>PATTERN-CONCEPT-FLOW-01</h3>
-        <ConceptFlow steps={[...HARNESS_FIXTURES.conceptSteps]} />
+      <div class="uf-harness-example-block">
+        <h3>SECTION-CONCEPTUAL-MODEL-01 / PATTERN-CONCEPT-FLOW-01 (3-Step Homepage Flow)</h3>
+        <ConceptualModelSection
+          title="Homepage Conceptual Model"
+          steps={[...HARNESS_FIXTURES.homeConceptSteps]}
+          variant="default"
+        />
       </div>
 
-      <div style="margin-bottom: 2rem;">
-        <h3>FAQ-ITEM-01</h3>
+      <div class="uf-harness-example-block">
+        <h3>SECTION-FINAL-CTA-01 / PATTERN-FINAL-CTA-01 (Homepage Dual Action CTA)</h3>
+        <FinalCtaSection
+          heading={HARNESS_FIXTURES.homeFinalCta.heading}
+          subheading={HARNESS_FIXTURES.homeFinalCta.subheading}
+          primaryAction={HARNESS_FIXTURES.homeFinalCta.primaryAction}
+          secondaryAction={HARNESS_FIXTURES.homeFinalCta.secondaryAction}
+        />
+      </div>
+    </section>
+
+    <section class="uf-harness-section">
+      <h2>3. Composition-2 (GS1 Pillar) Extracted Owner Verification</h2>
+
+      <div class="uf-harness-example-block">
+        <h3>SECTION-HERO-HUMAN-01 / PATTERN-HERO-ACTION-01 (GS1 Pillar Contract)</h3>
+        <HumanRealityHero
+          eyebrow={HARNESS_FIXTURES.gs1HeroData.eyebrow}
+          heading={HARNESS_FIXTURES.gs1HeroData.heading}
+          lead={HARNESS_FIXTURES.gs1HeroData.lead}
+          primaryAction={HARNESS_FIXTURES.gs1HeroData.primaryAction}
+          secondaryAction={HARNESS_FIXTURES.gs1HeroData.secondaryAction}
+          imageSrc="/favicon.svg"
+          imageAlt="GS1 Digital Link physical barcode and resolution flow"
+          theme="dark"
+        />
+      </div>
+
+      <div class="uf-harness-example-block">
+        <h3>SECTION-CONCEPTUAL-MODEL-01 / PATTERN-CONCEPT-FLOW-01 (5-Step GS1 Flow)</h3>
+        <ConceptualModelSection
+          title="GS1 Digital Link Resolution Flow"
+          steps={[...HARNESS_FIXTURES.gs1ConceptSteps]}
+          variant="emphasis"
+        />
+      </div>
+
+      <div class="uf-harness-example-block">
+        <h3>PATTERN-DEPTH-PATHS-01 (Held Placeholder Inspection)</h3>
+        <ProgressiveDepthPaths paths={[...HARNESS_FIXTURES.gs1DepthPaths]} />
+      </div>
+
+      <div class="uf-harness-example-block">
+        <h3>SECTION-FINAL-CTA-01 / PATTERN-FINAL-CTA-01 (GS1 Single Primary Action CTA)</h3>
+        <FinalCtaSection
+          heading={HARNESS_FIXTURES.gs1FinalCta.heading}
+          subheading={HARNESS_FIXTURES.gs1FinalCta.subheading}
+          primaryAction={HARNESS_FIXTURES.gs1FinalCta.primaryAction}
+        />
+      </div>
+    </section>
+
+    <section class="uf-harness-section">
+      <h2>4. Held Owners (Composition-Local / FAQ) Inspection</h2>
+      <div class="uf-harness-example-block">
+        <h3>FAQ-ITEM-01 (Held Owner)</h3>
         <FaqItem
           id={HARNESS_FIXTURES.faqItems[0].id}
           question={HARNESS_FIXTURES.faqItems[0].question}
           directAnswer={HARNESS_FIXTURES.faqItems[0].directAnswer}
-        />
-      </div>
-
-      <div>
-        <h3>PATTERN-FINAL-CTA-01</h3>
-        <FinalCta
-          heading={HARNESS_FIXTURES.finalCtaData.heading}
-          subheading={HARNESS_FIXTURES.finalCtaData.subheading}
-          primaryAction={HARNESS_FIXTURES.finalCtaData.primaryAction}
         />
       </div>
     </section>
@@ -87,7 +141,7 @@ import FinalCta from '../patterns/FinalCta.astro';
 
 <style>
   .uf-harness-inspector {
-    padding: 2rem;
+    padding: 2rem 1rem;
     font-family: var(--unfict-font-sans, sans-serif);
     background-color: var(--unfict-color-white, #ffffff);
     max-width: var(--uf-width-wide, 1200px);
@@ -111,5 +165,22 @@ import FinalCta from '../patterns/FinalCta.astro';
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
+  }
+
+  .uf-harness-example-block {
+    margin-bottom: 2.5rem;
+    border: 1px solid var(--unfict-color-border-gray, #dde1e7);
+    padding: 1rem;
+    border-radius: var(--uf-radius-default, 4px);
+  }
+
+  .uf-harness-example-block h3 {
+    font-family: var(--unfict-font-mono, monospace);
+    font-size: 0.875rem;
+    color: var(--unfict-color-slate, #596273);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed var(--unfict-color-border-gray, #dde1e7);
   }
 </style>

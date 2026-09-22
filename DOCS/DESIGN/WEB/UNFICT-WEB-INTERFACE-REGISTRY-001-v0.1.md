@@ -1485,8 +1485,8 @@ job:
   - Establish page Job with one dominant legitimate action and optional subordinate path.
 
 semanticStatus: GOVERNED
-visualStatus: REFERENCE_PAGE_ACCEPTED
-implementationStatus: NOT_IMPLEMENTED
+visualStatus: CANDIDATE_EXTRACTED
+implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
 visualEvidence: REFERENCE_PAGE_ACCEPTED
 
@@ -1494,9 +1494,12 @@ sources:
   - UIS
   - LEGACY-REG
   - HOME-LEGACY
+  - STITCH-UNFICT-HOME-01
+  - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
   - HOME-LEGACY
-
+  - COMPOSITION-HOME-01
+  - COMPOSITION-GS1-PILLAR-01
 runtimeOwner: src/design-system/patterns/ActionHero.astro
 visualRegressionOwner: null
 placeholderAllowed: true
@@ -1547,8 +1550,8 @@ job:
   - Explain a small ordered conceptual relationship using restrained technical diagram grammar.
 
 semanticStatus: GOVERNED
-visualStatus: REFERENCE_PAGE_ACCEPTED
-implementationStatus: NOT_IMPLEMENTED
+visualStatus: CANDIDATE_EXTRACTED
+implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
 visualEvidence: REFERENCE_PAGE_ACCEPTED
 
@@ -1557,10 +1560,13 @@ sources:
   - LEGACY-REG
   - HOME-LEGACY
   - GS1-LEGACY
+  - STITCH-UNFICT-HOME-01
+  - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
   - HOME-LEGACY
   - GS1-LEGACY
-
+  - COMPOSITION-HOME-01
+  - COMPOSITION-GS1-PILLAR-01
 runtimeOwner: src/design-system/patterns/ConceptFlow.astro
 visualRegressionOwner: null
 placeholderAllowed: true
@@ -1729,8 +1735,8 @@ job:
   - Conclude a content path with one legitimate primary next action.
 
 semanticStatus: GOVERNED
-visualStatus: REFERENCE_PAGE_ACCEPTED
-implementationStatus: NOT_IMPLEMENTED
+visualStatus: CANDIDATE_EXTRACTED
+implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
 visualEvidence: REFERENCE_PAGE_ACCEPTED
 
@@ -1740,11 +1746,14 @@ sources:
   - HOME-LEGACY
   - GS1-LEGACY
   - FAQ-LEGACY
+  - STITCH-UNFICT-HOME-01
+  - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
   - HOME-LEGACY
   - GS1-LEGACY
   - FAQ-LEGACY
-
+  - COMPOSITION-HOME-01
+  - COMPOSITION-GS1-PILLAR-01
 runtimeOwner: src/design-system/patterns/FinalCta.astro
 visualRegressionOwner: null
 placeholderAllowed: true
@@ -1829,8 +1838,8 @@ job:
   - Establish page Job with live copy and one Reality-first environmental image.
 
 semanticStatus: GOVERNED
-visualStatus: REFERENCE_PAGE_ACCEPTED
-implementationStatus: NOT_IMPLEMENTED
+visualStatus: CANDIDATE_EXTRACTED
+implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
 visualEvidence: REFERENCE_PAGE_ACCEPTED
 
@@ -1838,9 +1847,12 @@ sources:
   - UIS
   - LEGACY-REG
   - HOME-LEGACY
+  - STITCH-UNFICT-HOME-01
+  - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
   - HOME-LEGACY
-
+  - COMPOSITION-HOME-01
+  - COMPOSITION-GS1-PILLAR-01
 runtimeOwner: src/design-system/sections/HumanRealityHero.astro
 visualRegressionOwner: null
 placeholderAllowed: true
@@ -1947,8 +1959,8 @@ job:
   - Explain a bounded conceptual sequence using the governed Concept Flow pattern.
 
 semanticStatus: GOVERNED
-visualStatus: REFERENCE_PAGE_ACCEPTED
-implementationStatus: NOT_IMPLEMENTED
+visualStatus: CANDIDATE_EXTRACTED
+implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
 visualEvidence: REFERENCE_PAGE_ACCEPTED
 
@@ -1957,10 +1969,13 @@ sources:
   - LEGACY-REG
   - HOME-LEGACY
   - GS1-LEGACY
+  - STITCH-UNFICT-HOME-01
+  - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
   - HOME-LEGACY
   - GS1-LEGACY
-
+  - COMPOSITION-HOME-01
+  - COMPOSITION-GS1-PILLAR-01
 runtimeOwner: src/design-system/sections/ConceptualModelSection.astro
 visualRegressionOwner: null
 placeholderAllowed: true
@@ -2250,8 +2265,8 @@ job:
   - Page-level conclusion using the governed Final CTA pattern.
 
 semanticStatus: GOVERNED
-visualStatus: REFERENCE_PAGE_ACCEPTED
-implementationStatus: NOT_IMPLEMENTED
+visualStatus: CANDIDATE_EXTRACTED
+implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
 visualEvidence: REFERENCE_PAGE_ACCEPTED
 
@@ -2259,9 +2274,12 @@ sources:
   - UIS
   - LEGACY-REG
   - HOME-LEGACY
+  - STITCH-UNFICT-HOME-01
+  - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
   - HOME-LEGACY
-
+  - COMPOSITION-HOME-01
+  - COMPOSITION-GS1-PILLAR-01
 runtimeOwner: src/design-system/sections/FinalCtaSection.astro
 visualRegressionOwner: null
 placeholderAllowed: true
@@ -2358,7 +2376,7 @@ sources:
 sourceCompositions:
   - HOME-LEGACY
 
-runtimeOwner: src/design-system/components/GlobalMobileNav.astro
+runtimeOwner: src/design-system/navigation/NavWebMobile.astro
 visualRegressionOwner: null
 placeholderAllowed: true
 engineBaseline: REQUIRED
@@ -2790,17 +2808,18 @@ job:
   - Establish the active Unfict visual language for the `PAGE-ARCHETYPE-PILLAR` Job as part of the Master Composition Set.
 
 semanticStatus: PROPOSED
-visualStatus: UNDESIGNED
+visualStatus: REFERENCE_PAGE_ACCEPTED
 implementationStatus: NOT_IMPLEMENTED
 authorityConfidence: PROVISIONAL
-visualEvidence: NONE
+visualEvidence: REFERENCE_PAGE_ACCEPTED
 
 sources:
   - UIS
   - GS1-LEGACY
+  - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
   - GS1-LEGACY
-
+  - COMPOSITION-GS1-PILLAR-01
 runtimeOwner: src/pages/gs1-digital-link.astro
 visualRegressionOwner: null
 placeholderAllowed: false
@@ -2840,7 +2859,7 @@ placeholderAllowed: false
 engineBaseline: CREATIVE
 
 notes: >-
-  Stitch export accepted as active design evidence for governed extraction; page route remains non-replaced pending full content/responsive ratification.
+  Legacy Zyppi-era material is seed/reference evidence only; active Unfict composition must be designed and accepted as a whole.
 ```
 
 ## COMPOSITION-FAQ-01 — FAQ Master Composition
@@ -2873,7 +2892,7 @@ placeholderAllowed: false
 engineBaseline: CREATIVE
 
 notes: >-
-  Stitch export accepted as active design evidence for governed extraction; page route remains non-replaced pending full content/responsive ratification.
+  Legacy Zyppi-era material is seed/reference evidence only; active Unfict composition must be designed and accepted as a whole.
 ```
 
 ## COMPOSITION-ARTICLE-01 — Insight Article Master Composition
@@ -2903,7 +2922,7 @@ placeholderAllowed: false
 engineBaseline: CREATIVE
 
 notes: >-
-  Stitch export accepted as active design evidence for governed extraction; page route remains non-replaced pending full content/responsive ratification.
+  Legacy Zyppi-era material is seed/reference evidence only; active Unfict composition must be designed and accepted as a whole.
 ```
 
 # PART X — CROSS-REGISTRY CONTRACTS

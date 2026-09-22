@@ -1,5 +1,7 @@
 ---
 import Button from '../primitives/Button.astro';
+import TextLink from '../primitives/TextLink.astro';
+import { isPlaceholderOwner } from '../registry/interface-runtime-state';
 
 export interface ActionProp {
   label: string;
@@ -10,23 +12,32 @@ export interface Props {
   heading: string;
   subheading?: string;
   primaryAction: ActionProp;
+  secondaryAction?: ActionProp;
   class?: string;
 }
 
-const { heading, subheading, primaryAction, class: className = '' } = Astro.props;
+const { heading, subheading, primaryAction, secondaryAction, class: className = '' } = Astro.props;
+const isPlaceholder = isPlaceholderOwner('PATTERN-FINAL-CTA-01');
 ---
 
 <div
   class={`uf-pattern-final-cta ${className}`.trim()}
   data-uf-interface-owner="PATTERN-FINAL-CTA-01"
-  data-uf-interface-status="placeholder"
+  data-uf-interface-status={isPlaceholder ? 'placeholder' : 'implemented'}
 >
   <h2 class="uf-pattern-final-cta__heading">{heading}</h2>
   {subheading && <p class="uf-pattern-final-cta__subheading">{subheading}</p>}
-  <div class="uf-pattern-final-cta__action">
+  <div class="uf-pattern-final-cta__actions">
     <Button variant="primary" href={primaryAction.href}>
       {primaryAction.label}
     </Button>
+    {
+      secondaryAction && (
+        <TextLink href={secondaryAction.href} class="uf-pattern-final-cta__secondary-link">
+          {secondaryAction.label}
+        </TextLink>
+      )
+    }
   </div>
 </div>
 
@@ -37,7 +48,7 @@ const { heading, subheading, primaryAction, class: className = '' } = Astro.prop
     align-items: center;
     text-align: center;
     gap: var(--uf-spacing-sm, 1rem);
-    padding: var(--uf-spacing-xl, 3rem) var(--uf-spacing-sm, 1rem);
+    padding: var(--uf-spacing-xl, 3rem) var(--uf-spacing-md, 1.5rem);
     border: 1px solid var(--unfict-color-border-gray, #dde1e7);
     border-radius: var(--uf-radius-default, 4px);
     background-color: var(--unfict-color-institutional-gray, #f6f7f9);
@@ -47,11 +58,26 @@ const { heading, subheading, primaryAction, class: className = '' } = Astro.prop
     font-size: 1.75rem;
     font-weight: 700;
     margin: 0;
+    color: var(--unfict-color-deep-ink, #0a0d14);
   }
 
   .uf-pattern-final-cta__subheading {
     font-size: 1rem;
     color: var(--unfict-color-slate, #596273);
     margin: 0;
+    max-width: 600px;
+  }
+
+  .uf-pattern-final-cta__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--uf-spacing-md, 1.5rem);
+    margin-top: var(--uf-spacing-xs, 0.75rem);
+  }
+
+  .uf-pattern-final-cta__secondary-link {
+    font-size: 0.875rem;
   }
 </style>

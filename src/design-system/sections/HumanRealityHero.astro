@@ -1,73 +1,92 @@
 ---
 import ActionHero, { type ActionProp } from '../patterns/ActionHero.astro';
+import { isPlaceholderOwner } from '../registry/interface-runtime-state';
 
 export interface Props {
+  eyebrow?: string;
   heading: string;
   lead?: string;
   primaryAction: ActionProp;
   secondaryAction?: ActionProp;
-  imageAlt?: string;
+  imageSrc: string;
+  imageAlt: string;
+  theme?: 'light' | 'dark';
   class?: string;
 }
 
 const {
+  eyebrow,
   heading,
   lead,
   primaryAction,
   secondaryAction,
-  imageAlt = 'Reality-first representation',
+  imageSrc,
+  imageAlt,
+  theme = 'dark',
   class: className = ''
 } = Astro.props;
+
+const isPlaceholder = isPlaceholderOwner('SECTION-HERO-HUMAN-01');
 ---
 
 <section
-  class={`uf-section-human-reality-hero ${className}`.trim()}
+  class={`uf-section-human-reality-hero uf-section-human-reality-hero--${theme} ${className}`.trim()}
   data-uf-interface-owner="SECTION-HERO-HUMAN-01"
-  data-uf-interface-status="placeholder"
+  data-uf-interface-status={isPlaceholder ? 'placeholder' : 'implemented'}
 >
   <div class="uf-section-human-reality-hero__inner">
-    <ActionHero
-      heading={heading}
-      lead={lead}
-      primaryAction={primaryAction}
-      secondaryAction={secondaryAction}
-    />
+    <div class="uf-section-human-reality-hero__content">
+      <ActionHero
+        eyebrow={eyebrow}
+        heading={heading}
+        lead={lead}
+        primaryAction={primaryAction}
+        secondaryAction={secondaryAction}
+        theme={theme}
+      />
+    </div>
     <div class="uf-section-human-reality-hero__media">
-      <div class="uf-section-human-reality-hero__image-placeholder" aria-label={imageAlt}>
-        <span class="uf-section-human-reality-hero__badge">Reality-first Media Placeholder</span>
-      </div>
+      <img src={imageSrc} alt={imageAlt} class="uf-section-human-reality-hero__image" />
+      <slot name="aside" />
     </div>
   </div>
 </section>
 
 <style>
   .uf-section-human-reality-hero {
-    padding: var(--uf-spacing-lg, 2rem) var(--uf-spacing-sm, 1rem);
+    padding: var(--uf-spacing-xl, 3rem) var(--uf-spacing-sm, 1rem);
+    border-bottom: 1px solid var(--unfict-color-border-gray, #dde1e7);
+  }
+
+  .uf-section-human-reality-hero--light {
+    background-color: var(--unfict-color-institutional-gray, #f6f7f9);
+  }
+
+  .uf-section-human-reality-hero--dark {
+    background-color: var(--unfict-color-deep-ink, #0a0d14);
+    border-bottom-color: rgba(221, 225, 231, 0.15);
   }
 
   .uf-section-human-reality-hero__inner {
     max-width: var(--uf-width-wide, 1200px);
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--uf-spacing-lg, 2rem);
+    grid-template-columns: 1fr;
+    gap: var(--uf-spacing-xl, 3rem);
     align-items: center;
   }
 
-  .uf-section-human-reality-hero__image-placeholder {
+  @media (min-width: 768px) {
+    .uf-section-human-reality-hero__inner {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .uf-section-human-reality-hero__image {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    background-color: var(--unfict-color-institutional-gray, #f6f7f9);
-    border: 1px solid var(--unfict-color-border-gray, #dde1e7);
+    height: auto;
     border-radius: var(--uf-radius-default, 4px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .uf-section-human-reality-hero__badge {
-    font-size: 0.75rem;
-    color: var(--unfict-color-slate, #596273);
-    font-family: var(--unfict-font-mono, monospace);
+    border: 1px solid var(--unfict-color-border-gray, #dde1e7);
+    object-fit: cover;
   }
 </style>
