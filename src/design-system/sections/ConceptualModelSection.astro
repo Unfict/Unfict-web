@@ -1,19 +1,27 @@
 ---
 import ConceptFlow, { type ConceptStep } from '../patterns/ConceptFlow.astro';
+import { isPlaceholderOwner } from '../registry/interface-runtime-state';
 
 export interface Props {
   title?: string;
   steps: ConceptStep[];
+  variant?: 'default' | 'emphasis';
   class?: string;
 }
 
-const { title = 'Conceptual Model', steps, class: className = '' } = Astro.props;
+const {
+  title = 'Conceptual Model',
+  steps,
+  variant = 'default',
+  class: className = ''
+} = Astro.props;
+const isPlaceholder = isPlaceholderOwner('SECTION-CONCEPTUAL-MODEL-01');
 ---
 
 <section
-  class={`uf-section-conceptual-model ${className}`.trim()}
+  class={`uf-section-conceptual-model uf-section-conceptual-model--${variant} ${className}`.trim()}
   data-uf-interface-owner="SECTION-CONCEPTUAL-MODEL-01"
-  data-uf-interface-status="placeholder"
+  data-uf-interface-status={isPlaceholder ? 'placeholder' : 'implemented'}
 >
   <div class="uf-section-conceptual-model__inner">
     <ConceptFlow title={title} steps={steps} />
@@ -23,9 +31,16 @@ const { title = 'Conceptual Model', steps, class: className = '' } = Astro.props
 <style>
   .uf-section-conceptual-model {
     padding: var(--uf-spacing-xl, 3rem) var(--uf-spacing-sm, 1rem);
-    background-color: var(--unfict-color-institutional-gray, #f6f7f9);
     border-top: 1px solid var(--unfict-color-border-gray, #dde1e7);
     border-bottom: 1px solid var(--unfict-color-border-gray, #dde1e7);
+  }
+
+  .uf-section-conceptual-model--default {
+    background-color: var(--unfict-color-institutional-gray, #f6f7f9);
+  }
+
+  .uf-section-conceptual-model--emphasis {
+    background-color: var(--unfict-color-white, #ffffff);
   }
 
   .uf-section-conceptual-model__inner {

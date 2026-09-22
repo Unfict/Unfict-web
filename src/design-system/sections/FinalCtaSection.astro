@@ -1,24 +1,32 @@
 ---
 import FinalCta from '../patterns/FinalCta.astro';
 import type { ActionProp } from '../patterns/ActionHero.astro';
+import { isPlaceholderOwner } from '../registry/interface-runtime-state';
 
 export interface Props {
   heading: string;
   subheading?: string;
   primaryAction: ActionProp;
+  secondaryAction?: ActionProp;
   class?: string;
 }
 
-const { heading, subheading, primaryAction, class: className = '' } = Astro.props;
+const { heading, subheading, primaryAction, secondaryAction, class: className = '' } = Astro.props;
+const isPlaceholder = isPlaceholderOwner('SECTION-FINAL-CTA-01');
 ---
 
 <section
   class={`uf-section-final-cta ${className}`.trim()}
   data-uf-interface-owner="SECTION-FINAL-CTA-01"
-  data-uf-interface-status="placeholder"
+  data-uf-interface-status={isPlaceholder ? 'placeholder' : 'implemented'}
 >
   <div class="uf-section-final-cta__inner">
-    <FinalCta heading={heading} subheading={subheading} primaryAction={primaryAction} />
+    <FinalCta
+      heading={heading}
+      subheading={subheading}
+      primaryAction={primaryAction}
+      secondaryAction={secondaryAction}
+    />
   </div>
 </section>
 

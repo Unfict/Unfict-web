@@ -1,5 +1,7 @@
 ---
 import Button from '../primitives/Button.astro';
+import TextLink from '../primitives/TextLink.astro';
+import { isPlaceholderOwner } from '../registry/interface-runtime-state';
 
 export interface ActionProp {
   label: string;
@@ -8,22 +10,32 @@ export interface ActionProp {
 
 export interface Props {
   heading: string;
+  eyebrow?: string;
   lead?: string;
   primaryAction: ActionProp;
   secondaryAction?: ActionProp;
   class?: string;
 }
 
-const { heading, lead, primaryAction, secondaryAction, class: className = '' } = Astro.props;
+const {
+  eyebrow,
+  heading,
+  lead,
+  primaryAction,
+  secondaryAction,
+  class: className = ''
+} = Astro.props;
+
+const isPlaceholder = isPlaceholderOwner('PATTERN-HERO-ACTION-01');
 ---
 
-<section
+<div
   class={`uf-pattern-action-hero ${className}`.trim()}
-  aria-labelledby="action-hero-heading"
   data-uf-interface-owner="PATTERN-HERO-ACTION-01"
-  data-uf-interface-status="placeholder"
+  data-uf-interface-status={isPlaceholder ? 'placeholder' : 'implemented'}
 >
-  <h1 id="action-hero-heading" class="uf-pattern-action-hero__heading">{heading}</h1>
+  {eyebrow && <div class="uf-pattern-action-hero__eyebrow">{eyebrow}</div>}
+  <h1 class="uf-pattern-action-hero__heading">{heading}</h1>
   {lead && <p class="uf-pattern-action-hero__lead">{lead}</p>}
   <div class="uf-pattern-action-hero__actions">
     <Button variant="primary" href={primaryAction.href}>
@@ -31,38 +43,53 @@ const { heading, lead, primaryAction, secondaryAction, class: className = '' } =
     </Button>
     {
       secondaryAction && (
-        <Button variant="secondary" href={secondaryAction.href}>
+        <TextLink href={secondaryAction.href} class="uf-pattern-action-hero__secondary-link">
           {secondaryAction.label}
-        </Button>
+        </TextLink>
       )
     }
   </div>
-</section>
+</div>
 
 <style>
   .uf-pattern-action-hero {
     display: flex;
     flex-direction: column;
     gap: var(--uf-spacing-sm, 1rem);
-    padding: var(--uf-spacing-xl, 3rem) var(--uf-spacing-sm, 1rem);
-    max-width: var(--uf-width-standard, 960px);
-    margin: 0 auto;
+  }
+
+  .uf-pattern-action-hero__eyebrow {
+    font-family: var(--unfict-font-mono, monospace);
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--unfict-color-slate, #596273);
   }
 
   .uf-pattern-action-hero__heading {
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 700;
+    line-height: 1.2;
     margin: 0;
+    color: var(--unfict-color-deep-ink, #0a0d14);
   }
 
   .uf-pattern-action-hero__lead {
     font-size: 1.125rem;
+    line-height: 1.5;
     color: var(--unfict-color-slate, #596273);
     margin: 0;
   }
 
   .uf-pattern-action-hero__actions {
     display: flex;
-    gap: var(--uf-spacing-xs, 0.75rem);
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--uf-spacing-md, 1.5rem);
+    margin-top: var(--uf-spacing-2xs, 0.5rem);
+  }
+
+  .uf-pattern-action-hero__secondary-link {
+    font-size: 0.875rem;
   }
 </style>

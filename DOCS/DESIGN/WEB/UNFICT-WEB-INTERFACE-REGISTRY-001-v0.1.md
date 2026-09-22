@@ -1485,17 +1485,18 @@ job:
   - Establish page Job with one dominant legitimate action and optional subordinate path.
 
 semanticStatus: GOVERNED
-visualStatus: REFERENCE_PAGE_ACCEPTED
-implementationStatus: NOT_IMPLEMENTED
+visualStatus: CANDIDATE_EXTRACTED
+implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
-visualEvidence: REFERENCE_PAGE_ACCEPTED
+visualEvidence: PARTIAL
 
 sources:
   - UIS
-  - LEGACY-REG
-  - HOME-LEGACY
+  - STITCH-UNFICT-HOME-01
+  - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
-  - HOME-LEGACY
+  - COMPOSITION-HOME-01
+  - COMPOSITION-GS1-PILLAR-01
 
 runtimeOwner: src/design-system/patterns/ActionHero.astro
 visualRegressionOwner: null
@@ -1547,19 +1548,18 @@ job:
   - Explain a small ordered conceptual relationship using restrained technical diagram grammar.
 
 semanticStatus: GOVERNED
-visualStatus: REFERENCE_PAGE_ACCEPTED
-implementationStatus: NOT_IMPLEMENTED
+visualStatus: CANDIDATE_EXTRACTED
+implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
-visualEvidence: REFERENCE_PAGE_ACCEPTED
+visualEvidence: PARTIAL
 
 sources:
   - UIS
-  - LEGACY-REG
-  - HOME-LEGACY
-  - GS1-LEGACY
+  - STITCH-UNFICT-HOME-01
+  - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
-  - HOME-LEGACY
-  - GS1-LEGACY
+  - COMPOSITION-HOME-01
+  - COMPOSITION-GS1-PILLAR-01
 
 runtimeOwner: src/design-system/patterns/ConceptFlow.astro
 visualRegressionOwner: null
@@ -1580,17 +1580,18 @@ job:
   - Offer one or two legitimate deeper paths without competing with the primary action.
 
 semanticStatus: GOVERNED
-visualStatus: UNDESIGNED
-implementationStatus: NOT_IMPLEMENTED
-authorityConfidence: PROVISIONAL
-visualEvidence: MANDATE_ONLY
+visualStatus: CANDIDATE_EXTRACTED
+implementationStatus: IMPLEMENTED
+authorityConfidence: OPERATIVE
+visualEvidence: PARTIAL
 
 sources:
   - UIS
-  - LEGACY-REG
-  - GS1-LEGACY
+  - STITCH-UNFICT-HOME-01
+  - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
-  - GS1-LEGACY
+  - COMPOSITION-HOME-01
+  - COMPOSITION-GS1-PILLAR-01
 
 runtimeOwner: src/design-system/patterns/ProgressiveDepthPaths.astro
 visualRegressionOwner: null
@@ -1729,21 +1730,18 @@ job:
   - Conclude a content path with one legitimate primary next action.
 
 semanticStatus: GOVERNED
-visualStatus: REFERENCE_PAGE_ACCEPTED
-implementationStatus: NOT_IMPLEMENTED
+visualStatus: CANDIDATE_EXTRACTED
+implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
-visualEvidence: REFERENCE_PAGE_ACCEPTED
+visualEvidence: PARTIAL
 
 sources:
   - UIS
-  - LEGACY-REG
-  - HOME-LEGACY
-  - GS1-LEGACY
-  - FAQ-LEGACY
+  - STITCH-UNFICT-HOME-01
+  - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
-  - HOME-LEGACY
-  - GS1-LEGACY
-  - FAQ-LEGACY
+  - COMPOSITION-HOME-01
+  - COMPOSITION-GS1-PILLAR-01
 
 runtimeOwner: src/design-system/patterns/FinalCta.astro
 visualRegressionOwner: null
@@ -1829,17 +1827,18 @@ job:
   - Establish page Job with live copy and one Reality-first environmental image.
 
 semanticStatus: GOVERNED
-visualStatus: REFERENCE_PAGE_ACCEPTED
-implementationStatus: NOT_IMPLEMENTED
+visualStatus: CANDIDATE_EXTRACTED
+implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
-visualEvidence: REFERENCE_PAGE_ACCEPTED
+visualEvidence: PARTIAL
 
 sources:
   - UIS
-  - LEGACY-REG
-  - HOME-LEGACY
+  - STITCH-UNFICT-HOME-01
+  - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
-  - HOME-LEGACY
+  - COMPOSITION-HOME-01
+  - COMPOSITION-GS1-PILLAR-01
 
 runtimeOwner: src/design-system/sections/HumanRealityHero.astro
 visualRegressionOwner: null
@@ -1947,19 +1946,18 @@ job:
   - Explain a bounded conceptual sequence using the governed Concept Flow pattern.
 
 semanticStatus: GOVERNED
-visualStatus: REFERENCE_PAGE_ACCEPTED
-implementationStatus: NOT_IMPLEMENTED
+visualStatus: CANDIDATE_EXTRACTED
+implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
-visualEvidence: REFERENCE_PAGE_ACCEPTED
+visualEvidence: PARTIAL
 
 sources:
   - UIS
-  - LEGACY-REG
-  - HOME-LEGACY
-  - GS1-LEGACY
+  - STITCH-UNFICT-HOME-01
+  - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
-  - HOME-LEGACY
-  - GS1-LEGACY
+  - COMPOSITION-HOME-01
+  - COMPOSITION-GS1-PILLAR-01
 
 runtimeOwner: src/design-system/sections/ConceptualModelSection.astro
 visualRegressionOwner: null
@@ -2250,17 +2248,18 @@ job:
   - Page-level conclusion using the governed Final CTA pattern.
 
 semanticStatus: GOVERNED
-visualStatus: REFERENCE_PAGE_ACCEPTED
-implementationStatus: NOT_IMPLEMENTED
+visualStatus: CANDIDATE_EXTRACTED
+implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
-visualEvidence: REFERENCE_PAGE_ACCEPTED
+visualEvidence: PARTIAL
 
 sources:
   - UIS
-  - LEGACY-REG
-  - HOME-LEGACY
+  - STITCH-UNFICT-HOME-01
+  - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
-  - HOME-LEGACY
+  - COMPOSITION-HOME-01
+  - COMPOSITION-GS1-PILLAR-01
 
 runtimeOwner: src/design-system/sections/FinalCtaSection.astro
 visualRegressionOwner: null
@@ -2790,16 +2789,16 @@ job:
   - Establish the active Unfict visual language for the `PAGE-ARCHETYPE-PILLAR` Job as part of the Master Composition Set.
 
 semanticStatus: PROPOSED
-visualStatus: UNDESIGNED
+visualStatus: REFERENCE_PAGE_ACCEPTED
 implementationStatus: NOT_IMPLEMENTED
 authorityConfidence: PROVISIONAL
-visualEvidence: NONE
+visualEvidence: PARTIAL
 
 sources:
   - UIS
-  - GS1-LEGACY
+  - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
-  - GS1-LEGACY
+  - COMPOSITION-GS1-PILLAR-01
 
 runtimeOwner: src/pages/gs1-digital-link.astro
 visualRegressionOwner: null

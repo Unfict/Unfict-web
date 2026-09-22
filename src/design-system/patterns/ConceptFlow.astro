@@ -1,5 +1,6 @@
 ---
 import UfIcon from '../icons/components/UfIcon.astro';
+import { isPlaceholderOwner } from '../registry/interface-runtime-state';
 
 export interface ConceptStep {
   title: string;
@@ -13,28 +14,31 @@ export interface Props {
 }
 
 const { title, steps, class: className = '' } = Astro.props;
+const isPlaceholder = isPlaceholderOwner('PATTERN-CONCEPT-FLOW-01');
 ---
 
 <div
   class={`uf-pattern-concept-flow ${className}`.trim()}
   data-uf-interface-owner="PATTERN-CONCEPT-FLOW-01"
-  data-uf-interface-status="placeholder"
+  data-uf-interface-status={isPlaceholder ? 'placeholder' : 'implemented'}
 >
   {title && <h3 class="uf-pattern-concept-flow__title">{title}</h3>}
   <ol class="uf-pattern-concept-flow__steps">
     {
       steps.map((step, index) => (
         <li class="uf-pattern-concept-flow__step">
-          <div class="uf-pattern-concept-flow__step-number">{index + 1}</div>
+          <div class="uf-pattern-concept-flow__step-header">
+            <div class="uf-pattern-concept-flow__step-number">{index + 1}</div>
+            {index < steps.length - 1 && (
+              <div class="uf-pattern-concept-flow__arrow" aria-hidden="true">
+                <UfIcon name="arrow-right" size={16} decorative={true} />
+              </div>
+            )}
+          </div>
           <div class="uf-pattern-concept-flow__step-content">
             <h4 class="uf-pattern-concept-flow__step-title">{step.title}</h4>
             <p class="uf-pattern-concept-flow__step-desc">{step.description}</p>
           </div>
-          {index < steps.length - 1 && (
-            <div class="uf-pattern-concept-flow__arrow" aria-hidden="true">
-              <UfIcon name="arrow-right" size={16} decorative={true} />
-            </div>
-          )}
         </li>
       ))
     }
@@ -45,18 +49,19 @@ const { title, steps, class: className = '' } = Astro.props;
   .uf-pattern-concept-flow {
     display: flex;
     flex-direction: column;
-    gap: var(--uf-spacing-sm, 1rem);
+    gap: var(--uf-spacing-md, 1.5rem);
   }
 
   .uf-pattern-concept-flow__title {
     font-size: 1.25rem;
     font-weight: 600;
     margin: 0;
+    color: var(--unfict-color-deep-ink, #0a0d14);
   }
 
   .uf-pattern-concept-flow__steps {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: var(--uf-spacing-md, 1.5rem);
     list-style: none;
     margin: 0;
@@ -65,10 +70,14 @@ const { title, steps, class: className = '' } = Astro.props;
 
   .uf-pattern-concept-flow__step {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
     gap: var(--uf-spacing-xs, 0.75rem);
-    flex: 1;
-    min-width: 200px;
+  }
+
+  .uf-pattern-concept-flow__step-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .uf-pattern-concept-flow__step-number {
@@ -79,18 +88,28 @@ const { title, steps, class: className = '' } = Astro.props;
     height: 28px;
     border-radius: 50%;
     border: 1px solid var(--unfict-color-border-gray, #dde1e7);
+    background-color: var(--unfict-color-white, #ffffff);
     font-size: 0.875rem;
     font-weight: 600;
+    color: var(--unfict-color-deep-ink, #0a0d14);
+  }
+
+  .uf-pattern-concept-flow__arrow {
+    color: var(--unfict-color-slate, #596273);
+    display: flex;
+    align-items: center;
   }
 
   .uf-pattern-concept-flow__step-title {
     font-size: 0.9375rem;
     font-weight: 600;
     margin: 0 0 var(--uf-spacing-3xs, 0.25rem) 0;
+    color: var(--unfict-color-deep-ink, #0a0d14);
   }
 
   .uf-pattern-concept-flow__step-desc {
     font-size: 0.8125rem;
+    line-height: 1.4;
     color: var(--unfict-color-slate, #596273);
     margin: 0;
   }

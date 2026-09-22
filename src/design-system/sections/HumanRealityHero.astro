@@ -1,63 +1,99 @@
 ---
 import ActionHero, { type ActionProp } from '../patterns/ActionHero.astro';
+import { isPlaceholderOwner } from '../registry/interface-runtime-state';
 
 export interface Props {
+  eyebrow?: string;
   heading: string;
   lead?: string;
   primaryAction: ActionProp;
   secondaryAction?: ActionProp;
+  imageSrc?: string;
   imageAlt?: string;
   class?: string;
 }
 
 const {
+  eyebrow,
   heading,
   lead,
   primaryAction,
   secondaryAction,
-  imageAlt = 'Reality-first representation',
+  imageSrc,
+  imageAlt = '',
   class: className = ''
 } = Astro.props;
+
+const isPlaceholder = isPlaceholderOwner('SECTION-HERO-HUMAN-01');
 ---
 
 <section
   class={`uf-section-human-reality-hero ${className}`.trim()}
   data-uf-interface-owner="SECTION-HERO-HUMAN-01"
-  data-uf-interface-status="placeholder"
+  data-uf-interface-status={isPlaceholder ? 'placeholder' : 'implemented'}
 >
   <div class="uf-section-human-reality-hero__inner">
-    <ActionHero
-      heading={heading}
-      lead={lead}
-      primaryAction={primaryAction}
-      secondaryAction={secondaryAction}
-    />
+    <div class="uf-section-human-reality-hero__content">
+      <ActionHero
+        eyebrow={eyebrow}
+        heading={heading}
+        lead={lead}
+        primaryAction={primaryAction}
+        secondaryAction={secondaryAction}
+      />
+    </div>
     <div class="uf-section-human-reality-hero__media">
-      <div class="uf-section-human-reality-hero__image-placeholder" aria-label={imageAlt}>
-        <span class="uf-section-human-reality-hero__badge">Reality-first Media Placeholder</span>
-      </div>
+      {
+        imageSrc ? (
+          <img src={imageSrc} alt={imageAlt} class="uf-section-human-reality-hero__image" />
+        ) : (
+          <div
+            class="uf-section-human-reality-hero__image-placeholder"
+            aria-label={imageAlt || 'Reality-first representation'}
+          >
+            <span class="uf-section-human-reality-hero__badge">Reality-first Media</span>
+          </div>
+        )
+      }
+      <slot name="aside" />
     </div>
   </div>
 </section>
 
 <style>
   .uf-section-human-reality-hero {
-    padding: var(--uf-spacing-lg, 2rem) var(--uf-spacing-sm, 1rem);
+    padding: var(--uf-spacing-xl, 3rem) var(--uf-spacing-sm, 1rem);
+    background-color: var(--unfict-color-institutional-gray, #f6f7f9);
+    border-bottom: 1px solid var(--unfict-color-border-gray, #dde1e7);
   }
 
   .uf-section-human-reality-hero__inner {
     max-width: var(--uf-width-wide, 1200px);
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--uf-spacing-lg, 2rem);
+    grid-template-columns: 1fr;
+    gap: var(--uf-spacing-xl, 3rem);
     align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .uf-section-human-reality-hero__inner {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .uf-section-human-reality-hero__image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--uf-radius-default, 4px);
+    border: 1px solid var(--unfict-color-border-gray, #dde1e7);
+    object-fit: cover;
   }
 
   .uf-section-human-reality-hero__image-placeholder {
     width: 100%;
     aspect-ratio: 16 / 9;
-    background-color: var(--unfict-color-institutional-gray, #f6f7f9);
+    background-color: var(--unfict-color-white, #ffffff);
     border: 1px solid var(--unfict-color-border-gray, #dde1e7);
     border-radius: var(--uf-radius-default, 4px);
     display: flex;
