@@ -9,7 +9,7 @@
 -   Extraction mandate: `JULES-UNFICT-GS1-EVIDENCE-EXTRACTION-01`
 -   Preparation baseline SHA: `174c03646253470a93381e1e9c3cc3c9c0c0d9e2`
 -   Actual starting HEAD: `4b7a865050d4bd3fc6eabaaab3dd690420c57d9c`
--   Actual Pushed Commit SHA: `5b4bba0185fd043ea6db8502bcf703fcd4322ca9` (PR #5)
+-   Final Pushed HEAD: Handled per repository external reporting convention
 -   Suggested PR branch: `design/gs1-evidence-extraction-01`
 -   Suggested PR Title: `design: ingest GS1 pillar evidence and continue governed extraction`
 -   Status: BODY ACCEPTED FOR EXTRACTION; GLOBAL SHELL OVERRIDDEN TO HOMEPAGE OWNERS; SECOND GOVERNED EXTRACTION COMPLETE (6/7 OWNERS EXTRACTED, 1 HELD)
@@ -83,8 +83,8 @@ Reused without modification or page-specific forks:
 
 6 of 7 candidate owners evaluated and successfully promoted to `CANDIDATE_EXTRACTED` / `IMPLEMENTED`:
 
-1.  `PATTERN-HERO-ACTION-01` — Extracted primary button + optional secondary text link relationship supporting bounded light and dark surface themes.
-2.  `SECTION-HERO-HUMAN-01` — Extracted dark reality-first hero section with bounded dark/light theme and media placeholder/slot contract.
+1.  `PATTERN-HERO-ACTION-01` — Extracted primary button + optional secondary text link relationship supporting bounded light and dark surface themes with accessible secondary link styling.
+2.  `SECTION-HERO-HUMAN-01` — Extracted dark reality-first hero section with bounded dark/light theme and required media (`imageSrc`, `imageAlt`) contract.
 3.  `PATTERN-CONCEPT-FLOW-01` — Extracted ordered step sequence pattern (reconstructed across 3-step Home and 5-step GS1 flows).
 4.  `SECTION-CONCEPTUAL-MODEL-01` — Extracted section-level wrapper with bounded `default`/`emphasis` visual variants.
 5.  `PATTERN-FINAL-CTA-01` — Extracted concluding conversion pattern with primary button and optional secondary link.
@@ -92,7 +92,7 @@ Reused without modification or page-specific forks:
 
 ## Held Candidates & Unresolved Recurrence
 
-1.  `PATTERN-DEPTH-PATHS-01` — **HELD**: Its governed Registry Job specifies "Offer one or two legitimate deeper paths...", but accepted Homepage evidence contains three depth paths (Product & Business Leaders, Standards & Operations, Developers & Architects). Held pending semantic/Registry amendment for multi-path sets.
+1.  `PATTERN-DEPTH-PATHS-01` — **HELD**: Reverted to placeholder state. Its governed Registry Job specifies "Offer one or two legitimate deeper paths...", but accepted Homepage evidence contains three depth paths. Held pending semantic/Registry amendment for multi-path sets.
 2.  `SECTION-PROBLEM-01` & `SECTION-PERSISTENCE-01` — Shared semantic territory, but GS1 lifecycle comparison visual structure remains composition-local.
 3.  `FAQ-ITEM-01`, `PATTERN-FAQ-GROUP-01`, `SECTION-FAQ-SHORT-01` — Homepage uses interactive `<details>` disclosure; GS1 uses always-visible numbered direct answers. Defer variant contract to FAQ Master Composition.
 4.  `PATTERN-BRAND-SIGNATURE-01` / `SECTION-BRAND-SIGNATURE-01` — GS1 has only a quiet final-CTA eyebrow.
@@ -111,10 +111,10 @@ Reused without modification or page-specific forks:
 ## Authority Corrections Applied
 
 Neutralized/removed generated Stitch claims & restored historical provenance:
-- Restored pre-existing `sources` (`HOME-LEGACY`, `GS1-LEGACY`, `FAQ-LEGACY`, `LEGACY-REG`) and `sourceCompositions` entries across all Registry records.
+- Restored pre-existing historical `sources` and `sourceCompositions` entries across all Registry records.
 - Corrected `visualEvidence` Registry fields to `REFERENCE_PAGE_ACCEPTED`.
-- Neutralized unverified claims in `harness-fixtures.ts`, replacing product claims with neutral structural copy.
-- Used Brand v3 color palette, canonical font families (IBM Plex Sans / IBM Plex Mono), and bounded dark/light surface themes for Hero components.
+- Neutralized all fixture copy in `harness-fixtures.ts`, replacing all capability, resolution, governance, and product assertions with purely structural design system copy.
+- Enforced required imageSrc/imageAlt media contract on HumanRealityHero.
 
 ## Reconstruction Standard
 
@@ -137,7 +137,7 @@ Public route (`src/pages/gs1-digital-link.astro`) was preserved without modifica
 -   `pnpm run typecheck` — PASSED
 -   `pnpm run icons:validate` — PASSED (127 assets verified)
 -   `pnpm run interface:validate` — PASSED (83 records verified)
--   `pnpm run test` — PASSED (34 vitest tests passed, including Markdown/TS Registry parity assertion)
+-   `pnpm run test` — PASSED (38 vitest tests passed, including full-field Markdown/TS Registry parity assertion)
 -   `pnpm run build` — PASSED (10 static pages built)
 -   `pnpm run ci` — PASSED
 -   `pnpm run interface:check-release` — Expected release check failure (39 remaining interface placeholders).

@@ -1,6 +1,5 @@
 ---
 import TextLink from '../primitives/TextLink.astro';
-import { isPlaceholderOwner } from '../registry/interface-runtime-state';
 
 export interface PathItem {
   title: string;
@@ -14,13 +13,12 @@ export interface Props {
 }
 
 const { paths, class: className = '' } = Astro.props;
-const isPlaceholder = isPlaceholderOwner('PATTERN-DEPTH-PATHS-01');
 ---
 
 <div
   class={`uf-pattern-depth-paths ${className}`.trim()}
   data-uf-interface-owner="PATTERN-DEPTH-PATHS-01"
-  data-uf-interface-status={isPlaceholder ? 'placeholder' : 'implemented'}
+  data-uf-interface-status="placeholder"
 >
   {
     paths.map((path) => (
@@ -43,24 +41,18 @@ const isPlaceholder = isPlaceholderOwner('PATTERN-DEPTH-PATHS-01');
 
   .uf-pattern-depth-paths__item {
     border: 1px solid var(--unfict-color-border-gray, #dde1e7);
-    padding: var(--uf-spacing-md, 1.5rem);
+    padding: var(--uf-spacing-sm, 1rem);
     border-radius: var(--uf-radius-default, 4px);
-    background-color: var(--unfict-color-white, #ffffff);
-    display: flex;
-    flex-direction: column;
-    gap: var(--uf-spacing-2xs, 0.5rem);
   }
 
   .uf-pattern-depth-paths__title {
-    margin: 0;
-    font-size: 1.125rem;
-    font-weight: 600;
+    margin: 0 0 var(--uf-spacing-3xs, 0.25rem) 0;
+    font-size: 1rem;
   }
 
   .uf-pattern-depth-paths__desc {
     margin: 0;
     font-size: 0.875rem;
-    line-height: 1.5;
     color: var(--unfict-color-slate, #596273);
   }
 </style>

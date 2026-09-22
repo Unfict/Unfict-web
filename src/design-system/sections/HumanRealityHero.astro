@@ -8,8 +8,8 @@ export interface Props {
   lead?: string;
   primaryAction: ActionProp;
   secondaryAction?: ActionProp;
-  imageSrc?: string;
-  imageAlt?: string;
+  imageSrc: string;
+  imageAlt: string;
   theme?: 'light' | 'dark';
   class?: string;
 }
@@ -21,7 +21,7 @@ const {
   primaryAction,
   secondaryAction,
   imageSrc,
-  imageAlt = '',
+  imageAlt,
   theme = 'dark',
   class: className = ''
 } = Astro.props;
@@ -46,18 +46,7 @@ const isPlaceholder = isPlaceholderOwner('SECTION-HERO-HUMAN-01');
       />
     </div>
     <div class="uf-section-human-reality-hero__media">
-      {
-        imageSrc ? (
-          <img src={imageSrc} alt={imageAlt} class="uf-section-human-reality-hero__image" />
-        ) : (
-          <div
-            class="uf-section-human-reality-hero__image-placeholder"
-            aria-label={imageAlt || 'Reality-first representation'}
-          >
-            <span class="uf-section-human-reality-hero__badge">Reality-first Media</span>
-          </div>
-        )
-      }
+      <img src={imageSrc} alt={imageAlt} class="uf-section-human-reality-hero__image" />
       <slot name="aside" />
     </div>
   </div>
@@ -99,37 +88,5 @@ const isPlaceholder = isPlaceholderOwner('SECTION-HERO-HUMAN-01');
     border-radius: var(--uf-radius-default, 4px);
     border: 1px solid var(--unfict-color-border-gray, #dde1e7);
     object-fit: cover;
-  }
-
-  .uf-section-human-reality-hero__image-placeholder {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border-radius: var(--uf-radius-default, 4px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .uf-section-human-reality-hero--light .uf-section-human-reality-hero__image-placeholder {
-    background-color: var(--unfict-color-white, #ffffff);
-    border: 1px solid var(--unfict-color-border-gray, #dde1e7);
-  }
-
-  .uf-section-human-reality-hero--dark .uf-section-human-reality-hero__image-placeholder {
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(221, 225, 231, 0.2);
-  }
-
-  .uf-section-human-reality-hero__badge {
-    font-size: 0.75rem;
-    font-family: var(--unfict-font-mono, monospace);
-  }
-
-  .uf-section-human-reality-hero--light .uf-section-human-reality-hero__badge {
-    color: var(--unfict-color-slate, #596273);
-  }
-
-  .uf-section-human-reality-hero--dark .uf-section-human-reality-hero__badge {
-    color: var(--unfict-color-border-gray, #dde1e7);
   }
 </style>

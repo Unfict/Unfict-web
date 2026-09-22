@@ -1597,6 +1597,7 @@ sources:
   - GS1-LEGACY
 sourceCompositions:
   - GS1-LEGACY
+
 runtimeOwner: src/design-system/patterns/ProgressiveDepthPaths.astro
 visualRegressionOwner: null
 placeholderAllowed: true
@@ -2375,7 +2376,7 @@ sources:
 sourceCompositions:
   - HOME-LEGACY
 
-runtimeOwner: src/design-system/components/GlobalMobileNav.astro
+runtimeOwner: src/design-system/navigation/NavWebMobile.astro
 visualRegressionOwner: null
 placeholderAllowed: true
 engineBaseline: REQUIRED
@@ -2858,7 +2859,7 @@ placeholderAllowed: false
 engineBaseline: CREATIVE
 
 notes: >-
-  Stitch export accepted as active design evidence for governed extraction; page route remains non-replaced pending full content/responsive ratification.
+  Legacy Zyppi-era material is seed/reference evidence only; active Unfict composition must be designed and accepted as a whole.
 ```
 
 ## COMPOSITION-FAQ-01 — FAQ Master Composition
@@ -2891,7 +2892,7 @@ placeholderAllowed: false
 engineBaseline: CREATIVE
 
 notes: >-
-  Stitch export accepted as active design evidence for governed extraction; page route remains non-replaced pending full content/responsive ratification.
+  Legacy Zyppi-era material is seed/reference evidence only; active Unfict composition must be designed and accepted as a whole.
 ```
 
 ## COMPOSITION-ARTICLE-01 — Insight Article Master Composition
@@ -2921,7 +2922,7 @@ placeholderAllowed: false
 engineBaseline: CREATIVE
 
 notes: >-
-  Stitch export accepted as active design evidence for governed extraction; page route remains non-replaced pending full content/responsive ratification.
+  Legacy Zyppi-era material is seed/reference evidence only; active Unfict composition must be designed and accepted as a whole.
 ```
 
 # PART X — CROSS-REGISTRY CONTRACTS

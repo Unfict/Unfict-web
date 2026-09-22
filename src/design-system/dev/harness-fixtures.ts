@@ -1,80 +1,71 @@
 export const HARNESS_FIXTURES = {
   notice: 'NON-ROUTE SYSTEM HARNESS — CROSS-COMPOSITION RECONSTRUCTION',
   headerNav: [
-    { label: 'GS1 Digital Link', href: '/gs1-digital-link' },
-    { label: 'Developers', href: '/developers' },
-    { label: 'Insights', href: '/insights' },
-    { label: 'About', href: '/about' },
-    { label: 'Request developer preview', href: '/early-access', isCta: true }
+    { label: 'Primary Link Alpha', href: '/link-alpha' },
+    { label: 'Primary Link Beta', href: '/link-beta' },
+    { label: 'Primary Link Gamma', href: '/link-gamma' },
+    { label: 'Primary Link Delta', href: '/link-delta' },
+    { label: 'Call To Action', href: '/cta-target', isCta: true }
   ],
   homeHeroData: {
-    eyebrow: 'Structural Component Model',
-    heading: 'Governed Interface Layer Foundation',
-    lead: 'Deterministic interface components and layout patterns built for cross-composition design extraction.',
-    primaryAction: { label: 'Explore Specification', href: '/developers' },
-    secondaryAction: { label: 'Learn About Design System', href: '/about' }
+    eyebrow: 'Interface System Layer',
+    heading: 'Primary Section Heading Example',
+    lead: 'Secondary introductory lead copy demonstrating layout typography and structural line wrapping.',
+    primaryAction: { label: 'Primary Action Target', href: '/action-primary' },
+    secondaryAction: { label: 'Subordinate Link Target', href: '/action-secondary' }
   },
   gs1HeroData: {
-    eyebrow: 'GS1 Digital Link Pillar',
-    heading: 'Physical Product URI Resolution',
-    lead: 'Connect standard identifiers, web URIs, and enterprise systems through persistent structural resolution.',
-    primaryAction: { label: 'Explore Resolution Architecture', href: '/developers' },
-    secondaryAction: { label: 'Request Integration Preview', href: '/early-access' }
+    eyebrow: 'Secondary Composition Layer',
+    heading: 'Alternative Section Heading Example',
+    lead: 'Secondary introductory lead copy demonstrating layout typography across composition boundaries.',
+    primaryAction: { label: 'Primary Action Target', href: '/action-primary' },
+    secondaryAction: { label: 'Subordinate Link Target', href: '/action-secondary' }
   },
   homeConceptSteps: [
-    {
-      title: 'Identity Entry',
-      description: 'Standardized identity representation across domains.'
-    },
-    { title: 'State Mapping', description: 'Structural alignment across system boundaries.' },
-    { title: 'Governance Receipt', description: 'Record of system state transformation.' }
+    { title: 'Step Sequence Alpha', description: 'First step description text in sequence.' },
+    { title: 'Step Sequence Beta', description: 'Second step description text in sequence.' },
+    { title: 'Step Sequence Gamma', description: 'Third step description text in sequence.' }
   ],
   gs1ConceptSteps: [
-    { title: 'Scan / Request Input', description: 'Capture standard identifier or web URI input.' },
-    {
-      title: 'Canonical Parsing',
-      description: 'Extract key identifiers and qualifiers deterministically.'
-    },
-    { title: 'Policy Evaluation', description: 'Evaluate authority and context rules.' },
-    { title: 'Target Dispatch', description: 'Route request to verified destination payload.' },
-    { title: 'Resolution Receipt', description: 'Record receipt of resolution event.' }
+    { title: 'Step Sequence One', description: 'First step description text in sequence.' },
+    { title: 'Step Sequence Two', description: 'Second step description text in sequence.' },
+    { title: 'Step Sequence Three', description: 'Third step description text in sequence.' },
+    { title: 'Step Sequence Four', description: 'Fourth step description text in sequence.' },
+    { title: 'Step Sequence Five', description: 'Fifth step description text in sequence.' }
   ],
   gs1DepthPaths: [
     {
-      title: 'Enterprise Integration',
-      description:
-        'Connect existing scanning and database infrastructure without re-architecting core services.',
-      href: '/developers'
+      title: 'Depth Path Alpha',
+      description: 'First depth path card description text for progressive navigation.',
+      href: '/path-alpha'
     },
     {
-      title: 'Standards Alignment',
-      description: 'Review structural alignment with published URI resolution specifications.',
-      href: '/about'
+      title: 'Depth Path Beta',
+      description: 'Second depth path card description text for progressive navigation.',
+      href: '/path-beta'
     }
   ],
   homeFinalCta: {
-    heading: 'Ready for Interface Integration?',
-    subheading: 'Request access to the component development preview stream.',
-    primaryAction: { label: 'Request Early Access', href: '/early-access' },
-    secondaryAction: { label: 'Read Technical Specs', href: '/developers' }
+    heading: 'Concluding Section Heading',
+    subheading: 'Concluding section lead description text demonstrating dual action layout.',
+    primaryAction: { label: 'Primary Action Target', href: '/action-primary' },
+    secondaryAction: { label: 'Subordinate Link Target', href: '/action-secondary' }
   },
   gs1FinalCta: {
-    heading: 'Deploy Standard Digital Link Resolution',
-    subheading: 'Establish standard product identity resolution across supply chain touchpoints.',
-    primaryAction: { label: 'Request Integration Preview', href: '/early-access' }
+    heading: 'Concluding Section Heading',
+    subheading: 'Concluding section lead description text demonstrating single action layout.',
+    primaryAction: { label: 'Primary Action Target', href: '/action-primary' }
   },
   faqItems: [
     {
       id: 'harness-faq-1',
-      question: 'What is the Interface Harness?',
-      directAnswer:
-        'The Interface Harness is an internal inspection surface used to verify design extraction contracts.'
+      question: 'Sample Question Entry Alpha?',
+      directAnswer: 'Sample direct answer explanation text for question entry alpha.'
     },
     {
       id: 'harness-faq-2',
-      question: 'How does GS1 Digital Link resolution function?',
-      directAnswer:
-        'It parses standard web URIs containing GS1 key structures and routes them according to system rules.'
+      question: 'Sample Question Entry Beta?',
+      directAnswer: 'Sample direct answer explanation text for question entry beta.'
     }
   ]
 } as const;
