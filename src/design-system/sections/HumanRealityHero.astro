@@ -10,6 +10,7 @@ export interface Props {
   secondaryAction?: ActionProp;
   imageSrc?: string;
   imageAlt?: string;
+  theme?: 'light' | 'dark';
   class?: string;
 }
 
@@ -21,6 +22,7 @@ const {
   secondaryAction,
   imageSrc,
   imageAlt = '',
+  theme = 'dark',
   class: className = ''
 } = Astro.props;
 
@@ -28,7 +30,7 @@ const isPlaceholder = isPlaceholderOwner('SECTION-HERO-HUMAN-01');
 ---
 
 <section
-  class={`uf-section-human-reality-hero ${className}`.trim()}
+  class={`uf-section-human-reality-hero uf-section-human-reality-hero--${theme} ${className}`.trim()}
   data-uf-interface-owner="SECTION-HERO-HUMAN-01"
   data-uf-interface-status={isPlaceholder ? 'placeholder' : 'implemented'}
 >
@@ -40,6 +42,7 @@ const isPlaceholder = isPlaceholderOwner('SECTION-HERO-HUMAN-01');
         lead={lead}
         primaryAction={primaryAction}
         secondaryAction={secondaryAction}
+        theme={theme}
       />
     </div>
     <div class="uf-section-human-reality-hero__media">
@@ -63,8 +66,16 @@ const isPlaceholder = isPlaceholderOwner('SECTION-HERO-HUMAN-01');
 <style>
   .uf-section-human-reality-hero {
     padding: var(--uf-spacing-xl, 3rem) var(--uf-spacing-sm, 1rem);
-    background-color: var(--unfict-color-institutional-gray, #f6f7f9);
     border-bottom: 1px solid var(--unfict-color-border-gray, #dde1e7);
+  }
+
+  .uf-section-human-reality-hero--light {
+    background-color: var(--unfict-color-institutional-gray, #f6f7f9);
+  }
+
+  .uf-section-human-reality-hero--dark {
+    background-color: var(--unfict-color-deep-ink, #0a0d14);
+    border-bottom-color: rgba(221, 225, 231, 0.15);
   }
 
   .uf-section-human-reality-hero__inner {
@@ -93,17 +104,32 @@ const isPlaceholder = isPlaceholderOwner('SECTION-HERO-HUMAN-01');
   .uf-section-human-reality-hero__image-placeholder {
     width: 100%;
     aspect-ratio: 16 / 9;
-    background-color: var(--unfict-color-white, #ffffff);
-    border: 1px solid var(--unfict-color-border-gray, #dde1e7);
     border-radius: var(--uf-radius-default, 4px);
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
+  .uf-section-human-reality-hero--light .uf-section-human-reality-hero__image-placeholder {
+    background-color: var(--unfict-color-white, #ffffff);
+    border: 1px solid var(--unfict-color-border-gray, #dde1e7);
+  }
+
+  .uf-section-human-reality-hero--dark .uf-section-human-reality-hero__image-placeholder {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(221, 225, 231, 0.2);
+  }
+
   .uf-section-human-reality-hero__badge {
     font-size: 0.75rem;
-    color: var(--unfict-color-slate, #596273);
     font-family: var(--unfict-font-mono, monospace);
+  }
+
+  .uf-section-human-reality-hero--light .uf-section-human-reality-hero__badge {
+    color: var(--unfict-color-slate, #596273);
+  }
+
+  .uf-section-human-reality-hero--dark .uf-section-human-reality-hero__badge {
+    color: var(--unfict-color-border-gray, #dde1e7);
   }
 </style>

@@ -14,6 +14,7 @@ export interface Props {
   lead?: string;
   primaryAction: ActionProp;
   secondaryAction?: ActionProp;
+  theme?: 'light' | 'dark';
   class?: string;
 }
 
@@ -23,6 +24,7 @@ const {
   lead,
   primaryAction,
   secondaryAction,
+  theme = 'light',
   class: className = ''
 } = Astro.props;
 
@@ -30,7 +32,7 @@ const isPlaceholder = isPlaceholderOwner('PATTERN-HERO-ACTION-01');
 ---
 
 <div
-  class={`uf-pattern-action-hero ${className}`.trim()}
+  class={`uf-pattern-action-hero uf-pattern-action-hero--${theme} ${className}`.trim()}
   data-uf-interface-owner="PATTERN-HERO-ACTION-01"
   data-uf-interface-status={isPlaceholder ? 'placeholder' : 'implemented'}
 >
@@ -63,7 +65,14 @@ const isPlaceholder = isPlaceholderOwner('PATTERN-HERO-ACTION-01');
     font-size: 0.75rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+  }
+
+  .uf-pattern-action-hero--light .uf-pattern-action-hero__eyebrow {
     color: var(--unfict-color-slate, #596273);
+  }
+
+  .uf-pattern-action-hero--dark .uf-pattern-action-hero__eyebrow {
+    color: var(--unfict-color-border-gray, #dde1e7);
   }
 
   .uf-pattern-action-hero__heading {
@@ -71,14 +80,28 @@ const isPlaceholder = isPlaceholderOwner('PATTERN-HERO-ACTION-01');
     font-weight: 700;
     line-height: 1.2;
     margin: 0;
+  }
+
+  .uf-pattern-action-hero--light .uf-pattern-action-hero__heading {
     color: var(--unfict-color-deep-ink, #0a0d14);
+  }
+
+  .uf-pattern-action-hero--dark .uf-pattern-action-hero__heading {
+    color: var(--unfict-color-white, #ffffff);
   }
 
   .uf-pattern-action-hero__lead {
     font-size: 1.125rem;
     line-height: 1.5;
-    color: var(--unfict-color-slate, #596273);
     margin: 0;
+  }
+
+  .uf-pattern-action-hero--light .uf-pattern-action-hero__lead {
+    color: var(--unfict-color-slate, #596273);
+  }
+
+  .uf-pattern-action-hero--dark .uf-pattern-action-hero__lead {
+    color: var(--unfict-color-border-gray, #dde1e7);
   }
 
   .uf-pattern-action-hero__actions {
@@ -91,5 +114,13 @@ const isPlaceholder = isPlaceholderOwner('PATTERN-HERO-ACTION-01');
 
   .uf-pattern-action-hero__secondary-link {
     font-size: 0.875rem;
+  }
+
+  .uf-pattern-action-hero--dark :global(.uf-pattern-action-hero__secondary-link) {
+    color: var(--unfict-color-white, #ffffff);
+  }
+
+  .uf-pattern-action-hero--dark :global(.uf-pattern-action-hero__secondary-link:hover) {
+    color: var(--unfict-color-border-gray, #dde1e7);
   }
 </style>

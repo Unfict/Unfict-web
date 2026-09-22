@@ -9,10 +9,10 @@
 -   Extraction mandate: `JULES-UNFICT-GS1-EVIDENCE-EXTRACTION-01`
 -   Preparation baseline SHA: `174c03646253470a93381e1e9c3cc3c9c0c0d9e2`
 -   Actual starting HEAD: `4b7a865050d4bd3fc6eabaaab3dd690420c57d9c`
--   Final Pushed HEAD: Handled per repository external reporting convention
+-   Actual Pushed Commit SHA: `5b4bba0185fd043ea6db8502bcf703fcd4322ca9` (PR #5)
 -   Suggested PR branch: `design/gs1-evidence-extraction-01`
 -   Suggested PR Title: `design: ingest GS1 pillar evidence and continue governed extraction`
--   Status: BODY ACCEPTED FOR EXTRACTION; GLOBAL SHELL OVERRIDDEN TO HOMEPAGE OWNERS; SECOND GOVERNED EXTRACTION COMPLETE
+-   Status: BODY ACCEPTED FOR EXTRACTION; GLOBAL SHELL OVERRIDDEN TO HOMEPAGE OWNERS; SECOND GOVERNED EXTRACTION COMPLETE (6/7 OWNERS EXTRACTED, 1 HELD)
 
 ## Evidence Paths
 
@@ -81,71 +81,68 @@ Reused without modification or page-specific forks:
 
 ## Evaluated & Extracted Candidates
 
-All 7 candidate owners evaluated and successfully promoted to `CANDIDATE_EXTRACTED` / `IMPLEMENTED`:
+6 of 7 candidate owners evaluated and successfully promoted to `CANDIDATE_EXTRACTED` / `IMPLEMENTED`:
 
-1.  `PATTERN-HERO-ACTION-01` — Extracted primary + optional secondary link action relationship.
-2.  `SECTION-HERO-HUMAN-01` — Extracted dark, reality-first documentary hero framing with media placeholder/slot.
-3.  `PATTERN-CONCEPT-FLOW-01` — Extracted ordered step sequence pattern (tested across 3-step Home and 5-step GS1 flows).
-4.  `SECTION-CONCEPTUAL-MODEL-01` — Extracted page section framing around concept flows with bounded variants (`default` / `emphasis`).
-5.  `PATTERN-DEPTH-PATHS-01` — Extracted grid of progressive path cards using `TEXT-LINK-01`.
-6.  `PATTERN-FINAL-CTA-01` — Extracted concluding conversion pattern supporting primary button and optional secondary depth link.
-7.  `SECTION-FINAL-CTA-01` — Extracted section-level wrapper for final CTA pattern.
+1.  `PATTERN-HERO-ACTION-01` — Extracted primary button + optional secondary text link relationship supporting bounded light and dark surface themes.
+2.  `SECTION-HERO-HUMAN-01` — Extracted dark reality-first hero section with bounded dark/light theme and media placeholder/slot contract.
+3.  `PATTERN-CONCEPT-FLOW-01` — Extracted ordered step sequence pattern (reconstructed across 3-step Home and 5-step GS1 flows).
+4.  `SECTION-CONCEPTUAL-MODEL-01` — Extracted section-level wrapper with bounded `default`/`emphasis` visual variants.
+5.  `PATTERN-FINAL-CTA-01` — Extracted concluding conversion pattern with primary button and optional secondary link.
+6.  `SECTION-FINAL-CTA-01` — Extracted section wrapper for final CTA pattern.
 
-## Held / Unresolved Recurrence
+## Held Candidates & Unresolved Recurrence
 
--   `SECTION-PROBLEM-01` --- Job recurs, visual treatment differs materially.
--   `SECTION-PERSISTENCE-01` --- semantic territory recurs; section ownership remains ambiguous.
--   `FAQ-ITEM-01` --- Home uses disclosure; GS1 evidence uses always-visible numbered direct answers.
--   `DISCLOSURE-TRIGGER-01` --- not required by the accepted GS1 visual form.
--   `PATTERN-FAQ-GROUP-01` --- semantic recurrence confirmed; visual variant normalization unresolved.
--   `SECTION-FAQ-SHORT-01` --- page-level recurrence exists; defer until FAQ pattern contract is resolved.
--   `PATTERN-BRAND-SIGNATURE-01` / `SECTION-BRAND-SIGNATURE-01` --- GS1 has only a quiet final-CTA eyebrow.
--   `PATTERN-INTEGRATION-REASSURANCE-01` / `SECTION-INTEGRATION-REASSURANCE-01` --- strong GS1 evidence but insufficient current cross-composition recurrence.
--   layout/image foundations --- second composition supports them, but direct canonical breakpoint evidence remains incomplete.
+1.  `PATTERN-DEPTH-PATHS-01` — **HELD**: Its governed Registry Job specifies "Offer one or two legitimate deeper paths...", but accepted Homepage evidence contains three depth paths (Product & Business Leaders, Standards & Operations, Developers & Architects). Held pending semantic/Registry amendment for multi-path sets.
+2.  `SECTION-PROBLEM-01` & `SECTION-PERSISTENCE-01` — Shared semantic territory, but GS1 lifecycle comparison visual structure remains composition-local.
+3.  `FAQ-ITEM-01`, `PATTERN-FAQ-GROUP-01`, `SECTION-FAQ-SHORT-01` — Homepage uses interactive `<details>` disclosure; GS1 uses always-visible numbered direct answers. Defer variant contract to FAQ Master Composition.
+4.  `PATTERN-BRAND-SIGNATURE-01` / `SECTION-BRAND-SIGNATURE-01` — GS1 has only a quiet final-CTA eyebrow.
+5.  `PATTERN-INTEGRATION-REASSURANCE-01` / `SECTION-INTEGRATION-REASSURANCE-01` — Strong GS1 evidence, but lacks sufficient cross-composition recurrence with Homepage.
+6.  layout/image foundations — second composition supports them, but direct canonical breakpoint evidence remains incomplete.
 
 ## Composition-Local Structures
 
 -   GS1 Hero right-side Reality Sync Axis ledger.
 -   Lifecycle mismatch comparison table.
 -   Data Carrier vs Standard Link URI two-panel treatment.
--   Blue technical-peak treatment around the five-step flow.
+-   Blue technical-peak section treatment.
 -   Three-boundary role grid.
 -   Standards-maintenance callout.
 
 ## Authority Corrections Applied
 
-Neutralized/removed generated Stitch claims:
-- Removed raw Tailwind, Material Symbols, generated SVGs, IBM Plex Serif, and off-brand blue tokens (`#0053CE`, `#266CF3`).
-- Neutralized unverified claims regarding exact SLA execution (<28ms), 5-20+ year packaging lifespans, exact ISO spec conformance, and future roadmap promises in harness fixtures.
-- Used Brand v3 color palette and canonical font families (IBM Plex Sans / IBM Plex Mono).
+Neutralized/removed generated Stitch claims & restored historical provenance:
+- Restored pre-existing `sources` (`HOME-LEGACY`, `GS1-LEGACY`, `FAQ-LEGACY`, `LEGACY-REG`) and `sourceCompositions` entries across all Registry records.
+- Corrected `visualEvidence` Registry fields to `REFERENCE_PAGE_ACCEPTED`.
+- Neutralized unverified claims in `harness-fixtures.ts`, replacing product claims with neutral structural copy.
+- Used Brand v3 color palette, canonical font families (IBM Plex Sans / IBM Plex Mono), and bounded dark/light surface themes for Hero components.
 
 ## Reconstruction Standard
 
-Non-route Interface Harness (`src/design-system/dev/InterfaceHarness.astro`) proves integrated cross-composition relationships for both Homepage and GS1 Pillar compositions across all 7 extracted owners, using neutral fixture data.
+Non-route Interface Harness (`src/design-system/dev/InterfaceHarness.astro`) proves integrated cross-composition relationships for both Homepage and GS1 Pillar compositions across extracted owners, using neutral fixture data.
 
 Public route (`src/pages/gs1-digital-link.astro`) was preserved without modification.
 
 ## Registry & Placeholder Synchronization
 
 -   `COMPOSITION-GS1-PILLAR-01` visual status set to `REFERENCE_PAGE_ACCEPTED`, visual evidence set to `REFERENCE_PAGE_ACCEPTED`.
--   The 7 extracted owners updated in `DOCS/DESIGN/WEB/UNFICT-WEB-INTERFACE-REGISTRY-001-v0.1.md` and `src/design-system/registry/interface-registry.ts` with `visualStatus: CANDIDATE_EXTRACTED` and `implementationStatus: IMPLEMENTED`.
--   7 implemented placeholders removed from `src/design-system/metadata/INTERFACE-PLACEHOLDERS.json`.
+-   The 6 extracted owners updated in `DOCS/DESIGN/WEB/UNFICT-WEB-INTERFACE-REGISTRY-001-v0.1.md` and `src/design-system/registry/interface-registry.ts` with `visualStatus: CANDIDATE_EXTRACTED` and `implementationStatus: IMPLEMENTED`.
+-   6 implemented placeholders removed from `src/design-system/metadata/INTERFACE-PLACEHOLDERS.json`.
 -   Placeholder count before: 45
--   Placeholder count after: 38
+-   Placeholder count after: 39 (39 remaining tracked interface placeholders)
 
 ## Validation Results
 
 -   `pnpm run format:check` — PASSED
 -   `pnpm run lint` — PASSED
 -   `pnpm run typecheck` — PASSED
--   `pnpm run icons:validate` — PASSED
+-   `pnpm run icons:validate` — PASSED (127 assets verified)
 -   `pnpm run interface:validate` — PASSED (83 records verified)
--   `pnpm run test` — PASSED (33 tests passed)
+-   `pnpm run test` — PASSED (34 vitest tests passed, including Markdown/TS Registry parity assertion)
 -   `pnpm run build` — PASSED (10 static pages built)
 -   `pnpm run ci` — PASSED
--   `pnpm run interface:check-release` — Expected release failure due to 38 remaining placeholders.
--   `pnpm run icons:check-release` — Expected release failure due to 1 icon placeholder remaining.
+-   `pnpm run interface:check-release` — Expected release check failure (39 remaining interface placeholders).
+-   `pnpm run icons:check-release` — Expected release check failure (126 remaining tracked icon placeholders).
 
 ## Final Recommendation
 
-The second governed extraction cycle successfully ingested GS1 Pillar evidence, validated 7 recurring owners against the Homepage visual language, demonstrated integrated cross-composition relationships in the Interface Harness, and updated all static/runtime registry projections and placeholder overlays without modifying public routes. Proceed with PR submission.
+The second governed extraction cycle successfully ingested GS1 Pillar evidence, validated 6 recurring owners against the Homepage visual language, held 1 candidate (`PATTERN-DEPTH-PATHS-01`) due to an explicit 3-path vs 2-path Job conflict, demonstrated integrated cross-composition relationships in the Interface Harness, and synchronized all static/runtime registry projections and placeholder overlays without modifying public routes.

@@ -1488,16 +1488,18 @@ semanticStatus: GOVERNED
 visualStatus: CANDIDATE_EXTRACTED
 implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
-visualEvidence: PARTIAL
+visualEvidence: REFERENCE_PAGE_ACCEPTED
 
 sources:
   - UIS
+  - LEGACY-REG
+  - HOME-LEGACY
   - STITCH-UNFICT-HOME-01
   - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
+  - HOME-LEGACY
   - COMPOSITION-HOME-01
   - COMPOSITION-GS1-PILLAR-01
-
 runtimeOwner: src/design-system/patterns/ActionHero.astro
 visualRegressionOwner: null
 placeholderAllowed: true
@@ -1551,16 +1553,20 @@ semanticStatus: GOVERNED
 visualStatus: CANDIDATE_EXTRACTED
 implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
-visualEvidence: PARTIAL
+visualEvidence: REFERENCE_PAGE_ACCEPTED
 
 sources:
   - UIS
+  - LEGACY-REG
+  - HOME-LEGACY
+  - GS1-LEGACY
   - STITCH-UNFICT-HOME-01
   - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
+  - HOME-LEGACY
+  - GS1-LEGACY
   - COMPOSITION-HOME-01
   - COMPOSITION-GS1-PILLAR-01
-
 runtimeOwner: src/design-system/patterns/ConceptFlow.astro
 visualRegressionOwner: null
 placeholderAllowed: true
@@ -1580,19 +1586,17 @@ job:
   - Offer one or two legitimate deeper paths without competing with the primary action.
 
 semanticStatus: GOVERNED
-visualStatus: CANDIDATE_EXTRACTED
-implementationStatus: IMPLEMENTED
-authorityConfidence: OPERATIVE
-visualEvidence: PARTIAL
+visualStatus: UNDESIGNED
+implementationStatus: NOT_IMPLEMENTED
+authorityConfidence: PROVISIONAL
+visualEvidence: MANDATE_ONLY
 
 sources:
   - UIS
-  - STITCH-UNFICT-HOME-01
-  - STITCH-UNFICT-GS1-PILLAR-01
+  - LEGACY-REG
+  - GS1-LEGACY
 sourceCompositions:
-  - COMPOSITION-HOME-01
-  - COMPOSITION-GS1-PILLAR-01
-
+  - GS1-LEGACY
 runtimeOwner: src/design-system/patterns/ProgressiveDepthPaths.astro
 visualRegressionOwner: null
 placeholderAllowed: true
@@ -1733,16 +1737,22 @@ semanticStatus: GOVERNED
 visualStatus: CANDIDATE_EXTRACTED
 implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
-visualEvidence: PARTIAL
+visualEvidence: REFERENCE_PAGE_ACCEPTED
 
 sources:
   - UIS
+  - LEGACY-REG
+  - HOME-LEGACY
+  - GS1-LEGACY
+  - FAQ-LEGACY
   - STITCH-UNFICT-HOME-01
   - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
+  - HOME-LEGACY
+  - GS1-LEGACY
+  - FAQ-LEGACY
   - COMPOSITION-HOME-01
   - COMPOSITION-GS1-PILLAR-01
-
 runtimeOwner: src/design-system/patterns/FinalCta.astro
 visualRegressionOwner: null
 placeholderAllowed: true
@@ -1830,16 +1840,18 @@ semanticStatus: GOVERNED
 visualStatus: CANDIDATE_EXTRACTED
 implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
-visualEvidence: PARTIAL
+visualEvidence: REFERENCE_PAGE_ACCEPTED
 
 sources:
   - UIS
+  - LEGACY-REG
+  - HOME-LEGACY
   - STITCH-UNFICT-HOME-01
   - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
+  - HOME-LEGACY
   - COMPOSITION-HOME-01
   - COMPOSITION-GS1-PILLAR-01
-
 runtimeOwner: src/design-system/sections/HumanRealityHero.astro
 visualRegressionOwner: null
 placeholderAllowed: true
@@ -1949,16 +1961,20 @@ semanticStatus: GOVERNED
 visualStatus: CANDIDATE_EXTRACTED
 implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
-visualEvidence: PARTIAL
+visualEvidence: REFERENCE_PAGE_ACCEPTED
 
 sources:
   - UIS
+  - LEGACY-REG
+  - HOME-LEGACY
+  - GS1-LEGACY
   - STITCH-UNFICT-HOME-01
   - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
+  - HOME-LEGACY
+  - GS1-LEGACY
   - COMPOSITION-HOME-01
   - COMPOSITION-GS1-PILLAR-01
-
 runtimeOwner: src/design-system/sections/ConceptualModelSection.astro
 visualRegressionOwner: null
 placeholderAllowed: true
@@ -2251,16 +2267,18 @@ semanticStatus: GOVERNED
 visualStatus: CANDIDATE_EXTRACTED
 implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
-visualEvidence: PARTIAL
+visualEvidence: REFERENCE_PAGE_ACCEPTED
 
 sources:
   - UIS
+  - LEGACY-REG
+  - HOME-LEGACY
   - STITCH-UNFICT-HOME-01
   - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
+  - HOME-LEGACY
   - COMPOSITION-HOME-01
   - COMPOSITION-GS1-PILLAR-01
-
 runtimeOwner: src/design-system/sections/FinalCtaSection.astro
 visualRegressionOwner: null
 placeholderAllowed: true
@@ -2792,14 +2810,15 @@ semanticStatus: PROPOSED
 visualStatus: REFERENCE_PAGE_ACCEPTED
 implementationStatus: NOT_IMPLEMENTED
 authorityConfidence: PROVISIONAL
-visualEvidence: PARTIAL
+visualEvidence: REFERENCE_PAGE_ACCEPTED
 
 sources:
   - UIS
+  - GS1-LEGACY
   - STITCH-UNFICT-GS1-PILLAR-01
 sourceCompositions:
+  - GS1-LEGACY
   - COMPOSITION-GS1-PILLAR-01
-
 runtimeOwner: src/pages/gs1-digital-link.astro
 visualRegressionOwner: null
 placeholderAllowed: false

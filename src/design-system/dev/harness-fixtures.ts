@@ -8,70 +8,73 @@ export const HARNESS_FIXTURES = {
     { label: 'Request developer preview', href: '/early-access', isCta: true }
   ],
   homeHeroData: {
-    eyebrow: 'Reality-First Infrastructure',
-    heading: 'Governed Reality Sync Engine',
-    lead: 'Deterministic interface components and governance patterns built for cross-composition stability.',
+    eyebrow: 'Structural Component Model',
+    heading: 'Governed Interface Layer Foundation',
+    lead: 'Deterministic interface components and layout patterns built for cross-composition design extraction.',
     primaryAction: { label: 'Explore Specification', href: '/developers' },
-    secondaryAction: { label: 'Learn About Unfict', href: '/about' }
+    secondaryAction: { label: 'Learn About Design System', href: '/about' }
   },
   gs1HeroData: {
     eyebrow: 'GS1 Digital Link Pillar',
-    heading: 'Authoritative Physical Product Resolution',
-    lead: 'Connect barcodes, web URIs, and enterprise systems through persistent, policy-governed resolution.',
-    primaryAction: { label: 'Explore Resolution Arch', href: '/developers' },
+    heading: 'Physical Product URI Resolution',
+    lead: 'Connect standard identifiers, web URIs, and enterprise systems through persistent structural resolution.',
+    primaryAction: { label: 'Explore Resolution Architecture', href: '/developers' },
     secondaryAction: { label: 'Request Integration Preview', href: '/early-access' }
   },
   homeConceptSteps: [
-    { title: 'Identity Capture', description: 'Standardized identity resolution across domains.' },
     {
-      title: 'State Synchronization',
-      description: 'Real-time structural alignment across entities.'
+      title: 'Identity Entry',
+      description: 'Standardized identity representation across domains.'
     },
-    { title: 'Governance Receipt', description: 'Cryptographic proof of system state.' }
+    { title: 'State Mapping', description: 'Structural alignment across system boundaries.' },
+    { title: 'Governance Receipt', description: 'Record of system state transformation.' }
   ],
   gs1ConceptSteps: [
-    { title: 'Scan / Request', description: 'Capture standard GS1 barcode or web URI input.' },
-    { title: 'Canonical Parse', description: 'Extract GTIN and key qualifiers deterministically.' },
-    { title: 'Policy Resolution', description: 'Evaluate authority, context, and access rules.' },
-    { title: 'Target Dispatch', description: 'Route to verified destination or data payload.' },
-    { title: 'Governance Log', description: 'Record immutable receipt of resolution event.' }
+    { title: 'Scan / Request Input', description: 'Capture standard identifier or web URI input.' },
+    {
+      title: 'Canonical Parsing',
+      description: 'Extract key identifiers and qualifiers deterministically.'
+    },
+    { title: 'Policy Evaluation', description: 'Evaluate authority and context rules.' },
+    { title: 'Target Dispatch', description: 'Route request to verified destination payload.' },
+    { title: 'Resolution Receipt', description: 'Record receipt of resolution event.' }
   ],
   gs1DepthPaths: [
     {
       title: 'Enterprise Integration',
       description:
-        'Connect existing WMS, ERP, and scanning infrastructure without re-architecting legacy systems.',
+        'Connect existing scanning and database infrastructure without re-architecting core services.',
       href: '/developers'
     },
     {
-      title: 'Standards Conformance',
-      description:
-        'Review structural alignment with published global standards and open URI resolution specs.',
+      title: 'Standards Alignment',
+      description: 'Review structural alignment with published URI resolution specifications.',
       href: '/about'
     }
   ],
   homeFinalCta: {
-    heading: 'Ready for Reality Sync?',
-    subheading: 'Request early access to the developer preview stream.',
+    heading: 'Ready for Interface Integration?',
+    subheading: 'Request access to the component development preview stream.',
     primaryAction: { label: 'Request Early Access', href: '/early-access' },
-    secondaryAction: { label: 'Read Technical Docs', href: '/developers' }
+    secondaryAction: { label: 'Read Technical Specs', href: '/developers' }
   },
   gs1FinalCta: {
     heading: 'Deploy Standard Digital Link Resolution',
-    subheading: 'Establish reliable product identity resolution across your supply chain.',
+    subheading: 'Establish standard product identity resolution across supply chain touchpoints.',
     primaryAction: { label: 'Request Integration Preview', href: '/early-access' }
   },
   faqItems: [
     {
       id: 'harness-faq-1',
-      question: 'What is Unfict?',
-      directAnswer: 'Unfict is a governed reality sync engine for physical and digital systems.'
+      question: 'What is the Interface Harness?',
+      directAnswer:
+        'The Interface Harness is an internal inspection surface used to verify design extraction contracts.'
     },
     {
       id: 'harness-faq-2',
-      question: 'How does Unfict integrate with existing GS1 resolution?',
+      question: 'How does GS1 Digital Link resolution function?',
       directAnswer:
-        'Unfict resolves GS1 Digital Link URIs alongside canonical identity frameworks without requiring core infrastructure replacement.'
+        'It parses standard web URIs containing GS1 key structures and routes them according to system rules.'
     }
   ]
 } as const;

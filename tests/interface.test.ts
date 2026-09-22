@@ -80,6 +80,31 @@ describe('Interface Engine Governance & Registry', () => {
     }
   });
 
+  it('should ensure strict parity between Markdown authority and TypeScript projection', () => {
+    const mdPath = path.resolve(
+      process.cwd(),
+      'DOCS/DESIGN/WEB/UNFICT-WEB-INTERFACE-REGISTRY-001-v0.1.md'
+    );
+    const mdContent = fs.readFileSync(mdPath, 'utf8');
+
+    for (const record of INTERFACE_REGISTRY) {
+      const idMatch = new RegExp(`id:\\s*${record.id}\\b`).test(mdContent);
+      expect(idMatch).toBe(true);
+
+      const blockRegex = new RegExp(`id:\\s*${record.id}\\n[\\s\\S]*?\\n\\n\`\`\``, 'm');
+      const blockMatch = mdContent.match(blockRegex);
+      expect(blockMatch).not.toBeNull();
+
+      if (blockMatch) {
+        const block = blockMatch[0];
+        expect(block).toContain(`visualStatus: ${record.visualStatus}`);
+        expect(block).toContain(`implementationStatus: ${record.implementationStatus}`);
+        expect(block).toContain(`authorityConfidence: ${record.authorityConfidence}`);
+        expect(block).toContain(`visualEvidence: ${record.visualEvidence}`);
+      }
+    }
+  });
+
   it('should ensure two-way placeholder overlay consistency', () => {
     const overlayIds = getAllPlaceholderOwnerIds();
     expect(overlayIds.length).toBeGreaterThan(0);
