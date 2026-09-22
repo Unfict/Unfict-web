@@ -56,6 +56,11 @@ const { items = defaultItems, activeHref, class: className = '' } = Astro.props;
 </nav>
 
 <style>
+  .uf-nav-primary {
+    display: flex;
+    align-items: center;
+  }
+
   .uf-nav-primary__list {
     display: flex;
     align-items: center;
@@ -82,5 +87,11 @@ const { items = defaultItems, activeHref, class: className = '' } = Astro.props;
   .uf-nav-primary__link--active {
     text-decoration: underline;
     text-underline-offset: 4px;
+  }
+
+  @media (max-width: 768px) {
+    .uf-nav-primary {
+      display: none;
+    }
   }
 </style>

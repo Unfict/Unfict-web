@@ -6,9 +6,9 @@
 - Mandate ID: `JULES-UNFICT-HOME-EVIDENCE-EXTRACTION-01`
 - Date: 22 September 2026
 - Starting HEAD: `8cb2de1` (supersedes preparation SHA `c5f2b973fa517fd992b8407c5bb86dd032283dbe`)
-- Final Pushed HEAD: `design/homepage-evidence-extraction-01`
+- Final Pushed HEAD: `PR #4 commit update` (pushed to branch `design/homepage-evidence-extraction-01`)
 - Reviewer: Chair + Jules.google.com
-- Status: FIRST CONSERVATIVE EXTRACTION COMPLETE — NOT VISUALLY FROZEN
+- Status: FIRST CONSERVATIVE EXTRACTION COMPLETE & CORRECTIONS APPLIED — NOT VISUALLY FROZEN
 
 ## Evidence Paths & Visual Completeness
 - Raw Stitch Export: `DOCS/DESIGN/PAGES/HOME/stitch-export/code.html`
@@ -46,7 +46,7 @@
 1. `BUTTON-PRIMARY-01` (`src/design-system/primitives/Button.astro`)
    - Layer: primitive
    - Status: Extracted & Implemented. Removed from `INTERFACE-PLACEHOLDERS.json`.
-   - Contract: Dominant legitimate action primitive with Unfict Blue background, active square alignment marker, hover/focus states, and IBM Plex Sans font.
+   - Contract: Dominant legitimate action primitive using Unfict Blue background, active square alignment marker, hover/focus states with governed Brand tokens, and IBM Plex Sans font.
 
 2. `TEXT-LINK-01` (`src/design-system/primitives/TextLink.astro`)
    - Layer: primitive
@@ -56,17 +56,17 @@
 3. `NAV-WEB-PRIMARY-01` (`src/design-system/navigation/NavWebPrimary.astro`)
    - Layer: navigation
    - Status: Extracted & Implemented. Removed from `INTERFACE-PLACEHOLDERS.json`.
-   - Contract: Primary desktop web navigation with current-page active state and CTA integration using `Button.astro`.
+   - Contract: Primary desktop web navigation with current-page active state, CTA integration using `Button.astro`, and responsive CSS rules hiding desktop navigation on mobile viewports (<768px) to prevent capability leakage.
 
 4. `GLOBAL-HEADER-01` (`src/design-system/components/GlobalHeader.astro`)
    - Layer: component
    - Status: Extracted & Implemented. Removed from `INTERFACE-PLACEHOLDERS.json`.
-   - Contract: Global header with sticky positioning, Unfict motif mark via `UfIcon`, vertical rule, Unfict wordmark, monospaced "REALITY SYNC" sub-tag, and `NavWebPrimary`.
+   - Contract: Global header with sticky positioning, Unfict motif mark via `UfIcon`, vertical rule, canonical vector wordmark via `UfWordmark.astro`, `REALITY SYNC` sub-tag in IBM Plex Sans (BRAND-001 §8.4), and `NavWebPrimary`.
 
 5. `GLOBAL-FOOTER-01` (`src/design-system/components/GlobalFooter.astro`)
    - Layer: component
    - Status: Extracted & Implemented. Removed from `INTERFACE-PLACEHOLDERS.json`.
-   - Contract: Institutional footer with brand signature, active system status node indicator, product/company/legal navigation groups, and copyright notice.
+   - Contract: Institutional footer with brand signature using `UfWordmark.astro`, product/company/legal navigation groups, optional description prop, and copyright notice. Non-authoritative status node and hardcoded description copy removed.
 
 6. `SHELL-WEB-PUBLIC-01` (`src/design-system/shells/PublicWebShell.astro`)
    - Layer: shell
@@ -107,8 +107,13 @@ All 14 held owners remain at their existing governed state. Deferred owners were
 - Remaining tracked placeholders count: 45
 
 ## Reconstruction
-- Environment: Non-route Interface Harness (`src/design-system/dev/InterfaceHarness.astro`) and Vitest harness tests.
-- Result: Extracted owners successfully demonstrate navigation hierarchy, brand orientation, action hierarchy, shell framing, and footer closure relationships without hard-coding promotional claims or modifying `src/pages/index.astro`.
+- Environment: Integrated Non-route Interface Harness (`src/design-system/dev/InterfaceHarness.astro`) and Vitest harness tests.
+- Result: Extracted owners demonstrate integrated shell framing, header orientation, primary navigation, main content relationships, and footer closure without hard-coding promotional claims or modifying `src/pages/index.astro`.
+
+## Unresolved Items & Evidence Limitations
+- Canonical 1440px desktop and 390px mobile visual baseline captures remain absent from evidence package (source-full.png is a 304x1600 preview).
+- Mobile navigation drawer remains held at `GLOBAL-MOBILE-NAV-01` pending canonical mobile evidence.
+- Public page content and route replacement (`src/pages/index.astro`) remain blocked pending content truth and responsive evidence ratification.
 
 ## Validation Gates & Release Check
 - `pnpm run format:check`: PASS
@@ -123,5 +128,5 @@ All 14 held owners remain at their existing governed state. Deferred owners were
 - `pnpm run icons:check-release`: Expected failure reporting remaining icon placeholders.
 
 ## Final Recommendation
-- **EXTRACTION SUCCESSFUL**
-- PR ready to be opened against `main` for Chair review.
+- **EXTRACTION CORRECTIONS COMPLETE**
+- PR #4 updated and ready for Chair review.

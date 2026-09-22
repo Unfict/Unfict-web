@@ -750,8 +750,8 @@ job:
   - Highest-priority legitimate action in the current decision context.
 
 semanticStatus: GOVERNED
-visualStatus: REFERENCE_PAGE_ACCEPTED
-implementationStatus: NOT_IMPLEMENTED
+visualStatus: CANDIDATE_EXTRACTED
+implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
 visualEvidence: REFERENCE_PAGE_ACCEPTED
 
@@ -759,6 +759,9 @@ sources:
   - UIS
   - LEGACY-REG
   - HOME-LEGACY
+sourceCompositions:
+  - HOME-LEGACY
+  - COMPOSITION-HOME-01
 
 runtimeOwner: src/design-system/primitives/Button.astro
 visualRegressionOwner: null
@@ -836,8 +839,8 @@ job:
   - Progressive depth, related reading, secondary navigation, and low-commitment action.
 
 semanticStatus: GOVERNED
-visualStatus: REFERENCE_PAGE_ACCEPTED
-implementationStatus: NOT_IMPLEMENTED
+visualStatus: CANDIDATE_EXTRACTED
+implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
 visualEvidence: REFERENCE_PAGE_ACCEPTED
 
@@ -845,6 +848,9 @@ sources:
   - UIS
   - LEGACY-REG
   - HOME-LEGACY
+sourceCompositions:
+  - HOME-LEGACY
+  - COMPOSITION-HOME-01
 
 runtimeOwner: src/design-system/primitives/TextLink.astro
 visualRegressionOwner: null
@@ -1093,8 +1099,8 @@ job:
   - Persistent public brand orientation, primary navigation, active route, and authorized primary CTA.
 
 semanticStatus: GOVERNED
-visualStatus: REFERENCE_PAGE_ACCEPTED
-implementationStatus: NOT_IMPLEMENTED
+visualStatus: CANDIDATE_EXTRACTED
+implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
 visualEvidence: REFERENCE_PAGE_ACCEPTED
 
@@ -1104,6 +1110,7 @@ sources:
   - HOME-LEGACY
 sourceCompositions:
   - HOME-LEGACY
+  - COMPOSITION-HOME-01
 
 runtimeOwner: src/design-system/components/GlobalHeader.astro
 visualRegressionOwner: null
@@ -1155,8 +1162,8 @@ job:
   - Persistent public brand signature, legitimate link groups, legal links, status/identity context, and responsive closure.
 
 semanticStatus: GOVERNED
-visualStatus: REFERENCE_PAGE_ACCEPTED
-implementationStatus: NOT_IMPLEMENTED
+visualStatus: CANDIDATE_EXTRACTED
+implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
 visualEvidence: REFERENCE_PAGE_ACCEPTED
 
@@ -1166,6 +1173,7 @@ sources:
   - HOME-LEGACY
 sourceCompositions:
   - HOME-LEGACY
+  - COMPOSITION-HOME-01
 
 runtimeOwner: src/design-system/components/GlobalFooter.astro
 visualRegressionOwner: null
@@ -2304,8 +2312,8 @@ job:
   - Expose only current legitimate public navigation scope.
 
 semanticStatus: GOVERNED
-visualStatus: REFERENCE_PAGE_ACCEPTED
-implementationStatus: NOT_IMPLEMENTED
+visualStatus: CANDIDATE_EXTRACTED
+implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
 visualEvidence: REFERENCE_PAGE_ACCEPTED
 
@@ -2316,8 +2324,9 @@ sources:
   - HOME-LEGACY
 sourceCompositions:
   - HOME-LEGACY
+  - COMPOSITION-HOME-01
 
-runtimeOwner: src/design-system/components/GlobalHeader.astro
+runtimeOwner: src/design-system/navigation/NavWebPrimary.astro
 visualRegressionOwner: null
 placeholderAllowed: true
 engineBaseline: REQUIRED
@@ -2429,8 +2438,8 @@ job:
   - Provide stable public orientation through one global header, main region, and global footer.
 
 semanticStatus: GOVERNED
-visualStatus: REFERENCE_PAGE_ACCEPTED
-implementationStatus: NOT_IMPLEMENTED
+visualStatus: CANDIDATE_EXTRACTED
+implementationStatus: IMPLEMENTED
 authorityConfidence: OPERATIVE
 visualEvidence: REFERENCE_PAGE_ACCEPTED
 
@@ -2441,6 +2450,7 @@ sources:
   - REPO
 sourceCompositions:
   - HOME-LEGACY
+  - COMPOSITION-HOME-01
 
 runtimeOwner: src/design-system/shells/PublicWebShell.astro
 visualRegressionOwner: null
@@ -2746,16 +2756,17 @@ job:
   - Establish the active Unfict visual language for the `PAGE-ARCHETYPE-ACQUISITION` Job as part of the Master Composition Set.
 
 semanticStatus: PROPOSED
-visualStatus: UNDESIGNED
+visualStatus: REFERENCE_PAGE_ACCEPTED
 implementationStatus: NOT_IMPLEMENTED
 authorityConfidence: PROVISIONAL
-visualEvidence: NONE
+visualEvidence: VISUALLY_ACCEPTED
 
 sources:
   - UIS
   - HOME-LEGACY
 sourceCompositions:
   - HOME-LEGACY
+  - COMPOSITION-HOME-01
 
 runtimeOwner: src/pages/index.astro
 visualRegressionOwner: null
