@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+
+<html lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-low": "#f6f7f9",
+            "surface-container-lowest": "#ffffff",
+            "secondary": "#1965ec",
+            "on-error": "#ffffff",
+            "surface-dim": "#d9dadc",
+            "on-surface": "#0a0d14",
+            "on-tertiary": "#ffffff",
+            "on-primary-fixed": "#191b23",
+            "on-surface-variant": "#596273",
+            "on-error-container": "#93000a",
+            "background": "#f8f9fb",
+            "inverse-surface": "#2e3132",
+            "inverse-primary": "#c4c6d0",
+            "surface-container-high": "#e7e8ea",
+            "on-background": "#0a0d14",
+            "on-secondary": "#ffffff",
+            "outline-variant": "#dde1e7",
+            "on-primary-container": "#81838d",
+            "secondary-container": "#1965ec",
+            "on-secondary-fixed-variant": "#104ab3",
+            "surface": "#f8f9fb",
+            "error": "#ba1a1a",
+            "surface-container-highest": "#e1e2e4",
+            "primary": "#0a0d14",
+            "surface-container": "#edeef0",
+            "outline": "#596273",
+            "on-primary": "#ffffff"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            sm: "0.125rem",
+            lg: "0.375rem"
+          },
+          spacing: {
+            "gutter-sm": "1rem",
+            margin: "2rem",
+            "margin-sm": "1rem",
+            "margin-lg": "4rem",
+            gutter: "1.5rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "gutter-lg": "2rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem"
+          },
+          fontFamily: {
+            sans: ["IBM Plex Sans", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+            mono: ["IBM Plex Mono", "monospace"],
+            "body-lg": ["IBM Plex Sans", "sans-serif"],
+            "code-sm": ["IBM Plex Mono", "monospace"],
+            "title-md": ["IBM Plex Sans", "sans-serif"],
+            display: ["IBM Plex Sans", "sans-serif"],
+            "title-lg": ["IBM Plex Sans", "sans-serif"],
+            "headline-lg": ["IBM Plex Sans", "sans-serif"],
+            "headline-md": ["IBM Plex Sans", "sans-serif"],
+            "headline-sm": ["IBM Plex Sans", "sans-serif"],
+            "body-sm": ["IBM Plex Sans", "sans-serif"],
+            "body-md": ["IBM Plex Sans", "sans-serif"],
+            "label-md": ["IBM Plex Sans", "sans-serif"]
+          },
+          fontSize: {
+            "body-lg": ["17px", { lineHeight: "28px", fontWeight: "400" }],
+            "code-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }],
+            "title-md": ["16px", { lineHeight: "24px", fontWeight: "600" }],
+            display: ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "600" }],
+            "title-lg": ["18px", { lineHeight: "26px", fontWeight: "600" }],
+            "headline-lg": ["40px", { lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "600" }],
+            "headline-md": ["26px", { lineHeight: "34px", letterSpacing: "-0.015em", fontWeight: "600" }],
+            "headline-sm": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+            "body-sm": ["13px", { lineHeight: "19px", fontWeight: "400" }],
+            "body-md": ["15px", { lineHeight: "24px", fontWeight: "400" }],
+            "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "500" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-sans text-body-md text-on-surface antialiased selection:bg-secondary/15 selection:text-secondary">
+<!-- HEADER: Variation 1 - Integrated Monogram Lockup & Frosted Institutional Glass -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#ffffff]/90 backdrop-blur-md border-b border-[#DDE1E7] transition-all">
+<div class="h-16 max-w-[1440px] mx-auto px-margin-sm md:px-margin lg:px-margin-lg flex items-center justify-between gap-gutter">
+<!-- Unfict Brand Lockup: Monogram Mark + 1px Divider + Wordmark + Reality Sync Label -->
+<div class="flex items-center">
+<a aria-label="Unfict Home" class="flex items-center group py-1" data-path="overview" href="#">
+<!-- Brand Mark Monogram (Blue Geometric continuous loop vector) -->
+<div class="h-6 w-5 shrink-0 flex items-center justify-center mr-3 text-secondary transition-transform duration-200 group-hover:scale-[1.03]">
+<svg class="h-6 w-auto block" fill="none" viewbox="19.4 9.1 471.2 566.8" xmlns="http://www.w3.org/2000/svg">
+<path d="M172.4715-3.8096C172.594 99.6191 171.0167 121.0277 161.0168 150.9966 151.1701 180.5367 138.8273 199.7248 113.7741 224.3645 85.1834 252.5111 58.1853 267.2735 18.385 276.523-12.2424 283.6439-56.0855 283.261-88.9487 275.5735-149.6675 261.393-203.4646 211.4857-223.9543 150.3381-233.3722 122.2375-233.7704 117.0002-233.8316 18.3953-233.8776-30.8842-233.3875-73.0275-232.7597-75.2633-231.9787-78.0504-229.4366-80.3934-224.72-82.6752-218.3801-85.7379-215.9605-85.9676-195.2411-85.4623-173.9091-84.9416-172.1634-84.6659-163.8021-80.47-153.3734-75.2174-142.3782-64.0231-137.7228-53.916-134.4917-46.9177-134.3538-44.345-133.4503 26.0521-132.409 106.9697-131.9802 110.8594-121.8885 131.2879-111.322 152.7117-89.791 173.7527-71.3073 180.7052-55.2433 186.7694-42.3338 188.7449-24.8762 187.8567-7.8167 186.9685 0.9427 184.8245 13.7297 178.4081 36.8687 166.785 54.4335 146.8159 65.0459 120.0323 69.2265 109.5118 69.2265 109.5118 70.0228 31.4119 70.8344-46.688 70.8344-46.688 74.9385-55.4474 79.793-65.8148 90.191-76.4119 100.3133-81.3582 106.8829-84.5434 110.1294-84.9416 133.6206-85.401 157.6019-85.8757 160.0367-85.6766 164.5696-82.8283 167.5405-80.96 170.0672-77.7288 170.9401-74.6967 171.7517-71.8943 172.4255-40.4859 172.4715-3.8096Z" fill="#1965ec" transform="matrix(1 0 0 1 255 292.5)"></path>
+<path d="M233.5729-255.7808C232.8072-230.1763 230.5714-222.2898 219.1015-204.8628 205.6254-184.4037 184.5844-171.3258 160.4194-168.4008 130.9405-164.8328 125.0141-163.7455 113.5288-159.9017 99.9456-155.3383 86.3317-148.784 76.194-141.9235 66.0104-135.0323 45.5972-114.7723 29.9466-96.0436 15.368-78.6013 11.3864-75.217 9.2885-78.4635 8.5993-79.5201 7.8336-99.5198 7.5733-122.9192 7.1445-162.1682 7.3589-166.456 10.3757-178.5079 17.4813-206.8842 26.7461-223.3158 47.0061-243.5299 57.8023-254.2954 62.8864-258.0319 75.8877-264.6934 84.9075-269.3181 98.0313-274.4942 106.5151-276.7606 120.91-280.635 123.0386-280.7728 175.4115-281.3853 218.1673-281.8907 229.9589-281.5997 231.8578-280.0377 233.8792-278.3532 234.1395-274.6473 233.5729-255.7808Z" fill="#1965ec" transform="matrix(1 0 0 1 255 292.5)"></path>
+</svg>
+</div>
+<!-- Clean 1px Vertical Divider to clearly decouple mark and wordmark -->
+<div class="h-4 w-[1px] bg-[#DDE1E7] mr-3"></div>
+<!-- Unfict Official Wordmark -->
+<div class="h-5 flex items-center">
+<img alt="Unfict" class="h-5 w-auto block object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VuBzH9eiqJGbWGCP9knr52CG56XZ2_U_-2EozZ0-0zmx2LXnUJ-OIfIylNyXY3KC0TD47Cn5O9AejZhGAH5A3LUJvUT59BCVoOyxJCRettw9LdwS5IX62S4OEjU8I5jGQX20DszzeknF__C5HNfOAWyWFXImqgrKAe_k9_yia_kD0bOLN3nOUMbwm4B9u4eF-pkSGRMB9GbRDn0l20AuXz_MVPFlYP9Y_C4HlPsqcxfwY6vD1rMwFWYAAh"/>
+</div>
+<!-- Subtle Monospaced Tagline / Sub-identity -->
+<span class="font-mono text-[11px] font-medium tracking-[0.14em] uppercase text-outline pl-3 border-l border-[#DDE1E7] ml-3 hidden sm:inline-flex items-center gap-1.5">
+REALITY SYNC
+</span>
+</a>
+</div>
+<!-- Navigation: quiet states and precise typography -->
+<nav class="hidden md:flex items-center gap-8 h-full">
+<a class="font-sans text-body-md text-on-surface-variant hover:text-primary transition-colors py-space-sm relative" data-path="gs1-digital-link" href="#gs1-standards">GS1 Digital Link</a>
+<a class="font-sans text-body-md text-on-surface-variant hover:text-primary transition-colors py-space-sm relative" data-path="developers" href="#depth-pathways">Developers</a>
+<a class="font-sans text-body-md text-on-surface-variant hover:text-primary transition-colors py-space-sm relative" data-path="insights" href="#depth-pathways">Insights</a>
+<a class="font-sans text-body-md text-on-surface-variant hover:text-primary transition-colors py-space-sm relative" data-path="about" href="#faq">About</a>
+</nav>
+<!-- Action Button with active square registration point icon -->
+<div class="flex items-center gap-space-md">
+<a class="inline-flex items-center justify-center gap-2 bg-secondary text-on-secondary hover:bg-on-secondary-fixed-variant px-4 py-2 text-body-md font-medium rounded transition-colors shadow-sm" data-path="developer-preview-request" href="#preview">
+<span class="w-1.5 h-1.5 bg-white shrink-0 inline-block"></span>
+<span>Request developer preview</span>
+</a>
+</div>
+</div>
+</header>
+<main class="w-full bg-surface min-h-[calc(100vh-4rem)]">
+<div class="flex flex-col w-full">
+<!-- REGION 1: HERO -->
+<section class="w-full min-h-screen relative flex flex-col justify-between overflow-hidden border-b border-outline-variant/40 bg-[#0a0d14]"><div class="absolute inset-0 z-0"><img alt="Product packaging engineer inspecting box with durable code in workshop" class="w-full h-full object-cover object-center filter brightness-[0.42] contrast-[1.08]" src="https://lh3.googleusercontent.com/aida/AEtjO1X5xt4kQcOFhKNNBlZTT_jTwQZYmXIkq95VNjFhtCn9v_fGynCdPS1rIaaxBhNZTtno4YCEf4_dUh0DER4QsDjn1lkjseAc1-7EVDdRIcVUD1mHMG6Yt5TuQ_LGBfu7w0z9r289cFuHOOtU634gNYhS9pN2ULdgF3BwqF7jmX8FTpXgje2gewWMXD8ylgRIK_00Rw5HCmc7SVSq3hNKo9jIwZ-0rzVBlgLjC2DCMk0fU6Rt5YqbhfYR4_Q"/><div class="absolute inset-0 bg-gradient-to-t from-[#0a0d14] via-[#0a0d14]/75 to-[#0a0d14]/60"></div><div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(25,101,236,0.18),transparent_70%)]"></div></div><div class="relative z-10 w-full max-w-[1440px] mx-auto px-margin-sm md:px-margin lg:px-margin-lg pt-28 pb-12 flex-1 flex flex-col justify-center"><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center"><div class="lg:col-span-8 flex flex-col justify-center"><div class="flex items-center gap-2 mb-6"><span class="w-2 h-2 bg-secondary inline-block"></span><span class="font-mono text-code-sm uppercase tracking-widest text-[#a3adc2]">UNFICT — REALITY SYNC</span></div><h1 class="font-sans text-headline-lg md:text-[54px] md:leading-[60px] text-white tracking-tight font-semibold mb-6">One product. One identity.<br class="hidden sm:inline"/> Wherever it needs to go.</h1><p class="font-sans text-body-lg text-[#cbd2e1] max-w-2xl mb-8 leading-relaxed font-normal">Websites change. Services change. Product information changes. Unfict keeps one product identity connected to the right place as everything around it evolves.</p><div class="flex flex-wrap items-center gap-space-md pt-2"><a class="inline-flex items-center justify-center bg-secondary text-on-secondary px-6 py-3.5 text-body-md font-medium rounded hover:bg-on-secondary-fixed-variant transition-colors" href="#how-it-works">See how it works</a><a class="inline-flex items-center gap-space-xs text-white hover:text-secondary font-sans font-medium text-title-md group py-3 px-3 transition-colors" data-path="gs1-digital-link" href="#gs1-standards"><span class="">Explore GS1 Digital Link</span><span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span></a></div><div class="grid grid-cols-3 gap-space-md mt-12 pt-8 border-t border-white/20 max-w-xl"><div><div class="font-mono text-[11px] text-[#a3adc2] uppercase tracking-wider">FOUNDATION</div><div class="font-sans font-medium text-body-md text-white mt-1">Single Identity</div></div><div><div class="font-mono text-[11px] text-[#a3adc2] uppercase tracking-wider">LIFECYCLE</div><div class="font-sans font-medium text-body-md text-white mt-1">Evolving Destinations</div></div><div><div class="font-mono text-[11px] text-[#a3adc2] uppercase tracking-wider">MAINTENANCE</div><div class="font-sans font-medium text-body-md text-white mt-1">Zero Reprinting</div></div></div></div><div class="lg:col-span-4 hidden lg:flex flex-col"><div class="bg-[#131c2a]/90 backdrop-blur border border-white/15 p-5"><div class="flex items-center justify-between pb-3 border-b border-white/10"><span class="font-sans font-semibold text-sm text-white">One durable physical code</span><span class="font-mono text-[11px] text-[#a3adc2] uppercase">Permanent</span></div><div class="space-y-3 pt-3"><div class="flex items-center justify-between text-body-sm text-[#cbd2e1]"><div class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#a3adc2] inline-block"></span><span class="">Launch experience</span></div><span class="font-mono text-[11px] text-[#a3adc2]">Retail / Debut</span></div><div class="flex items-center justify-between text-body-sm font-medium text-white bg-secondary/20 px-2.5 py-1.5 border border-secondary/40"><div class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary inline-block"></span><span class="">Product passport &amp; facts</span></div><span class="font-mono text-[11px] text-secondary">Active destination</span></div><div class="flex items-center justify-between text-body-sm text-[#cbd2e1]"><div class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#a3adc2] inline-block"></span><span class="">Support &amp; recycling</span></div><span class="font-mono text-[11px] text-[#a3adc2]">Post-purchase</span></div></div><div class="mt-4 pt-3 border-t border-white/10 flex items-center gap-2 text-[11px] font-mono text-[#a3adc2] uppercase tracking-wider"><span class="w-1.5 h-1.5 bg-secondary inline-block"></span><span class="">Reality Sync · Continuous Alignment</span></div></div></div></div></div><div class="relative z-10 w-full border-t border-white/15 bg-[#0a0d14]/80 backdrop-blur py-3"><div class="max-w-[1440px] mx-auto px-margin-sm md:px-margin lg:px-margin-lg flex items-center justify-between text-body-sm"><div class="flex items-center gap-2 font-mono text-[11px] uppercase tracking-wider text-[#cbd2e1]"><span class="w-1.5 h-1.5 bg-secondary inline-block"></span><span class="">The physical code never changes</span></div><div class="font-mono text-[11px] text-[#a3adc2] uppercase tracking-widest hidden sm:block">PHYSICAL REALITY ──[ UNFICT LAYER ]──&gt; ACTIVE RESOLUTION</div></div></div></section>
+<!-- REGION 2: "THINGS CHANGE" (THE REALITY GAP) -->
+<section class="w-full bg-secondary-container text-on-secondary py-20 md:py-24 border-b border-secondary/40 relative"><div class="max-w-[1440px] mx-auto px-margin-sm md:px-margin lg:px-margin-lg"><div class="flex items-center gap-3 mb-4"><div class="flex items-center gap-2 font-mono text-code-sm text-white/80 uppercase tracking-wider shrink-0"><span class="w-2 h-2 bg-white inline-block"></span><span class="">01 / THE REALITY GAP</span></div><div class="w-12 h-[1px] bg-white/30"></div></div><div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-12"><div><h2 class="font-sans text-headline-md md:text-headline-lg font-semibold text-white max-w-2xl tracking-tight">Websites change. Campaigns expire.<br class="hidden sm:inline"/> The product remains.</h2></div><p class="font-sans text-body-md text-white/85 max-w-md">Physical items endure for years in warehouses, homes, and distribution networks. When printed barcodes link directly to fragile website addresses, broken connections are guaranteed.</p></div><div class="grid grid-cols-1 md:grid-cols-3 border-t border-l border-white/20 bg-white/10 backdrop-blur"><div class="p-8 border-r border-b border-white/20 flex flex-col justify-between h-full hover:bg-white/5 transition-colors"><div><div class="flex items-center justify-between mb-4"><div class="font-mono text-code-sm text-white/70">01 / THE PHYSICAL REALITY</div><div class="w-8 h-8 border border-white/20 bg-white/10 flex items-center justify-center text-white"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="1.2" viewbox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><h3 class="font-sans text-title-lg font-semibold text-white mb-3">Physical permanence</h3><p class="font-sans text-body-md text-white/80 leading-relaxed">A physical code stamped or printed on packaging cannot be reprinted once shipped. It lives on shelves, in supply chains, and in customer hands for years.</p></div><div class="mt-8 pt-4 border-t border-white/20 font-mono text-code-sm text-white/70">LIFESPAN: 5–20+ YEARS</div></div><div class="p-8 border-r border-b border-white/20 flex flex-col justify-between h-full hover:bg-white/5 transition-colors"><div><div class="flex items-center justify-between mb-4"><div class="font-mono text-code-sm text-white/70">02 / DIGITAL VOLATILITY</div><div class="w-8 h-8 border border-white/20 bg-white/10 flex items-center justify-center text-white"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="1.2" viewbox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><h3 class="font-sans text-title-lg font-semibold text-white mb-3">Ephemeral destinations</h3><p class="font-sans text-body-md text-white/80 leading-relaxed">Websites get redesigned, marketing campaigns end, corporate domains migrate, regulatory demands shift, and internal systems are rebuilt or replaced.</p></div><div class="mt-8 pt-4 border-t border-white/20 font-mono text-code-sm text-white/70">LIFESPAN: 12–36 MONTHS</div></div><div class="p-8 border-r border-b border-white/20 flex flex-col justify-between h-full bg-white text-primary"><div><div class="flex items-center justify-between mb-4"><div class="font-mono text-code-sm text-secondary font-medium">03 / THE CONNECTION</div><div class="w-8 h-8 border border-secondary/30 bg-secondary/10 flex items-center justify-center text-secondary"><svg class="w-4 h-4 text-secondary" fill="none" stroke="currentColor" stroke-width="1.2" viewbox="0 0 24 24"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div><h3 class="font-sans text-title-lg font-semibold text-primary mb-3">Reliable alignment</h3><p class="font-sans text-body-md text-on-surface-variant leading-relaxed">Unfict keeps that single physical identity reliably linked to whatever destination is right today, tomorrow, and years from now—without touching packaging.</p></div><div class="mt-8 pt-4 border-t border-outline-variant font-mono text-code-sm text-secondary flex items-center gap-1.5"><span class="w-1.5 h-1.5 bg-secondary inline-block"></span>ALIGNMENT: PERSISTENT</div></div></div></div></section>
+<!-- REGION 3: PLAIN-LANGUAGE VALUE ("CONTINUITY THROUGH CHANGE") -->
+<section class="w-full bg-surface-container-low text-on-surface py-20 md:py-24 border-b border-outline-variant"><div class="max-w-[1440px] mx-auto px-margin-sm md:px-margin lg:px-margin-lg"><div class="flex items-center gap-3 mb-4"><div class="flex items-center gap-2 font-mono text-code-sm text-secondary uppercase tracking-wider shrink-0 font-medium"><span class="w-2 h-2 bg-secondary inline-block"></span><span class="">02 / CONTINUOUS IDENTITY</span></div><div class="w-12 h-[1px] bg-outline-variant"></div></div><div class="max-w-3xl mb-14"><h2 class="font-sans text-headline-md md:text-headline-lg font-semibold text-primary mb-4 tracking-tight">Change what happens behind the identity.<br class="hidden sm:inline"/>Never the identity itself.</h2><p class="font-sans text-body-lg text-on-surface-variant leading-relaxed max-w-2xl">Give each product one dependable digital address, then evolve the experience, information, or service over its entire lifecycle.</p></div><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><div class="border border-outline-variant bg-white p-6 md:p-8 flex flex-col justify-between hover:border-primary transition-colors"><div><div class="flex items-center justify-between pb-3 mb-4 border-b border-outline-variant"><span class="font-mono text-code-sm text-secondary font-medium tracking-wider">DAY 1</span><div class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-outline" fill="none" stroke="currentColor" stroke-width="1.2" viewbox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="font-mono text-[11px] text-on-surface-variant uppercase tracking-wider">Retail Debut</span></div></div><div class="font-mono text-[12px] text-outline mb-1">Product Scan →</div><h4 class="font-sans text-title-lg font-semibold text-primary mb-3">Brand launch &amp; origin story</h4><p class="font-sans text-body-md text-on-surface-variant leading-relaxed">Early scans connect consumers to onboarding guides, promotional storytelling, and authentic provenance information.</p></div><div class="mt-8 pt-4 border-t border-outline-variant text-[12px] font-mono text-primary flex items-center justify-between"><span class="inline-flex items-center gap-2 bg-surface-container-low px-2.5 py-1 border border-outline-variant"><span class="w-1.5 h-1.5 bg-secondary inline-block"></span>Printed code status: Untouched</span></div></div><div class="border border-outline-variant bg-white p-6 md:p-8 flex flex-col justify-between hover:border-primary transition-colors"><div><div class="flex items-center justify-between pb-3 mb-4 border-b border-outline-variant"><span class="font-mono text-code-sm text-secondary font-medium tracking-wider">DAY 180</span><div class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-outline" fill="none" stroke="currentColor" stroke-width="1.2" viewbox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="font-mono text-[11px] text-on-surface-variant uppercase tracking-wider">Compliance &amp; Detail</span></div></div><div class="font-mono text-[12px] text-outline mb-1">Same Product Code →</div><h4 class="font-sans text-title-lg font-semibold text-primary mb-3">Verified product data &amp; ingredients</h4><p class="font-sans text-body-md text-on-surface-variant leading-relaxed">As compliance updates or formulation notes emerge, scans resolve to live digital product passports and localized safety data.</p></div><div class="mt-8 pt-4 border-t border-outline-variant text-[12px] font-mono text-primary flex items-center justify-between"><span class="inline-flex items-center gap-2 bg-surface-container-low px-2.5 py-1 border border-outline-variant"><span class="w-1.5 h-1.5 bg-secondary inline-block"></span>Printed code status: Untouched</span></div></div><div class="border border-outline-variant bg-white p-6 md:p-8 flex flex-col justify-between hover:border-primary transition-colors"><div><div class="flex items-center justify-between pb-3 mb-4 border-b border-outline-variant"><span class="font-mono text-code-sm text-secondary font-medium tracking-wider">YEAR 2+</span><div class="flex items-center gap-2"><svg class="w-3.5 h-3.5 text-outline" fill="none" stroke="currentColor" stroke-width="1.2" viewbox="0 0 24 24"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="font-mono text-[11px] text-on-surface-variant uppercase tracking-wider">Circularity</span></div></div><div class="font-mono text-[12px] text-outline mb-1">Same Product Code →</div><h4 class="font-sans text-title-lg font-semibold text-primary mb-3">Maintenance, warranty, or recycling</h4><p class="font-sans text-body-md text-on-surface-variant leading-relaxed">Years after launch, the same code guides owners to genuine spare parts, repair tutorials, warranty claims, or proper end-of-life recycling.</p></div><div class="mt-8 pt-4 border-t border-outline-variant text-[12px] font-mono text-primary flex items-center justify-between"><span class="inline-flex items-center gap-2 bg-surface-container-low px-2.5 py-1 border border-outline-variant"><span class="w-1.5 h-1.5 bg-secondary inline-block"></span>Printed code status: Untouched</span></div></div></div><div class="mt-8 p-4 bg-white border border-outline-variant flex items-center justify-between flex-wrap gap-4 text-body-sm text-on-surface-variant"><span class="font-medium text-primary font-sans">All achieved without reprinting packaging, issuing replacement stickers, or altering physical codes.</span><span class="font-mono text-[11px] text-secondary font-medium uppercase tracking-wider flex items-center gap-1.5"><span class="w-1.5 h-1.5 bg-secondary inline-block"></span>CONTINUOUS RESOLUTION GUARANTEE</span></div></div></section>
+<!-- REGION 4: SIMPLE HOW IT WORKS -->
+<section class="w-full bg-surface-container-low border-b border-outline-variant py-20 md:py-24" id="how-it-works">
+<div class="max-w-[1440px] mx-auto px-margin-sm md:px-margin lg:px-margin-lg">
+<div class="max-w-3xl mb-14">
+<div class="font-mono text-code-sm text-outline uppercase tracking-wider mb-2">03 / ARCHITECTURE IN ACTION</div>
+<h2 class="font-sans text-headline-md md:text-headline-lg font-semibold text-primary mb-4 tracking-tight">
+            Three quiet steps from physical product to the right destination
+          </h2>
+<p class="font-sans text-body-lg text-on-surface-variant leading-relaxed">
+            No complex custom server stacks to maintain. Unfict acts as the dependable layer between the real world and your digital experiences.
+          </p>
+</div>
+<!-- 3-Step Relationship Architecture -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<div class="w-8 h-8 bg-surface-container-low border border-outline-variant flex items-center justify-center font-mono text-primary font-medium text-code-sm">
+                  01
+                </div>
+<div class="w-8 h-8 border border-outline-variant bg-surface flex items-center justify-center text-outline">
+<svg class="w-4 h-4 text-outline" fill="none" stroke="currentColor" stroke-width="1.2" viewbox="0 0 24 24">
+<path d="M12 4v1m6 11h2m-6 0a2 2 0 104 0m-4 0a2 2 0 114 0m-4-6a2 2 0 104 0m-4 0a2 2 0 114 0M6 16v1a2 2 0 002 2h1a2 2 0 002-2v-1a2 2 0 00-2-2H8a2 2 0 00-2 2zm0-6V9a2 2 0 012-2h1a2 2 0 012 2v1a2 2 0 01-2 2H8a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<div class="font-mono text-[11px] text-outline uppercase tracking-wider mb-1">THE TRIGGER</div>
+<h3 class="font-sans text-title-lg font-semibold text-primary mb-3">Scan standard barcode or QR</h3>
+<p class="font-sans text-body-md text-on-surface-variant leading-relaxed">
+                A consumer or warehouse worker scans any standard 2D barcode or QR code on the item using a smartphone camera or handheld optical scanner.
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant font-mono text-[12px] text-outline">
+              Input: One durable physical code
+            </div>
+</div>
+<!-- Step 2: Authoritative Synchronization Tier (MOMENT 4: Sync Axis & Registration Marker) -->
+<div class="bg-surface-container-lowest border border-outline-variant border-t-2 border-t-secondary p-8 flex flex-col justify-between relative shadow-none">
+<!-- MOMENT 4 Top Registration Axis Header -->
+<div class="absolute -top-[5px] left-0 right-0 flex items-center justify-center">
+<span class="w-2 h-2 bg-secondary inline-block"></span>
+</div>
+<div>
+<div class="flex items-center justify-between mb-6">
+<div class="w-8 h-8 bg-secondary/10 border border-secondary/30 flex items-center justify-center font-mono text-secondary font-medium text-code-sm">
+                  02
+                </div>
+<div class="px-2 py-0.5 border border-secondary/40 bg-secondary/5 font-mono text-[11px] uppercase tracking-wider text-secondary font-medium flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 bg-secondary inline-block"></span>
+                  THE UNFICT LAYER
+                </div>
+</div>
+<div class="font-mono text-[11px] text-secondary uppercase tracking-wider mb-1">THE EVALUATION</div>
+<h3 class="font-sans text-title-lg font-semibold text-primary mb-3">Identify product and context</h3>
+<p class="font-sans text-body-md text-on-surface-variant leading-relaxed">
+                Unfict instantly validates the product identity and understands context—such as language, location, and the current lifecycle status of that specific batch.
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant font-mono text-[12px] text-secondary flex items-center justify-between">
+<span class="">Logic: Zero-maintenance resolution</span>
+<span class="w-1.5 h-1.5 bg-secondary inline-block"></span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<div class="w-8 h-8 bg-surface-container-low border border-outline-variant flex items-center justify-center font-mono text-primary font-medium text-code-sm">
+                  03
+                </div>
+<div class="w-8 h-8 border border-outline-variant bg-surface flex items-center justify-center text-outline">
+<svg class="w-4 h-4 text-outline" fill="none" stroke="currentColor" stroke-width="1.2" viewbox="0 0 24 24">
+<path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+<div class="font-mono text-[11px] text-outline uppercase tracking-wider mb-1">THE OUTCOME</div>
+<h3 class="font-sans text-title-lg font-semibold text-primary mb-3">Connect to the right destination</h3>
+<p class="font-sans text-body-md text-on-surface-variant leading-relaxed">
+                The user arrives directly at the authorized destination—whether that is localized product transparency facts, technical specifications, or warranty support.
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant font-mono text-[12px] text-outline">
+              Outcome: Accurate, live destination
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- REGION 5: STANDARDS CREDIBILITY — GS1 DIGITAL LINK CONTEXT -->
+<section class="w-full bg-surface-container-lowest border-b border-outline-variant py-20 md:py-24" id="gs1-standards">
+<div class="max-w-[1440px] mx-auto px-margin-sm md:px-margin lg:px-margin-lg">
+<div class="border border-outline-variant bg-surface-container-low p-8 md:p-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-5">
+<div class="font-mono text-code-sm text-outline uppercase tracking-wider mb-2">OPEN STANDARDS FOUNDATION</div>
+<h2 class="font-sans text-headline-md md:text-headline-lg font-semibold text-primary mb-4 tracking-tight">
+                Built for the GS1 Digital Link standard.
+              </h2>
+<div class="inline-flex items-center gap-2 px-2.5 py-1 bg-surface-container-lowest border border-outline-variant text-[11px] font-mono text-secondary font-medium">
+<span class="w-1.5 h-1.5 bg-secondary inline-block"></span>
+                STANDARDS-COMPLIANT INFRASTRUCTURE
+              </div>
+</div>
+<div class="lg:col-span-7">
+<p class="font-sans text-body-lg text-on-surface-variant leading-relaxed mb-6">
+                GS1 Digital Link gives physical products a standard web identity. Unfict provides the infrastructure that keeps that identity reliably connected as digital destinations evolve.
+              </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-outline-variant text-body-sm text-primary">
+<div class="flex flex-col gap-1">
+<span class="font-sans font-semibold text-primary">Open Web Architecture</span>
+<span class="text-on-surface-variant text-[13px] font-sans">Standard URI syntax compatible with any modern browser and scanner.</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-sans font-semibold text-primary">Enterprise Interop</span>
+<span class="text-on-surface-variant text-[13px] font-sans">Coordinates seamlessly with existing ERP, PIM, and warehouse systems.</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-sans font-semibold text-primary">No Walled Gardens</span>
+<span class="text-on-surface-variant text-[13px] font-sans">Built directly on open global standards without proprietary vendor lock-in.</span>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/80 text-[13px] text-outline font-sans">
+                Unfict operationalizes the standard—ensuring resolution uptime, regional performance, and route governance without requiring custom in-house software builds.
+              </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- REGION 6: PROGRESSIVE DEPTH ("CHOOSE YOUR DEPTH") -->
+<section class="w-full bg-surface-container-low border-b border-outline-variant py-20 md:py-24" id="depth-pathways">
+<div class="max-w-[1440px] mx-auto px-margin-sm md:px-margin lg:px-margin-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+<div>
+<div class="font-mono text-code-sm text-outline uppercase tracking-wider mb-2">CHOOSE YOUR DEPTH</div>
+<h2 class="font-sans text-headline-md md:text-headline-lg font-semibold text-primary tracking-tight">
+              Explore tailored resources for your team
+            </h2>
+</div>
+<span class="font-sans text-body-md text-outline hidden md:block">Reference perspectives across product, operations, and engineering</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Path 1: Product & Business Leaders -->
+<a class="border border-outline-variant bg-surface-container-lowest p-8 flex flex-col justify-between hover:border-primary transition-colors group" data-path="insights" href="#">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="font-mono text-[11px] text-outline uppercase tracking-wider">FOR PRODUCT &amp; BUSINESS LEADERS</div>
+<svg class="w-4 h-4 text-outline group-hover:text-secondary transition-colors" fill="none" stroke="currentColor" stroke-width="1.2" viewbox="0 0 24 24">
+<path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="w-8 h-8 bg-surface-container-low border border-outline-variant flex items-center justify-center text-primary font-mono text-code-sm mb-6">
+                01
+              </div>
+<h3 class="font-sans text-title-lg font-semibold text-primary mb-3 group-hover:text-secondary transition-colors">
+                Why persistent product identity matters
+              </h3>
+<p class="font-sans text-body-md text-on-surface-variant leading-relaxed">
+                The strategic case for durable packaging connectivity. How protecting the customer gateway prevents broken post-purchase experiences and protects brand equity.
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant flex items-center justify-between text-body-md font-medium text-primary font-sans">
+<span class="">Read strategic overview</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Path 2: Standards & Operations Teams -->
+<a class="border border-outline-variant bg-surface-container-lowest p-8 flex flex-col justify-between hover:border-primary transition-colors group" data-path="gs1-digital-link" href="#">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="font-mono text-[11px] text-outline uppercase tracking-wider">FOR STANDARDS &amp; OPERATIONS</div>
+<svg class="w-4 h-4 text-outline group-hover:text-secondary transition-colors" fill="none" stroke="currentColor" stroke-width="1.2" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="w-8 h-8 bg-surface-container-low border border-outline-variant flex items-center justify-center text-primary font-mono text-code-sm mb-6">
+                02
+              </div>
+<h3 class="font-sans text-title-lg font-semibold text-primary mb-3 group-hover:text-secondary transition-colors">
+                Explore GS1 Digital Link
+              </h3>
+<p class="font-sans text-body-md text-on-surface-variant leading-relaxed">
+                How standards-based resolution connects physical products to the web. Understanding identifiers, key qualifiers, and packaging transition frameworks.
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant flex items-center justify-between text-body-md font-medium text-primary font-sans">
+<span class="">Explore the standard</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Path 3: Developers & Architects -->
+<a class="border border-outline-variant bg-surface-container-lowest p-8 flex flex-col justify-between hover:border-primary transition-colors group" data-path="developers" href="#">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="font-mono text-[11px] text-outline uppercase tracking-wider">FOR DEVELOPERS &amp; ARCHITECTS</div>
+<svg class="w-4 h-4 text-outline group-hover:text-secondary transition-colors" fill="none" stroke="currentColor" stroke-width="1.2" viewbox="0 0 24 24">
+<path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="w-8 h-8 bg-surface-container-low border border-outline-variant flex items-center justify-center text-primary font-mono text-code-sm mb-6">
+                03
+              </div>
+<h3 class="font-sans text-title-lg font-semibold text-primary mb-3 group-hover:text-secondary transition-colors">
+                Developer Architecture &amp; Documentation
+              </h3>
+<p class="font-sans text-body-md text-on-surface-variant leading-relaxed">
+                Resolver behavior, high-concurrency routing latency targets, regional edge node dispatch, programmatic APIs, and private developer preview specs.
+              </p>
+</div>
+<div class="mt-8 pt-4 border-t border-outline-variant flex items-center justify-between text-body-md font-medium text-primary font-sans">
+<span class="">View documentation</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- REGION 7: SHORT REVISED FAQ -->
+<section class="w-full bg-surface-container-lowest border-b border-outline-variant py-20 md:py-24" id="faq">
+<div class="max-w-[1440px] mx-auto px-margin-sm md:px-margin lg:px-margin-lg">
+<div class="max-w-2xl mb-12">
+<div class="font-mono text-code-sm text-outline uppercase tracking-wider mb-2">CLARIFICATIONS</div>
+<h2 class="font-sans text-headline-md md:text-headline-lg font-semibold text-primary tracking-tight">
+            Frequently asked questions
+          </h2>
+</div>
+<div class="max-w-3xl border-t border-outline-variant divide-y divide-outline-variant">
+<!-- Item 1 -->
+<details class="group py-6 [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer" open="">
+<summary class="flex items-center justify-between font-sans text-title-md font-semibold text-primary list-none">
+<span class="">What does Unfict actually do?</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-sans text-body-md text-on-surface-variant mt-4 leading-relaxed">
+              In plain terms: we keep physical product codes connected to active digital destinations as websites and systems change. When someone scans a barcode or QR code on a box years from now, Unfict ensures it resolves to the right authoritative place rather than a broken link.
+            </p>
+</details>
+<!-- Item 2 -->
+<details class="group py-6 [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer">
+<summary class="flex items-center justify-between font-sans text-title-md font-semibold text-primary list-none">
+<span class="">Why can't our packaging QR code just point directly to our website?</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-sans text-body-md text-on-surface-variant mt-4 leading-relaxed">
+              Because websites inevitably change. Redesigns, new domains, reorganized CMS paths, and expired marketing promotions will break direct links. Once a physical product leaves the factory, its printed code cannot be edited. Pointing directly to an ephemeral webpage creates permanent link rot.
+            </p>
+</details>
+<!-- Item 3 -->
+<details class="group py-6 [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer">
+<summary class="flex items-center justify-between font-sans text-title-md font-semibold text-primary list-none">
+<span class="">What happens when our product information or marketing changes?</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-sans text-body-md text-on-surface-variant mt-4 leading-relaxed">
+              You update the destination rule in Unfict. The barcode on the physical item remains unchanged, but incoming scans immediately route to the new campaign, the revised user manual, or the updated digital product passport without requiring any physical reprinting.
+            </p>
+</details>
+<!-- Item 4 -->
+<details class="group py-6 [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer">
+<summary class="flex items-center justify-between font-sans text-title-md font-semibold text-primary list-none">
+<span class="">Where does GS1 Digital Link fit into this?</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-sans text-body-md text-on-surface-variant mt-4 leading-relaxed">
+              GS1 Digital Link provides the international open standard for encoding product identifiers (like GTIN barcodes) into web URIs. Unfict provides the high-availability infrastructure that resolves those standardized requests reliably and contextually.
+            </p>
+</details>
+<!-- Item 5 -->
+<details class="group py-6 [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer">
+<summary class="flex items-center justify-between font-sans text-title-md font-semibold text-primary list-none">
+<span class="">Is Unfict for business teams or developers?</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200 group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-sans text-body-md text-on-surface-variant mt-4 leading-relaxed">
+              Both. Business and product teams gain durable customer engagement and regulatory continuity across decades of product lifecycles. Engineering teams get reliable, zero-maintenance resolution infrastructure that handles standards compliance, edge latency, and failover out of the box.
+            </p>
+</details>
+</div>
+</div>
+</section>
+<!-- REGION 8: QUIET BRAND SIGNATURE & CLOSING CALL TO ACTION -->
+<section class="w-full bg-surface-container-low py-24 md:py-28 relative overflow-hidden" id="preview">
+<div class="max-w-[1440px] mx-auto px-margin-sm md:px-margin lg:px-margin-lg text-center flex flex-col items-center relative z-10">
+<!-- MOMENT 5: Centered Brand Signature Registration Axis -->
+<div class="w-full max-w-xs flex items-center justify-center gap-3 mb-6">
+<div class="flex-1 h-[1px] bg-outline-variant"></div>
+<span class="w-2 h-2 bg-secondary inline-block shrink-0"></span>
+<div class="flex-1 h-[1px] bg-outline-variant"></div>
+</div>
+<div class="font-mono text-code-sm uppercase tracking-widest text-outline mb-4">
+          UNFICT — REALITY SYNC
+        </div>
+<p class="font-sans text-headline-sm md:text-[22px] text-on-surface-variant max-w-xl mb-4 font-normal">
+          “The real product stays the same. Its digital world keeps changing. Unfict keeps the connection aligned.”
+        </p>
+<h2 class="font-sans text-headline-lg md:text-[44px] md:leading-[52px] text-primary max-w-2xl font-semibold mb-8 mt-2 tracking-tight">
+          One product. One identity.<br/>Reliable wherever it needs to go.
+        </h2>
+<div class="flex flex-wrap items-center justify-center gap-space-md mb-8">
+<a class="inline-flex items-center justify-center bg-secondary text-on-secondary px-8 py-3.5 text-body-md font-medium rounded hover:bg-on-secondary-fixed-variant transition-colors" data-path="developer-preview-request" href="#">
+            Request developer preview
+          </a>
+<a class="inline-flex items-center gap-space-xs text-primary hover:text-secondary font-sans font-medium text-title-md px-4 py-3.5 transition-colors" data-path="gs1-digital-link" href="#gs1-standards">
+<span class="">Explore GS1 Digital Link</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<div class="inline-flex items-center gap-2 px-3 py-1.5 bg-surface-container-lowest border border-outline-variant font-mono text-[12px] text-outline">
+<span class="w-1.5 h-1.5 bg-secondary inline-block"></span>
+          Currently in private developer preview. Early access provided to qualified technical and product teams.
+        </div>
+</div>
+</section>
+</div>
+</main>
+<!-- FOOTER: Variation 1 - Technical Institutional Architecture -->
+<footer class="w-full bg-[#f6f7f9] border-t border-[#dde1e7] text-on-surface">
+<div class="max-w-[1440px] mx-auto px-margin-sm md:px-margin lg:px-margin-lg pt-16 pb-12">
+<!-- TOP SECTION: Large Bold Brand Lockup & Mission Descriptor -->
+<div class="pb-12 border-b border-[#dde1e7]">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-8">
+<div class="flex flex-col gap-4 max-w-xl">
+<!-- Brand Lockup: Mark + Divider + Wordmark + Tag -->
+<div class="flex items-center">
+<!-- Brand Mark -->
+<div class="h-7 w-6 shrink-0 flex items-center justify-center mr-3 text-primary">
+<svg class="h-7 w-auto block" fill="none" viewbox="19.4 9.1 471.2 566.8" xmlns="http://www.w3.org/2000/svg">
+<path d="M172.4715-3.8096C172.594 99.6191 171.0167 121.0277 161.0168 150.9966 151.1701 180.5367 138.8273 199.7248 113.7741 224.3645 85.1834 252.5111 58.1853 267.2735 18.385 276.523-12.2424 283.6439-56.0855 283.261-88.9487 275.5735-149.6675 261.393-203.4646 211.4857-223.9543 150.3381-233.3722 122.2375-233.7704 117.0002-233.8316 18.3953-233.8776-30.8842-233.3875-73.0275-232.7597-75.2633-231.9787-78.0504-229.4366-80.3934-224.72-82.6752-218.3801-85.7379-215.9605-85.9676-195.2411-85.4623-173.9091-84.9416-172.1634-84.6659-163.8021-80.47-153.3734-75.2174-142.3782-64.0231-137.7228-53.916-134.4917-46.9177-134.3538-44.345-133.4503 26.0521-132.409 106.9697-131.9802 110.8594-121.8885 131.2879-111.322 152.7117-89.791 173.7527-71.3073 180.7052-55.2433 186.7694-42.3338 188.7449-24.8762 187.8567-7.8167 186.9685 0.9427 184.8245 13.7297 178.4081 36.8687 166.785 54.4335 146.8159 65.0459 120.0323 69.2265 109.5118 69.2265 109.5118 70.0228 31.4119 70.8344-46.688 70.8344-46.688 74.9385-55.4474 79.793-65.8148 90.191-76.4119 100.3133-81.3582 106.8829-84.5434 110.1294-84.9416 133.6206-85.401 157.6019-85.8757 160.0367-85.6766 164.5696-82.8283 167.5405-80.96 170.0672-77.7288 170.9401-74.6967 171.7517-71.8943 172.4255-40.4859 172.4715-3.8096Z" fill="#0a0d14" transform="matrix(1 0 0 1 255 292.5)"></path>
+<path d="M233.5729-255.7808C232.8072-230.1763 230.5714-222.2898 219.1015-204.8628 205.6254-184.4037 184.5844-171.3258 160.4194-168.4008 130.9405-164.8328 125.0141-163.7455 113.5288-159.9017 99.9456-155.3383 86.3317-148.784 76.194-141.9235 66.0104-135.0323 45.5972-114.7723 29.9466-96.0436 15.368-78.6013 11.3864-75.217 9.2885-78.4635 8.5993-79.5201 7.8336-99.5198 7.5733-122.9192 7.1445-162.1682 7.3589-166.456 10.3757-178.5079 17.4813-206.8842 26.7461-223.3158 47.0061-243.5299 57.8023-254.2954 62.8864-258.0319 75.8877-264.6934 84.9075-269.3181 98.0313-274.4942 106.5151-276.7606 120.91-280.635 123.0386-280.7728 175.4115-281.3853 218.1673-281.8907 229.9589-281.5997 231.8578-280.0377 233.8792-278.3532 234.1395-274.6473 233.5729-255.7808Z" fill="#0a0d14" transform="matrix(1 0 0 1 255 292.5)"></path>
+</svg>
+</div>
+<div class="h-5 w-[1px] bg-[#dde1e7] mr-3"></div>
+<div class="h-6 flex items-center">
+<img alt="Unfict" class="h-5 w-auto block object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VuBzH9eiqJGbWGCP9knr52CG56XZ2_U_-2EozZ0-0zmx2LXnUJ-OIfIylNyXY3KC0TD47Cn5O9AejZhGAH5A3LUJvUT59BCVoOyxJCRettw9LdwS5IX62S4OEjU8I5jGQX20DszzeknF__C5HNfOAWyWFXImqgrKAe_k9_yia_kD0bOLN3nOUMbwm4B9u4eF-pkSGRMB9GbRDn0l20AuXz_MVPFlYP9Y_C4HlPsqcxfwY6vD1rMwFWYAAh"/>
+</div>
+<span class="font-mono text-[11px] font-semibold tracking-widest uppercase text-outline pl-3 border-l border-[#dde1e7] ml-3">REALITY SYNC</span>
+</div>
+<p class="font-sans text-body-md text-on-surface-variant max-w-lg leading-relaxed">
+Institutional infrastructure for keeping digital representations aligned with authoritative Reality.
+</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+<div class="px-3.5 py-2 bg-white border border-[#dde1e7] flex items-center gap-3">
+<span class="w-2 h-2 bg-secondary inline-block"></span>
+<div class="flex flex-col">
+<span class="font-mono text-[10px] text-outline uppercase tracking-wider">Protocol Architecture</span>
+<span class="font-mono text-[12px] font-medium text-primary">GS1 DIGITAL LINK v1.2</span>
+</div>
+</div>
+<div class="px-3.5 py-2 bg-white border border-[#dde1e7] flex items-center gap-3">
+<span class="w-2 h-2 bg-emerald-600 inline-block"></span>
+<div class="flex flex-col">
+<span class="font-mono text-[10px] text-outline uppercase tracking-wider">Edge Latency Target</span>
+<span class="font-mono text-[12px] font-medium text-primary">&lt; 28ms Global SLA</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- MIDDLE SECTION: Multi-column Navigation with Mono Metadata -->
+<div class="py-12 border-b border-[#dde1e7] grid grid-cols-2 md:grid-cols-4 gap-8">
+<!-- Col 1: Architecture -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="font-mono text-[11px] uppercase tracking-wider text-outline">01 / ARCHITECTURE</span>
+</div>
+<ul class="flex flex-col gap-2.5">
+<li>
+<a class="group flex items-center justify-between text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="gs1-digital-link" href="#gs1-standards">
+<span>GS1 Digital Link</span>
+<span class="font-mono text-[10px] text-outline group-hover:text-secondary opacity-0 group-hover:opacity-100 transition-opacity">RFC-LINK</span>
+</a>
+</li>
+<li>
+<a class="group flex items-center justify-between text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="resolution-architecture" href="#how-it-works">
+<span>Resolution Engine</span>
+<span class="font-mono text-[10px] text-outline group-hover:text-secondary opacity-0 group-hover:opacity-100 transition-opacity">EDGE-DNS</span>
+</a>
+</li>
+<li>
+<a class="group flex items-center justify-between text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="continuity" href="#depth-pathways">
+<span>Identity Continuity</span>
+<span class="font-mono text-[10px] text-outline group-hover:text-secondary opacity-0 group-hover:opacity-100 transition-opacity">PERSIST</span>
+</a>
+</li>
+<li>
+<a class="group flex items-center justify-between text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="reality-sync" href="#">
+<span>Reality Sync Protocol</span>
+<span class="font-mono text-[10px] text-outline group-hover:text-secondary opacity-0 group-hover:opacity-100 transition-opacity">SYNC</span>
+</a>
+</li>
+</ul>
+</div>
+<!-- Col 2: Developers -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="font-mono text-[11px] uppercase tracking-wider text-outline">02 / DEVELOPERS</span>
+</div>
+<ul class="flex flex-col gap-2.5">
+<li>
+<a class="group flex items-center justify-between text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="documentation" href="#depth-pathways">
+<span>Documentation</span>
+<span class="font-mono text-[10px] text-outline group-hover:text-secondary opacity-0 group-hover:opacity-100 transition-opacity">v1.4.0</span>
+</a>
+</li>
+<li>
+<a class="group flex items-center justify-between text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="standards-alignment" href="#gs1-standards">
+<span>API Reference</span>
+<span class="font-mono text-[10px] text-outline group-hover:text-secondary opacity-0 group-hover:opacity-100 transition-opacity">REST/gRPC</span>
+</a>
+</li>
+<li>
+<a class="group flex items-center justify-between text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="developer-preview-request" href="#preview">
+<span>Developer Preview</span>
+<span class="font-mono text-[10px] text-outline group-hover:text-secondary opacity-0 group-hover:opacity-100 transition-opacity">ACCESS</span>
+</a>
+</li>
+<li>
+<a class="group flex items-center justify-between text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="benchmarks" href="#">
+<span>Telemetry &amp; Latency</span>
+<span class="font-mono text-[10px] text-outline group-hover:text-secondary opacity-0 group-hover:opacity-100 transition-opacity">PROMETHEUS</span>
+</a>
+</li>
+</ul>
+</div>
+<!-- Col 3: Company -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="font-mono text-[11px] uppercase tracking-wider text-outline">03 / COMPANY</span>
+</div>
+<ul class="flex flex-col gap-2.5">
+<li>
+<a class="group flex items-center justify-between text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="about" href="#faq">
+<span>About Unfict</span>
+<span class="font-mono text-[10px] text-outline group-hover:text-secondary opacity-0 group-hover:opacity-100 transition-opacity">MISSION</span>
+</a>
+</li>
+<li>
+<a class="group flex items-center justify-between text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="insights" href="#depth-pathways">
+<span>Perspectives &amp; Insights</span>
+<span class="font-mono text-[10px] text-outline group-hover:text-secondary opacity-0 group-hover:opacity-100 transition-opacity">BRIEFS</span>
+</a>
+</li>
+<li>
+<a class="group flex items-center justify-between text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="press" href="#">
+<span>Press &amp; Media Kit</span>
+<span class="font-mono text-[10px] text-outline group-hover:text-secondary opacity-0 group-hover:opacity-100 transition-opacity">ASSETS</span>
+</a>
+</li>
+<li>
+<a class="group flex items-center justify-between text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="contact" href="#preview">
+<span>Inquiries</span>
+<span class="font-mono text-[10px] text-outline group-hover:text-secondary opacity-0 group-hover:opacity-100 transition-opacity">CONTACT</span>
+</a>
+</li>
+</ul>
+</div>
+<!-- Col 4: Governance & Standards -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="font-mono text-[11px] uppercase tracking-wider text-outline">04 / GOVERNANCE &amp; STANDARDS</span>
+</div>
+<ul class="flex flex-col gap-2.5">
+<li>
+<a class="group flex items-center justify-between text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="gs1-conformance" href="#gs1-standards">
+<span>GS1 Global Conformance</span>
+<span class="font-mono text-[10px] text-outline group-hover:text-secondary opacity-0 group-hover:opacity-100 transition-opacity">SPEC-1.2</span>
+</a>
+</li>
+<li>
+<a class="group flex items-center justify-between text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="dpp-compliance" href="#">
+<span>EU DPP Framework</span>
+<span class="font-mono text-[10px] text-outline group-hover:text-secondary opacity-0 group-hover:opacity-100 transition-opacity">ESPR-ALIGNED</span>
+</a>
+</li>
+<li>
+<a class="group flex items-center justify-between text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="security" href="#">
+<span>Security &amp; Encryption</span>
+<span class="font-mono text-[10px] text-outline group-hover:text-secondary opacity-0 group-hover:opacity-100 transition-opacity">SOC2-TYPEII</span>
+</a>
+</li>
+<li>
+<a class="group flex items-center justify-between text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="registry" href="#">
+<span>Authoritative Root Registry</span>
+<span class="font-mono text-[10px] text-outline group-hover:text-secondary opacity-0 group-hover:opacity-100 transition-opacity">VERIFIED</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<!-- BOTTOM BAR: Legal, Copyright & Live System Status Badge -->
+<div class="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-4">
+<span>© 2026 Unfict Inc. All rights reserved.</span>
+<span class="text-outline/40">|</span>
+<span class="font-mono text-[11px] text-outline">AUTHORITATIVE RESOLUTION PLATFORM</span>
+</div>
+<div class="flex flex-wrap items-center gap-6">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a>
+<!-- Live Infrastructure Status Badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-white border border-[#dde1e7] font-mono text-[11px] text-primary shadow-xs">
+<span class="w-1.5 h-1.5 bg-emerald-500 inline-block animate-pulse"></span>
+<span>System Status: Active Alignment · GS1 Conformance Node</span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
