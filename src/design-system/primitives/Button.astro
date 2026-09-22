@@ -1,4 +1,6 @@
 ---
+import { isPlaceholderOwner } from '../registry/interface-runtime-state';
+
 export interface Props {
   variant?: 'primary' | 'secondary';
   type?: 'button' | 'submit' | 'reset';
@@ -19,6 +21,7 @@ const {
 
 const ownerId = variant === 'secondary' ? 'BUTTON-SECONDARY-01' : 'BUTTON-PRIMARY-01';
 const Element = href ? 'a' : 'button';
+const isPlaceholder = isPlaceholderOwner(ownerId);
 ---
 
 <Element
@@ -27,9 +30,10 @@ const Element = href ? 'a' : 'button';
   disabled={href ? undefined : disabled}
   class={`uf-button uf-button--${variant} ${className}`.trim()}
   data-uf-interface-owner={ownerId}
-  data-uf-interface-status="placeholder"
+  data-uf-interface-status={isPlaceholder ? 'placeholder' : 'implemented'}
   {...rest}
 >
+  {variant === 'primary' && <span class="uf-button__marker" aria-hidden="true" />}
   <slot />
 </Element>
 
@@ -38,16 +42,48 @@ const Element = href ? 'a' : 'button';
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: var(--uf-spacing-2xs, 0.5rem);
     padding: var(--uf-spacing-2xs, 0.5rem) var(--uf-spacing-sm, 1rem);
     font-family: var(--unfict-font-sans, sans-serif);
     font-size: 0.875rem;
     font-weight: 500;
+    line-height: 1.25rem;
     text-decoration: none;
     border-radius: var(--uf-radius-default, 4px);
     cursor: pointer;
+    transition:
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out,
+      color 0.15s ease-in-out;
+  }
+
+  .uf-button--primary {
+    border: 1px solid var(--unfict-color-blue, #1965ec);
+    background-color: var(--unfict-color-blue, #1965ec);
+    color: var(--unfict-color-white, #ffffff);
+  }
+
+  .uf-button--primary:hover:not(:disabled) {
+    background-color: #104ab3;
+    border-color: #104ab3;
+  }
+
+  .uf-button--secondary {
     border: 1px solid var(--unfict-color-border-gray, #dde1e7);
     background-color: var(--unfict-color-institutional-gray, #f6f7f9);
     color: var(--unfict-color-deep-ink, #0a0d14);
+  }
+
+  .uf-button--secondary:hover:not(:disabled) {
+    background-color: var(--unfict-color-border-gray, #dde1e7);
+  }
+
+  .uf-button__marker {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: var(--unfict-color-white, #ffffff);
+    flex-shrink: 0;
   }
 
   .uf-button:disabled {

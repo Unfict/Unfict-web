@@ -4,6 +4,9 @@ import Button from '../primitives/Button.astro';
 import TextLink from '../primitives/TextLink.astro';
 import IconButton from '../primitives/IconButton.astro';
 import CodeInline from '../primitives/CodeInline.astro';
+import NavWebPrimary from '../navigation/NavWebPrimary.astro';
+import GlobalHeader from '../components/GlobalHeader.astro';
+import GlobalFooter from '../components/GlobalFooter.astro';
 import FaqItem from '../components/FaqItem.astro';
 import ActionHero from '../patterns/ActionHero.astro';
 import ConceptFlow from '../patterns/ConceptFlow.astro';
@@ -16,7 +19,7 @@ import FinalCta from '../patterns/FinalCta.astro';
   </div>
 
   <section class="uf-harness-section">
-    <h2>1. Primitives Inspection</h2>
+    <h2>1. Primitives & Navigation Inspection</h2>
     <div class="uf-harness-grid">
       <div>
         <h3>BUTTON-PRIMARY-01</h3>
@@ -39,10 +42,28 @@ import FinalCta from '../patterns/FinalCta.astro';
         <CodeInline>npm run build</CodeInline>
       </div>
     </div>
+
+    <div style="margin-top: 1.5rem;">
+      <h3>NAV-WEB-PRIMARY-01</h3>
+      <NavWebPrimary items={[...HARNESS_FIXTURES.headerNav]} />
+    </div>
   </section>
 
   <section class="uf-harness-section">
-    <h2>2. Components & Patterns Inspection</h2>
+    <h2>2. Header & Footer Components</h2>
+    <div style="margin-bottom: 2rem;">
+      <h3>GLOBAL-HEADER-01</h3>
+      <GlobalHeader navItems={[...HARNESS_FIXTURES.headerNav]} />
+    </div>
+
+    <div>
+      <h3>GLOBAL-FOOTER-01</h3>
+      <GlobalFooter />
+    </div>
+  </section>
+
+  <section class="uf-harness-section">
+    <h2>3. Components & Patterns Inspection</h2>
     <div>
       <h3>FAQ-ITEM-01</h3>
       <FaqItem

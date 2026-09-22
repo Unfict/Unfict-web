@@ -1,4 +1,6 @@
 ---
+import Button from '../primitives/Button.astro';
+
 export interface NavItem {
   label: string;
   href: string;
@@ -26,21 +28,27 @@ const { items = defaultItems, activeHref, class: className = '' } = Astro.props;
   class={`uf-nav-primary ${className}`.trim()}
   aria-label="Primary"
   data-uf-interface-owner="NAV-WEB-PRIMARY-01"
-  data-uf-interface-status="placeholder"
+  data-uf-interface-status="implemented"
 >
   <ul class="uf-nav-primary__list">
     {
       items.map((item) => (
         <li class="uf-nav-primary__item">
-          <a
-            href={item.href}
-            class={`uf-nav-primary__link ${item.isCta ? 'uf-nav-primary__link--cta' : ''} ${
-              activeHref === item.href ? 'uf-nav-primary__link--active' : ''
-            }`.trim()}
-            aria-current={activeHref === item.href ? 'page' : undefined}
-          >
-            {item.label}
-          </a>
+          {item.isCta ? (
+            <Button href={item.href} variant="primary">
+              {item.label}
+            </Button>
+          ) : (
+            <a
+              href={item.href}
+              class={`uf-nav-primary__link ${
+                activeHref === item.href ? 'uf-nav-primary__link--active' : ''
+              }`.trim()}
+              aria-current={activeHref === item.href ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          )}
         </li>
       ))
     }
@@ -60,19 +68,19 @@ const { items = defaultItems, activeHref, class: className = '' } = Astro.props;
   .uf-nav-primary__link {
     font-family: var(--unfict-font-sans, sans-serif);
     font-size: 0.875rem;
-    color: var(--unfict-color-deep-ink, #0a0d14);
+    color: var(--unfict-color-slate, #596273);
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.15s ease-in-out;
+  }
+
+  .uf-nav-primary__link:hover,
+  .uf-nav-primary__link--active {
+    color: var(--unfict-color-deep-ink, #0a0d14);
   }
 
   .uf-nav-primary__link--active {
     text-decoration: underline;
-  }
-
-  .uf-nav-primary__link--cta {
-    padding: var(--uf-spacing-2xs, 0.5rem) var(--uf-spacing-xs, 0.75rem);
-    border: 1px solid var(--unfict-color-border-gray, #dde1e7);
-    border-radius: var(--uf-radius-default, 4px);
-    background-color: var(--unfict-color-institutional-gray, #f6f7f9);
+    text-underline-offset: 4px;
   }
 </style>
